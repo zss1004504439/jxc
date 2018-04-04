@@ -107,8 +107,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
 <!-- 弹出层 -->
-<div id="guige-boxNumber"  >
-<div class="title"> 选择货品箱包含商品 </div>
+<div id="guige-boxNumber" style="display:none" >
+<div class="title"> 选择货品箱包含商品颜色数量 </div>
 <dl class="guige-boxNumber-color  ">
   <dt> 颜色 </dt>
   <dd> 
@@ -129,37 +129,92 @@
      <span>均码</span>
   </dd> 
 </dl>
+<form class="mui-input-group" id="guige-boxNumber-add"> 
+        <div class="mui-input-row">
+            <label> 红色 29码 </label>
+            <div class="mui-numbox">
+                <button class="mui-btn mui-btn-numbox-minus" type="button">-</button>
+                <input class="mui-input-numbox" type="number" />
+                <button class="mui-btn mui-btn-numbox-plus" type="button">+</button>
+            </div>
+        </div>
+    </form>
 </div>
 
 <div class="jxc-mask"></div>
 <!-- 弹出层 -->
 <style>
 dl,dt,dd{ margin: 0;padding: 0; }
-.jxc-mask{ width: 100%;height: 100%;background: rgba(0, 0, 0, .3) }
-#guige-boxNumber{background: #fff; position:fixed; bottom:0; left:0; width: 100%; height: 300px; padding:10px 20px; border:none; }
-.guige-boxNumber-color dd,.guige-boxNumber-size dd{ display: flex;justify-content: flex-start;align-items: center; }
-.guige-boxNumber-color dt,.guige-boxNumber-size dt{ width: 100% }
+html,body{ width: 100%;height: 100%; }
+.jxc-mask{  display: none;  position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;background: rgba(0, 0, 0, .3) }
+#guige-boxNumber{background: #fff; position:fixed; bottom:0; left:0; width: 100%; height: 360px; padding:10px 20px; border:none;z-index: 12; }
+#guige-boxNumber .title{ text-align: center;margin: 10px 0 20px ;font-size: 18px; }
+.guige-boxNumber-color dd,.guige-boxNumber-size dd{ display: flex;justify-content: flex-start;align-items: center;flex-wrap: wrap }
+.guige-boxNumber-color dt,.guige-boxNumber-size dt{ width: 100%;    border-left: 3px solid #dc2e2e;
+    padding-left: 6px;
+    line-height: 1;
+    vertical-align: middle; }
 .guige-boxNumber-color  dd span,.guige-boxNumber-size  dd span{     float: left;
-  padding: 5px 6px;
+  padding: 5px 6px;    font-size: 14px;
     border: 1px solid #666666;
     border-radius: 4px;
-    margin-top: 10px;
-    margin-right: 20px; }
+    margin:15px 10px 15px 0;   }
   dd span.guige-on{     color: #ffffff;
     background: #F03C03;
     border: 1px solid #F03C03; }
+
+    .down dl.subCount {
+    height:2.6rem;
+    line-height: 2.6rem;
+}
+  dl.subCount dt{
+    float: left;
+}
+  dl.subCount dd{
+    float: right;
+}
+   
 </style>
 
 
     <script src="js/mui.min.js"></script>
     <script src="js/song.js"></script>
     <script>
- 
-$(".guige-boxNumber-color  dd span,.guige-boxNumber-size  dd span").on("click",function(){
-  alert("ddd")
-$("this").siblings().removeClass("guige-on");
-$("this").addClass("guige-on");
+//  展开选择框
+$("#guige-boxNumber-btn").on("click",function(){ 
+    $(".jxc-mask").css({ "display":"block" });
+    $("#guige-boxNumber").css({ "display":"block" });
 })
+
+//  隐藏选择框
+$(".jxc-mask").on("click",function(){ 
+$("#guige-boxNumber").css({ "display":"none" });
+$(this).css({ "display":"none" });
+})
+
+
+// 移除选中
+var guigeColor=$(".guige-boxNumber-color dd span.guige-on").text();
+var guigeSize=$(".guige-boxNumber-size dd span.guige-on").text();
+ 
+$(".guige-boxNumber-color dd span").on("click",function(){ 
+ $(this).addClass("guige-on").siblings().removeClass("guige-on");
+ guigeColor=$(this).text()
+ guigeBoxNumberAdd()
+});
+$(".guige-boxNumber-size  dd span").on("click",function(){ 
+    $(this).addClass("guige-on").siblings().removeClass("guige-on");
+    guigeSize=$(this).text()
+    guigeBoxNumberAdd()
+ });
+ function guigeBoxNumberAdd(){
+    $("#guige-boxNumber-add label").html(guigeColor+"&nbsp;" + guigeSize);
+}
+guigeBoxNumberAdd();
 
   
 
