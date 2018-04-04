@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Hello MUI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="css/mui.min.css">
+    <link rel="stylesheet" href="css/icons-extra.css">
+    <link rel="stylesheet" href="css/app.css">
+    <style type="text/css">
+   #supplier-box ul{ background: #fff }
+   #supplier-box ul li{ padding: 11px 13px; }
+   #supplier-box ul li .mui-media-body{ font-size: 12px; }
+   /* .mui-input-row label{ text-align: right; } */
+   .mui-input-row-textarea{ height: initial!important }
+   #mui-card-form .mui-card-footer{    justify-content: flex-end;}
+    </style>
+</head>
+
+<body>
+    <header id="header" class="mui-bar mui-bar-nav">
+
+        <h1 class="mui-title">新增供应商</h1>
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <!-- <a id="promptBtn" class="mui-icon mui-icon-search mui-pull-right"></a> -->
+        <!-- <a class="mui-icon mui-icon-checkmarkempty mui-pull-right">   </a> -->
+    </header> 
+ 
+  
+    
+    <div class="mui-content" >
+            <div class="mui-card" id="mui-card-form">
+                    <div class="mui-card-header">
+                            供应商信息填写
+                    </div>
+                 
+                    <form class="mui-input-group mui-card-content">
+                            <div class="mui-input-row">
+                                <label>公司名称</label>
+                                <input type="text" class="mui-input-clear" placeholder="公司名称">
+                            </div> 
+                            <div class="mui-input-row">
+                                <label>编号</label>
+                                <input type="text" class="mui-input-clear" placeholder="编号">
+                            </div>
+                            <div class="mui-input-row">
+                                <label>客户类型</label>
+                                <select class="mui-input-clear">
+                                        <option value="普通客户">普通客户</option> 
+                                        <option value="重点客户" selected>重点客户</option> 
+                                    </select>
+                            </div>
+                            <div class="mui-input-row">
+                                <label>联系人</label>
+                                <input type="text" class="mui-input-clear" placeholder="联系人">
+                            </div>
+                            <div class="mui-input-row">
+                                <label>联系电话</label>
+                                <input type="text" class="mui-input-clear" placeholder="联系电话">
+                            </div>
+                            <div class="mui-input-row">
+                                <label>传真</label>
+                                <input type="text" class="mui-input-clear" placeholder="传真">
+                            </div>
+                            <div class="mui-input-row">
+                                <label>电子邮箱</label>
+                                <input type="text" class="mui-input-clear" placeholder="电子邮箱">
+                            </div>
+                            <div class="mui-input-row">
+                                <label>联系地址</label>
+                                <input type="text" class="mui-input-clear" placeholder="联系地址">
+                            </div>
+                            <div class="mui-input-row mui-input-row-textarea" >
+                                <label>其他描述</label>
+                                    <textarea id="textarea" rows="4" placeholder=""></textarea>
+                                </div>
+                            </form>
+                            <div class="mui-card-footer">
+                                    <div class="mui-button-row">
+                                        <button type="button" class="mui-btn mui-btn-primary"  >提交保存</button>&nbsp;&nbsp;
+                                        <!-- <button type="button" class="mui-btn mui-btn-danger" >重新填写</button> -->
+                                    </div> 
+                            </div>
+                </div>
+</div>
+    <nav class="mui-bar mui-bar-tab" id="bar-down">
+       
+            <div class="mui-tab-item mui-active" data-href="./index.html">
+                <span class="mui-icon mui-icon-home"></span>
+                <span class="mui-tab-label">首页</span>
+            </div>
+            <div class="mui-tab-item" data-href="./sales.html">
+                <span class="mui-icon mui-icon-star"> </span>
+                <span class="mui-tab-label">销售管理</span>
+            </div>
+            <div class="mui-tab-item" data-href="./procurement.html">
+                <span class="mui-icon mui-icon-download"> </span>
+                <span class="mui-tab-label">采购管理</span>
+            </div>
+            <div class="mui-tab-item" data-href="./warehouse.html">
+                <span class="mui-icon mui-icon-flag"></span>
+                <span class="mui-tab-label">仓库管理</span>
+            </div>
+            <div class="mui-tab-item" data-href="./basis.html">
+                <span class="mui-icon mui-icon-gear"></span>
+                <span class="mui-tab-label">基础管理</span>
+            </div>
+      
+    </nav>
+ 
+    <script src="js/mui.min.js"></script>
+    <script src="js/song.js"></script>
+    <script>
+        mui.init({});
+        //当前页面执行
+       /*  mui(".mui-table-view").on("tap", "li", function () {
+            var href = this.getAttribute("data-href");
+            if (href !== "") {
+                gotoUrl(href);
+                return;
+            }
+        }, false) */
+        mui("#bar-down").on("tap", "div", function () {
+            var href = this.getAttribute("data-href");
+            if (href !== "") {
+                gotoUrl(href);
+                return;
+            }
+        }, false);
+     
+    </script>
+</body>
+
+</html>
