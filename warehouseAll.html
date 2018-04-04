@@ -18,6 +18,8 @@
    /* .mui-input-row label{ text-align: right; } */
    .mui-input-row-textarea{ height: initial!important }
    #mui-card-form .mui-card-footer{    justify-content: flex-end;}
+   table{ width: 100%;background: #fff }
+   td{ text-align: center; }
     </style>
       <script src="js/jquery.min.js"></script>
       <link href="js/webuploader.css" rel="stylesheet">
@@ -28,57 +30,35 @@
 <body>
     <header id="header" class="mui-bar mui-bar-nav">
 
-        <h1 class="mui-title">仓库管理</h1>
+        <h1 class="mui-title">仓库盘点</h1>
         <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
         <!-- <a id="promptBtn" class="mui-icon mui-icon-search mui-pull-right"></a> -->
         <!-- <a class="mui-icon mui-icon-checkmarkempty mui-pull-right">   </a> -->
     </header> 
-    <div class="mui-content" id="supplier-box" >
-        <ul class="mui-table-view mui-grid-view mui-grid-9">
-            
-            <li class="mui-table-view-cell mui-media  mui-col-xs-3  " data-href="warehouseAdd.html">
-                <div class="mui-media-title">
-                    <span class="mui-icon mui-icon-download">
-                    </span>
-                </div>
-                <div class="mui-media-body">国内入库</div> 
-            </li>
-          
-            <li class="mui-table-view-cell mui-media  mui-col-xs-3  " data-href="warehouseOut.html">
-                <div class="mui-media-title">
-                    <span class="mui-icon mui-icon-upload"></span>
-                </div>
-                <div class="mui-media-body">国内出库</div>
-
-            </li>
-            <li class="mui-table-view-cell mui-media  mui-col-xs-3  " data-href="">
-                <div class="mui-media-title">
-                    <span class="mui-icon mui-icon-plus"></span>
-                </div>
-                <div class="mui-media-body">海外入仓</div> 
-            </li>
-            <li class="mui-table-view-cell mui-media  mui-col-xs-3  " data-href="">
-                <div class="mui-media-title">
-                    <span class="mui-icon mui-icon-minus"></span>
-                </div>
-                <div class="mui-media-body">海外出仓</div> 
-            </li>
-            <li class="mui-table-view-cell mui-media  mui-col-xs-6 " data-href="warehouseAll.html">
-                <div class="mui-media-title">
-                    <span class="mui-icon mui-icon-compose"></span>
-                </div>
-                <div class="mui-media-body">库存盘点</div>
-
-            </li>
-            <li class="mui-table-view-cell mui-media  mui-col-xs-6  " data-href="warehouseTransfers.html">
-                <div class="mui-media-title">
-                    <span class="mui-icon mui-icon-settings"></span>
-                </div>
-                <div class="mui-media-body">库存调拨</div> 
-            </li>
-        </ul>
-    </div>
-    <nav class="mui-bar mui-bar-tab" id="bar-down"> 
+    
+    <div class="mui-content">
+        <div class="mui-input-row mui-search" id="supplier-search">
+            <input type="search" class="mui-input-clear" placeholder="如：货号">
+          </div>
+       <table>
+         <thead>
+           <tr>
+             <th> 仓库 </th>
+             <th> 货号 </th>
+             <th> 数量 </th>
+           </tr>
+         </thead>
+         <tbody>
+           <tr>
+             <td> A库 </td>
+             <td> A226 </td>
+             <td> 1000 </td>
+           </tr>
+         </tbody>
+       </table>
+    </div> 
+    <nav class="mui-bar mui-bar-tab" id="bar-down">
+       
             <div class="mui-tab-item mui-active" data-href="./index.html">
                 <span class="mui-icon mui-icon-home"></span>
                 <span class="mui-tab-label">首页</span>
@@ -105,14 +85,7 @@
     <script src="js/song.js"></script>
     <script>
         mui.init({});
-        mui(".mui-table-view").on("tap", "li", function () {
-            showLoading()
-            var href = this.getAttribute("data-href");
-            if (href !== "") {
-                gotoUrl(href);
-                return;
-            }
-        }, false)
+
       // 底部导航 链接
         mui("#bar-down").on("tap", "div", function () {
             var href = this.getAttribute("data-href");
