@@ -11,18 +11,43 @@
     <link rel="stylesheet" href="css/icons-extra.css">
     <link rel="stylesheet" href="css/app.css">
     <style type="text/css">
-    body{ padding-bottom: 50px; }
-   #supplier-box ul{ background: #fff }
-   #supplier-box ul li{ padding: 11px 13px; }
-   #supplier-box ul li .mui-media-body{ font-size: 12px; }
-   /* .mui-input-row label{ text-align: right; } */
-   .mui-input-row-textarea{ height: initial!important }
-   #mui-card-form .mui-card-footer{    justify-content: flex-end;}
-   #guige-boxSize input{ width: 21.3333%;font-size: 14px; }
+        body {
+            padding-bottom: 50px;
+        }
+
+        #supplier-box ul {
+            background: #fff
+        }
+
+        #supplier-box ul li {
+            padding: 11px 13px;
+        }
+
+        #supplier-box ul li .mui-media-body {
+            font-size: 12px;
+        }
+
+        /* .mui-input-row label{ text-align: right; } */
+
+        .mui-input-row-textarea {
+            height: initial !important
+        }
+
+        #mui-card-form .mui-card-footer {
+            justify-content: flex-end;
+        }
+
+        #guige-boxSize input {
+            width: 21.3333%;
+            font-size: 14px;
+        }
     </style>
-      <script src="js/jquery.min.js"></script>
-      <!-- <link href="./js/theme/default/layer.css" rel="stylesheet"> -->
-      <script src="./js/layer.js"></script> 
+
+
+    <link rel="stylesheet" href="./css/guige.css">
+    <script src="js/jquery.min.js"></script>
+    <!-- <link href="./js/theme/default/layer.css" rel="stylesheet"> -->
+    <script src="./js/layer.js"></script>
 </head>
 
 <body>
@@ -32,195 +57,247 @@
         <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
         <!-- <a id="promptBtn" class="mui-icon mui-icon-search mui-pull-right"></a> -->
         <!-- <a class="mui-icon mui-icon-checkmarkempty mui-pull-right">   </a> -->
-    </header> 
-  
-    <div class="mui-content" >
-        <div class="mui-card" > 
-            <div class="mui-input-group mui-card-content">
-                    <div class="mui-input-row">
-                        <label>货品箱名称</label>
-                        <input type="text" class="mui-input-clear" placeholder="商货品名称">
-                    </div> 
-                    <div class="mui-input-row" id="guige-boxSize">
-                        <label>货品箱尺寸</label>
-                        <input type="text" class=" " placeholder="箱高">
-                        <input type="text" class=" " placeholder="箱宽">
-                        <input type="text" class=" " placeholder="箱长">
-                    </div> 
-                    <div class="mui-input-row mui-input-row-textarea" >
-                        <label>备注</label>
-                            <textarea id="textarea" rows="2" placeholder=""></textarea>
-                        </div>
-            </div> 
-        </div>
-            <div class="mui-card"  >
-                    <div class="mui-card-header">
-                        货品箱具体规格
-                    </div> 
-                    <div class="mui-input-group mui-card-content"> 
-                            <div class="mui-input-row">
-                                <label>货品单位数量</label> 
-                                <input type="text" class="mui-input-clear" value="80" placeholder="">
-                            </div>
-                            <div class="mui-input-row" id="guige-boxNumber-btn">
-                                <label>包含产品规格</label> 
-                                <input type="text"  class="mui-input-clear" disabled value="点击选择具体包装数量" placeholder="">
-                            </div> 
-                          </div> 
-                          <div class="mui-card-footer">
-                               
-                              </div>
-                              <div class="mui-card-footer">
-                                  <div class="mui-button-row">
-                                      <button type="button" class="mui-btn mui-btn-primary"  >提交保存</button>&nbsp;&nbsp; 
-                                  </div> 
-                          </div>
-                </div>
-          
+    </header>
 
-</div>
+    <div class="mui-content">
+        <div class="mui-card">
+            <div class="mui-input-group mui-card-content">
+                <div class="mui-input-row">
+                    <label>货品箱名称</label>
+                    <input type="text" class="mui-input-clear" placeholder="商货品名称">
+                </div>
+                <div class="mui-input-row" id="guige-boxSize">
+                    <label>货品箱尺寸</label>
+                    <input type="text" class=" " placeholder="箱高">
+                    <input type="text" class=" " placeholder="箱宽">
+                    <input type="text" class=" " placeholder="箱长">
+                </div>
+                <div class="mui-input-row mui-input-row-textarea">
+                    <label>备注</label>
+                    <textarea id="textarea" rows="2" placeholder=""></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="mui-card">
+            <div class="mui-card-header">
+                货品箱具体规格
+            </div>
+            <div class="mui-input-group mui-card-content">
+                <div class="mui-input-row" >
+                    <label>货品单位数量</label>
+                    <input type="text" class="mui-input-clear"  id="guige-total" value="0" placeholder="">
+                </div>
+                <div class="mui-input-row" id="guige-boxNumber-btn">
+                    <label>包含产品规格</label>
+                    <input type="text" class="mui-input-clear" disabled value="点击选择具体包装数量" placeholder="">
+                </div>
+            </div>
+            <div class="mui-card-footer" id="guige-add-list">
+                <table style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>颜色</th>
+                            <th>尺码</th>
+                            <th>数量</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- <tr>
+                                           <td> 蓝色 </td>
+                                           <td> 39 </td>
+                                           <td> <input type="text" value="20"  ></td>
+                                           <td> <a > 移除 </a> </td>
+                                       </tr> -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="mui-card-footer">
+                <div class="mui-button-row">
+                    <button type="button" class="mui-btn mui-btn-primary">提交保存</button>&nbsp;&nbsp;
+                </div>
+            </div>
+        </div>
+
+
+    </div>
     <nav class="mui-bar mui-bar-tab" id="bar-down">
-       
-            <div class="mui-tab-item mui-active" data-href="./index.html">
-                <span class="mui-icon mui-icon-home"></span>
-                <span class="mui-tab-label">首页</span>
-            </div>
-            <div class="mui-tab-item" data-href="./sales.html">
-                <span class="mui-icon mui-icon-star"> </span>
-                <span class="mui-tab-label">销售管理</span>
-            </div>
-            <div class="mui-tab-item" data-href="./procurement.html">
-                <span class="mui-icon mui-icon-download"> </span>
-                <span class="mui-tab-label">采购管理</span>
-            </div>
-            <div class="mui-tab-item" data-href="./warehouse.html">
-                <span class="mui-icon mui-icon-flag"></span>
-                <span class="mui-tab-label">仓库管理</span>
-            </div>
-            <div class="mui-tab-item" data-href="./basis.html">
-                <span class="mui-icon mui-icon-gear"></span>
-                <span class="mui-tab-label">基础管理</span>
-            </div> 
+
+        <div class="mui-tab-item mui-active" data-href="./index.html">
+            <span class="mui-icon mui-icon-home"></span>
+            <span class="mui-tab-label">首页</span>
+        </div>
+        <div class="mui-tab-item" data-href="./sales.html">
+            <span class="mui-icon mui-icon-star"> </span>
+            <span class="mui-tab-label">销售管理</span>
+        </div>
+        <div class="mui-tab-item" data-href="./procurement.html">
+            <span class="mui-icon mui-icon-download"> </span>
+            <span class="mui-tab-label">采购管理</span>
+        </div>
+        <div class="mui-tab-item" data-href="./warehouse.html">
+            <span class="mui-icon mui-icon-flag"></span>
+            <span class="mui-tab-label">仓库管理</span>
+        </div>
+        <div class="mui-tab-item" data-href="./basis.html">
+            <span class="mui-icon mui-icon-gear"></span>
+            <span class="mui-tab-label">基础管理</span>
+        </div>
     </nav>
 
 
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
-<!-- 弹出层 -->
-<div id="guige-boxNumber" style="display:none" >
-<div class="title"> 选择货品箱包含商品颜色数量 </div>
-<dl class="guige-boxNumber-color  ">
-  <dt> 颜色 </dt>
-  <dd> 
-    <span class="guige-on">褐色</span>
-    <span>红色</span>
-    <span>白色</span>
-    <span>绿色</span>
-  </dd>
-</dl>
-<dl class="guige-boxNumber-size  ">
-  <dt> 尺码 </dt>
-  <dd> 
-     <span class="guige-on">28</span>
-     <span>29</span>
-     <span>30</span>
-     <span>31</span>
-     <span>32</span>
-     <span>均码</span>
-  </dd> 
-</dl>
-<form class="mui-input-group" id="guige-boxNumber-add"> 
-        <div class="mui-input-row">
-            <label> 红色 29码 </label>
-            <div class="mui-numbox">
-                <button class="mui-btn mui-btn-numbox-minus" type="button">-</button>
-                <input class="mui-input-numbox" type="number" />
-                <button class="mui-btn mui-btn-numbox-plus" type="button">+</button>
+    <!-- 弹出层 -->
+    <div id="guige-boxNumber" style="display:none">
+        <div class="title"> 选择货品箱包含商品颜色数量 </div>
+        <dl class="guige-boxNumber-color  ">
+            <dt> 颜色 </dt>
+            <dd>
+                <span class="guige-on">褐色</span>
+                <span>红色</span>
+                <span>白色</span>
+                <span>绿色</span>
+            </dd>
+        </dl>
+        <dl class="guige-boxNumber-size  ">
+            <dt> 尺码 </dt>
+            <dd>
+                <span class="guige-on">28</span>
+                <span>29</span>
+                <span>30</span>
+                <span>31</span>
+                <span>32</span>
+            </dd>
+        </dl>
+        <form class="mui-input-group" id="guige-boxNumber-add">
+            <div class="mui-input-row">
+                <label> 已选中
+                    <span>红色 29码 数量 0</span>
+                </label>
+                <div class="mui-numbox">
+                    <button class="mui-btn mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" value="1" type="number" />
+                    <button class="mui-btn mui-btn-numbox-plus" type="button">+</button>
+                </div>
             </div>
-        </div>
-    </form>
-</div>
+        </form>
+        <button type="button" class="mui-btn mui-btn-primary mui-btn-block" id="guige-submit"> 确认添加 </button>
+    </div>
 
-<div class="jxc-mask"></div>
-<!-- 弹出层 -->
-<style>
-dl,dt,dd{ margin: 0;padding: 0; }
-html,body{ width: 100%;height: 100%; }
-.jxc-mask{  display: none;  position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;background: rgba(0, 0, 0, .3) }
-#guige-boxNumber{background: #fff; position:fixed; bottom:0; left:0; width: 100%; height: 360px; padding:10px 20px; border:none;z-index: 12; }
-#guige-boxNumber .title{ text-align: center;margin: 10px 0 20px ;font-size: 18px; }
-.guige-boxNumber-color dd,.guige-boxNumber-size dd{ display: flex;justify-content: flex-start;align-items: center;flex-wrap: wrap }
-.guige-boxNumber-color dt,.guige-boxNumber-size dt{ width: 100%;    border-left: 3px solid #dc2e2e;
-    padding-left: 6px;
-    line-height: 1;
-    vertical-align: middle; }
-.guige-boxNumber-color  dd span,.guige-boxNumber-size  dd span{     float: left;
-  padding: 5px 6px;    font-size: 14px;
-    border: 1px solid #666666;
-    border-radius: 4px;
-    margin:15px 10px 15px 0;   }
-  dd span.guige-on{     color: #ffffff;
-    background: #F03C03;
-    border: 1px solid #F03C03; }
-
-    .down dl.subCount {
-    height:2.6rem;
-    line-height: 2.6rem;
-}
-  dl.subCount dt{
-    float: left;
-}
-  dl.subCount dd{
-    float: right;
-}
-   
-</style>
+    <div class="jxc-mask"></div>
+    <!-- 弹出层 -->
 
 
     <script src="js/mui.min.js"></script>
     <script src="js/song.js"></script>
     <script>
-//  展开选择框
-$("#guige-boxNumber-btn").on("click",function(){ 
-    $(".jxc-mask").css({ "display":"block" });
-    $("#guige-boxNumber").css({ "display":"block" });
-})
+        function showBOX() {
+            $(".jxc-mask").css({
+                "display": "block"
+            });
+            $("#guige-boxNumber").css({
+                "display": "block"
+            });
+        }
 
-//  隐藏选择框
-$(".jxc-mask").on("click",function(){ 
-$("#guige-boxNumber").css({ "display":"none" });
-$(this).css({ "display":"none" });
-})
+        function hideBOX() {
+            $(".jxc-mask").css({
+                "display": "none"
+            });
+            $("#guige-boxNumber").css({
+                "display": "none"
+            });
+        } 
+        //  展开选择框
+        $("#guige-boxNumber-btn").on("click", function () {
+            showBOX()
+        })
+
+        //  隐藏选择框
+        $(".jxc-mask").on("click", function () {
+            hideBOX()
+        })
+        var guigeColor = $(".guige-boxNumber-color dd span.guige-on").text();
+        var guigeSize = $(".guige-boxNumber-size dd span.guige-on").text();
+        var guigeNumber = 1;
+        var guigeJSON = [];
+        var guigeTr = "";
+       
+
+        // 移除选中
+        $(".guige-boxNumber-color dd span").on("click", function () {
+            $(this).addClass("guige-on").siblings().removeClass("guige-on");
+            guigeColor = $(this).text()
+            guigeBoxNumberAdd()
+            return guigeColor
+        });
+        $(".guige-boxNumber-size  dd span").on("click", function () {
+            $(this).addClass("guige-on").siblings().removeClass("guige-on");
+            guigeSize = $(this).text()
+            guigeBoxNumberAdd()
+            return guigeSize
+        });
+        $("#guige-boxNumber-add .mui-numbox ").on("click", function () {
+            guigeNumber = $(this).find(".mui-input-numbox").val();
+            if (guigeNumber < 1) {
+                guigeNumber = 1
+                $(this).find(".mui-input-numbox").val(1)
+            }
+            guigeBoxNumberAdd()
+            return guigeNumber
+        });
+
+        function guigeBoxNumberAdd() {
+
+            $("#guige-boxNumber-add label span").html(guigeColor + "&nbsp;" + guigeSize + "码" + "&nbsp;数量" +
+                guigeNumber)
+        }
+        guigeBoxNumberAdd();
 
 
-// 移除选中
-var guigeColor=$(".guige-boxNumber-color dd span.guige-on").text();
-var guigeSize=$(".guige-boxNumber-size dd span.guige-on").text();
- 
-$(".guige-boxNumber-color dd span").on("click",function(){ 
- $(this).addClass("guige-on").siblings().removeClass("guige-on");
- guigeColor=$(this).text()
- guigeBoxNumberAdd()
-});
-$(".guige-boxNumber-size  dd span").on("click",function(){ 
-    $(this).addClass("guige-on").siblings().removeClass("guige-on");
-    guigeSize=$(this).text()
-    guigeBoxNumberAdd()
- });
- function guigeBoxNumberAdd(){
-    $("#guige-boxNumber-add label").html(guigeColor+"&nbsp;" + guigeSize);
-}
-guigeBoxNumberAdd();
+        mui("#guige-boxNumber").on("tap", "#guige-submit", function () {
 
-  
+            guigeJSON = [
+                guigeColor,
+                guigeSize,
+                guigeNumber
+            ];
+            // var  GuigeTd1 =$("<td></td>");
+            // var  GuigeTd2 =$("<td></td>");
+            // var  GuigeTd3 =$("<td></td>");
+            // var  GuigeA =$("<a>移除</a>");
+            // GuigeTd1.html(guigeJSON[0])
+            // GuigeTd2.html(guigeJSON[1])
+            // GuigeTd3.html(guigeJSON[2])
+            // var  GuigeTr =$("<tr></tr>").append(GuigeTd1).append(GuigeTd2).append(GuigeTd3)
+            guigeTr = "<tr><td> " + guigeJSON[0] + " </td><td> " + guigeJSON[1] +
+                "</td><td> <input type=\"text\" value=\"" + guigeJSON[2] +
+                "\"></td> <td> <a > 移除 </a> </td></tr>";
+            $("#guige-add-list table tbody").append(guigeTr)
+            hideBOX();
+            $("#guige-add-list tbody tr td a").on("click", function () {
+                console.log($(this).html())
+                $(this).parent().parent().remove()
+            });
+            $("#guige-boxNumber-add .mui-numbox .mui-input-numbox").val(0)
+            guigeNumber = 0  
+        }, false);
+
+
+// function guigeTotal(){   
+//     var guige_total=0
+// $("#guige-add-list tbody tr").each(function(index,ele){
+//     guige_tota+=parseInt($(this).find("input").val());
+//    return guige_tota
+// })  
+//     $("#guige-total").val(guige_tota)
+// } 
+
 
         mui.init({});
 
-      // 底部导航 链接
+        // 底部导航 链接
         mui("#bar-down").on("tap", "div", function () {
             var href = this.getAttribute("data-href");
             if (href !== "") {

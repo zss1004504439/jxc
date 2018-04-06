@@ -20,6 +20,15 @@
    #mui-card-form .mui-card-footer{    justify-content: flex-end;}
    table{ width: 100%;background: #fff }
    td{ text-align: center; }
+ 
+   #warehouseAll{ width: 98%;margin: 0 auto }
+   #warehouseAll thead th { padding: 10px 0 }
+   #warehouseAll>tbody>tr>td { border: 1px solid #d6d6d6}
+   #warehouseAll>tbody>tr:nth-child(2n) td{background-color: #fff; padding: 3px 0 }
+   #warehouseAll>tbody>tr:nth-child(2n-1) td{background-color:#eaeaea;  padding: 3px 0  }
+   #warehouseAll>tbody>tr:nth-child(2n)>td{ }
+   #warehouseAll>tbody>tr:nth-child(2n-1)>td{  }
+   
     </style>
       <script src="js/jquery.min.js"></script>
       <link href="js/webuploader.css" rel="stylesheet">
@@ -35,24 +44,67 @@
         <!-- <a id="promptBtn" class="mui-icon mui-icon-search mui-pull-right"></a> -->
         <!-- <a class="mui-icon mui-icon-checkmarkempty mui-pull-right">   </a> -->
     </header> 
-    
-    <div class="mui-content">
-        <div class="mui-input-row mui-search" id="supplier-search">
-            <input type="search" class="mui-input-clear" placeholder="如：货号">
-          </div>
-       <table>
+    <div class="mui-content" id="supplier-search"> 
+            <form action="" class="mui-content-padded" style="margin: 5px;">
+                <div class="mui-input-row mui-search" id=" ">
+                    <input type="search" class="mui-input-clear" placeholder="如：男鞋">
+                </div>
+            </form> 
+    </div> 
+    <div>
+         
+       <table id="warehouseAll">
          <thead>
            <tr>
-             <th> 仓库 </th>
-             <th> 货号 </th>
-             <th> 数量 </th>
+             <th> 仓库名 </th>
+             <th> 货号信息 </th> 
            </tr>
          </thead>
          <tbody>
            <tr>
-             <td> A库 </td>
-             <td> A226 </td>
-             <td> 1000 </td>
+             <td> A仓 </td>
+             <td>
+                 <table>
+                     <tbody>
+                         <tr>
+                             <td>s001</td>
+                             <td>12</td>
+                         </tr>
+                     </tbody>
+                 </table>
+             </td>
+           </tr>
+           <tr>
+             <td> B仓 </td>
+             <td>
+                 <table>
+                     <tbody>
+                         <tr>
+                             <td>s001</td>
+                             <td>12</td>
+                         </tr>
+                     </tbody>
+                 </table>
+             </td>
+           </tr>
+           
+           <tr>
+             <td> 一仓 </td>
+             <td>
+                    <table>
+                            <tbody>
+                                <tr>
+                                    <td>s001</td>
+                                    <td>12</td>
+                                </tr>
+                                <tr>
+                                    <td>s001</td>
+                                    <td>12</td>
+                                </tr>
+                            </tbody>
+                        </table>
+             </td>
+            
            </tr>
          </tbody>
        </table>
