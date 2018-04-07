@@ -25,16 +25,16 @@
 </head>
 
 <body>
-    <header id="header" class="mui-bar mui-bar-nav">
+    <!-- <header id="header" class="mui-bar mui-bar-nav"> -->
 
-        <h1 class="mui-title">新增商品</h1>
-        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <!-- <h1 class="mui-title">新增商品</h1> -->
+        <!-- <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a> -->
         <!-- <a id="promptBtn" class="mui-icon mui-icon-search mui-pull-right"></a> -->
         <!-- <a class="mui-icon mui-icon-checkmarkempty mui-pull-right">   </a> -->
-    </header> 
+    <!-- </header>  -->
  
 
-
+<!-- 
     <div class="mui-content" >
             <div class="mui-card"  >
                     <div class="mui-card-header">
@@ -51,11 +51,32 @@
                 </div>
           
 </div>
- 
- 
-    <script src="js/mui.min.js"></script>
-    <script src="js/song.js"></script>
   
+    <script src="js/mui.min.js"></script>
+    <script src="js/song.js"></script> -->
+
+     
+    <table id="tb">
+    <tr><th>单价</th><th>数量</th><th>小计</th></tr>
+    <tr><td><input type="text" /></td><td><input type="text" /></td><td><input type="text" readonly/></td></tr>
+    <tr><td><input type="text" /></td><td><input type="text" /></td><td><input type="text" readonly/></td></tr>
+    <tr><td><input type="text" /></td><td><input type="text" /></td><td><input type="text" readonly/></td></tr>
+    <tr><td><input type="text" /></td><td><input type="text" /></td><td><input type="text" readonly/></td></tr>
+    <tr><td>总计：</td><td><input type="text" id="total" readonly /></td></tr>
+    </table>
+    <script>
+            var ipts ;
+        $('#tb input').not('[readonly]').change(function () {
+            var sum = 0, v;
+            $('#tb tr').each(function () {
+                ipts = $(this).find('input');
+                v = (parseFloat(ipts.eq(0).val()) || 0) * (parseFloat(ipts.eq(1).val()) || 0)
+                ipts.eq(2).val(v);
+                sum += v;
+            });
+            $('#total').val(sum);
+        });
+        </script>
 </body>
 
 </html>

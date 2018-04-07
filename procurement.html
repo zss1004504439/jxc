@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> 采购历史订单 </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="css/mui.min.css">
+    <link rel="stylesheet" href="css/icons-extra.css">
+    <link rel="stylesheet" href="css/app.css">
+    <style type="text/css">
+.mui-table-view .mui-media-object.mui-pull-left{ max-width: 90px; height: 90px; }
+.mui-table-view-cell p{ font-size: 12px;; }
+ 
+    </style>
+</head>
+
+<body>
+    <header id="header" class="mui-bar mui-bar-nav">
+
+        <h1 class="mui-title">采购历史订单</h1>
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <!-- <a id="promptBtn" class="mui-icon mui-icon-search mui-pull-right"></a> -->
+        <a class="mui-icon  mui-icon-plus mui-pull-right" href="./procurementAdd.html"></a>
+    </header>
+ 
+  <div class="mui-content" id="supplier-search"> 
+        <form class="mui-content-padded" style="margin: 5px;">
+            <div class="mui-input-row mui-search" id=" ">
+                <input type="search" class="mui-input-clear" placeholder="如：货号">
+            </div>
+        </form>
+</div>
+
+  <ul class="mui-table-view mui-table-view-chevron">
+    <li class="mui-table-view-cell mui-media">
+        <a class="mui-navigate-right" href="./procurementShow.html"> 
+            <div class="mui-media-body">
+                <h4 class="title"> 采购单编号 </h4>
+                <p class="mui-ellipsis"> 总计金额：<span>5120.00</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;实付金额：<span>5120.00</span> </p>
+                <p class="mui-ellipsis"> 
+                    采购日期：<span> 2018/04/04 </span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    入库日期：<span> 暂无 </span>
+                </p> 
+                <p class="mui-ellipsis"> 订单状态：<span>已下单生产</span></p> 
+            </div>
+        </a>
+    </li> 
+ 
+</ul> 
+    <div class="mui-content">  </div>
+    <nav class="mui-bar mui-bar-tab" id="bar-down">
+       
+            <div class="mui-tab-item mui-active" data-href="./index.html">
+                <span class="mui-icon mui-icon-home"></span>
+                <span class="mui-tab-label">首页</span>
+            </div>
+            <div class="mui-tab-item" data-href="./sales.html">
+                <span class="mui-icon mui-icon-star"> </span>
+                <span class="mui-tab-label">销售管理</span>
+            </div>
+            <div class="mui-tab-item" data-href="./procurement.html">
+                <span class="mui-icon mui-icon-download"> </span>
+                <span class="mui-tab-label">采购管理</span>
+            </div>
+            <div class="mui-tab-item" data-href="./warehouse.html">
+                <span class="mui-icon mui-icon-flag"></span>
+                <span class="mui-tab-label">仓库管理</span>
+            </div>
+            <div class="mui-tab-item" data-href="./basis.html">
+                <span class="mui-icon mui-icon-gear"></span>
+                <span class="mui-tab-label">基础管理</span>
+            </div>
+      
+    </nav>
+
+
+
+    <script src="js/mui.min.js"></script>
+    <script src="js/song.js"></script>
+    <script>
+        mui.init({});
+        //当前页面执行
+       /*  mui(".mui-table-view").on("tap", "li", function () {
+            var href = this.getAttribute("data-href");
+            if (href !== "") {
+                gotoUrl(href);
+                return;
+            }
+        }, false) */
+        mui("#bar-down").on("tap", "div", function () {
+            var href = this.getAttribute("data-href");
+            if (href !== "") {
+                gotoUrl(href);
+                return;
+            }
+        }, false);
+     
+    </script>
+</body>
+
+</html>

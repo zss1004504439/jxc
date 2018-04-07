@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> 采购历史订单 </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="css/mui.min.css">
+    <link rel="stylesheet" href="css/icons-extra.css">
+    <link rel="stylesheet" href="css/app.css">
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/layer.js"></script>
+    <style type="text/css">
+.mui-table-view .mui-media-object.mui-pull-left{ max-width: 90px; height: 90px; }
+.mui-table-view-cell p{  }
+ 
+    </style>
+</head>
+
+<body>
+    <header id="header" class="mui-bar mui-bar-nav">
+
+        <h1 class="mui-title">订单详情</h1>
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <!-- <a id="promptBtn" class="mui-icon mui-icon-search mui-pull-right"></a> -->
+        <a class="mui-icon  mui-icon-plus mui-pull-right" href="./procurementAdd.html"></a>
+    </header>
+ 
+  <div class="mui-content" > 
+        
+    <ul class="mui-table-view mui-card">
+      <li class="mui-table-view-cell mui-media"> 
+              <div class="mui-media-body">
+                  <h4 class="title"> 采购单编号 </h4>
+                  <p class="mui-ellipsis"> 总计金额：<span>5120.00</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;实付金额：<span>5120.00</span> </p>
+                  <p class="mui-ellipsis"> 
+                      采购日期：<span> 2018/04/04 </span>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      入库日期：<span> 暂无 </span>
+                  </p>
+                  <p class="mui-ellipsis"> 订单状态：<span>已下单生产</span></p> 
+              </div> 
+      </li>
+    </ul> 
+    <div class="mui-card">
+				<div class="mui-card-header">采购单编号</div>
+				<div class="mui-card-content">
+					<div class="mui-card-content-inner">
+            <div class="mui-ellipsis">
+                录入人：<span> 2018/04/04 </span>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              供应商：<span> 暂无 </span>
+            </div> 
+            <div class="mui-ellipsis">
+                采购日期：<span> 2018/04/04 </span>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                入库日期：<span> 暂无 </span>
+            </div> 
+              <div class="mui-ellipsis"> 进货数量：<span> 200 </span></div> 
+              <div class="mui-ellipsis">
+                  总计金额：<span>5120.00</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;实付金额：<span>5120.00</span> 
+              </div> 
+					</div>
+				</div>
+				<div class="mui-card-footer">
+          <div class="mui-ellipsis">
+              订单状态：
+              <span>已下单生产&退回</span>
+              <a href="javascript:;" id="returnGeason">原因</a>
+          </div>
+        </div>
+      </div>
+      
+
+    <div class="mui-card">
+				<div class="mui-card-header">订单包含货品详情</div>
+				<div class="mui-card-content">
+            <ul class="mui-table-view mui-table-view-chevron">
+                <li class="mui-table-view-cell mui-media"> 
+                        <div class="mui-media-body">
+                            <h4 class="title"> 商品货号 </h4>
+                            <p class="mui-ellipsis"> 货品箱规格：<span>5120</span> </p>
+                            <p class="mui-ellipsis">数量：<span> 1000 </span> </p> 
+                            <p class="mui-ellipsis"> 金额<span>10000.00</span></p> 
+                        </div> 
+                </li> 
+                <li class="mui-table-view-cell mui-media"> 
+                        <div class="mui-media-body">
+                            <h4 class="title"> 商品货号 </h4>
+                            <p class="mui-ellipsis"> 货品箱规格：<span>5120</span> </p>
+                            <p class="mui-ellipsis">数量：<span> 1000 </span> </p> 
+                            <p class="mui-ellipsis"> 金额<span>10000.00</span></p> 
+                        </div> 
+                </li> 
+                <li class="mui-table-view-cell mui-media"> 
+                        <div class="mui-media-body">
+                            <h4 class="title"> 商品货号 </h4>
+                            <p class="mui-ellipsis"> 货品箱规格：<span>5120</span> </p>
+                            <p class="mui-ellipsis">数量：<span> 1000 </span> </p> 
+                            <p class="mui-ellipsis"> 金额<span>10000.00</span></p> 
+                        </div> 
+                </li> 
+              
+             
+            </ul>
+        </div>
+			</div>
+</div> 
+
+<!-- 退回原因 弹窗 -->
+
+<div id="returnGeasonBox" style="display:none">
+ <div id="returnGeasonBox-content">
+    <p>
+        <img src="http://test19.mqmiz.com/upload/201804/02/201804021326125595.jpg" width="100%" alt="">
+        <span> 退回原因  </span>
+      </p>
+ </div>
+</div>
+
+<!-- 退回原因 -->
+
+<script>
+  $("#returnGeason").on("click",function(){
+    layer.open({
+    content: $("#returnGeasonBox").html()
+    ,btn: '我知道了'
+  });
+  })
+</script>
+
+    <nav class="mui-bar mui-bar-tab" id="bar-down">
+       
+            <div class="mui-tab-item mui-active" data-href="./index.html">
+                <span class="mui-icon mui-icon-home"></span>
+                <span class="mui-tab-label">首页</span>
+            </div>
+            <div class="mui-tab-item" data-href="./sales.html">
+                <span class="mui-icon mui-icon-star"> </span>
+                <span class="mui-tab-label">销售管理</span>
+            </div>
+            <div class="mui-tab-item" data-href="./procurement.html">
+                <span class="mui-icon mui-icon-download"> </span>
+                <span class="mui-tab-label">采购管理</span>
+            </div>
+            <div class="mui-tab-item" data-href="./warehouse.html">
+                <span class="mui-icon mui-icon-flag"></span>
+                <span class="mui-tab-label">仓库管理</span>
+            </div>
+            <div class="mui-tab-item" data-href="./basis.html">
+                <span class="mui-icon mui-icon-gear"></span>
+                <span class="mui-tab-label">基础管理</span>
+            </div>
+      
+    </nav>
+
+
+
+    <script src="js/mui.min.js"></script>
+    <script src="js/song.js"></script>
+    <script>
+        mui.init({});
+        //当前页面执行
+   
+        mui("#bar-down").on("tap", "div", function () {
+            var href = this.getAttribute("data-href");
+            if (href !== "") {
+                gotoUrl(href);
+                return;
+            }
+        }, false);
+     
+    </script>
+</body>
+
+</html>

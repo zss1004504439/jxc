@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> 基础管理 </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="css/mui.min.css">
+    <link rel="stylesheet" href="css/icons-extra.css">
+    <link rel="stylesheet" href="css/app.css">
+    <style type="text/css">
+   #supplier-box ul{ background: #fff }
+   #supplier-box ul li{ padding: 11px 13px; }
+   #supplier-box ul li .mui-media-body{ font-size: 12px; }
+   /* #supplier-list{ padding-top: 0; } */ 
+    </style>
+</head>
+
+<body>
+    <header id="header" class="mui-bar mui-bar-nav">
+
+        <h1 class="mui-title">基础管理</h1>
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <!-- <a id="promptBtn" class="mui-icon mui-icon-search mui-pull-right"></a> -->
+        <!-- <a class="mui-icon  mui-icon-plus mui-pull-right" href="#"></a> -->
+    </header> 
+    <div class="mui-content" id="supplier-box" >
+        <ul class="mui-table-view mui-grid-view mui-grid-9">
+            <li class="mui-table-view-cell mui-media  mui-col-xs-4  " data-href="goods.html">
+                <div class="mui-media-title">
+                    <span class="mui-icon mui-icon-compose"></span>
+                </div>
+                <div class="mui-media-body">商品管理</div> 
+            </li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-4 " data-href="guige.html">
+                <div class="mui-media-title">
+                    <span class="mui-icon mui-icon-starhalf">   </span>
+                </div>
+                <div class="mui-media-body">货品箱规格</div> 
+            </li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-4 " data-href="supplier.html">
+                <div class="mui-media-title">
+                    <span class="mui-icon mui-icon-personadd"></span>
+                </div>
+                <div class="mui-media-body">供应商管理</div>
+
+            </li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-4 " data-href="customer.html">
+                <div class="mui-media-title">
+                    <span class="mui-icon mui-icon-person"></span>
+                </div>
+                <div class="mui-media-body">客户管理</div>
+
+            </li>
+         <!--    <li class="mui-table-view-cell mui-media mui-col-xs-4 " data-href="admin.html">
+
+                <div class="mui-media-title">
+                    <span class="mui-icon mui-icon-contact"></span>
+                </div>
+                <div class="mui-media-body">用户管理</div>
+
+            </li> -->
+            <li class="mui-table-view-cell mui-media mui-col-xs-4 " data-href="msg.html">
+                <div class="mui-media-title">
+                    <span class="mui-icon mui-icon-email">
+                        <span class="mui-badge">5</span>
+                    </span>
+                </div>
+                <div class="mui-media-body">消息管理</div> 
+            </li>
+        </ul>
+    </div>
+
+ 
+    
+    
+<div class="mui-content">
+</div>
+    <nav class="mui-bar mui-bar-tab" id="bar-down">
+       
+            <div class="mui-tab-item mui-active" data-href="./index.html">
+                <span class="mui-icon mui-icon-home"></span>
+                <span class="mui-tab-label">首页</span>
+            </div>
+            <div class="mui-tab-item" data-href="./sales.html">
+                <span class="mui-icon mui-icon-star"> </span>
+                <span class="mui-tab-label">销售管理</span>
+            </div>
+            <div class="mui-tab-item" data-href="./procurement.html">
+                <span class="mui-icon mui-icon-download"> </span>
+                <span class="mui-tab-label">采购管理</span>
+            </div>
+            <div class="mui-tab-item" data-href="./warehouse.html">
+                <span class="mui-icon mui-icon-flag"></span>
+                <span class="mui-tab-label">仓库管理</span>
+            </div>
+            <div class="mui-tab-item" data-href="./basis.html">
+                <span class="mui-icon mui-icon-gear"></span>
+                <span class="mui-tab-label">基础管理</span>
+            </div>
+      
+    </nav>
+
+
+
+    <script src="js/mui.min.js"></script>
+    <script src="js/song.js"></script>
+    <script>
+        mui.init({});
+        //当前页面执行
+        mui(".mui-table-view").on("tap", "li", function () {
+            showLoading()
+            var href = this.getAttribute("data-href");
+            if (href !== "") {
+                gotoUrl(href);
+                return;
+            }
+        }, false)
+        mui("#bar-down").on("tap", "div", function () {
+            var href = this.getAttribute("data-href");
+            if (href !== "") {
+                gotoUrl(href);
+                return;
+            }
+        }, false);
+     
+    </script>
+</body>
+
+</html>

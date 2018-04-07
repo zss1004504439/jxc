@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Hello MUI</title>
+    <title> 仓库盘点 </title>
     <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -11,29 +11,72 @@
     <link rel="stylesheet" href="css/icons-extra.css">
     <link rel="stylesheet" href="css/app.css">
     <style type="text/css">
-    body{ padding-bottom: 50px; }
-   #supplier-box ul{ background: #fff }
-   #supplier-box ul li{ padding: 11px 13px; }
-   #supplier-box ul li .mui-media-body{ font-size: 12px; }
-   /* .mui-input-row label{ text-align: right; } */
-   .mui-input-row-textarea{ height: initial!important }
-   #mui-card-form .mui-card-footer{    justify-content: flex-end;}
-   table{ width: 100%;background: #fff }
-   td{ text-align: center; }
- 
-   #warehouseAll{ width: 98%;margin: 0 auto }
-   #warehouseAll thead th { padding: 10px 0 }
-   #warehouseAll>tbody>tr>td { border: 1px solid #d6d6d6}
-   #warehouseAll>tbody>tr:nth-child(2n) td{background-color: #fff; padding: 3px 0 }
-   #warehouseAll>tbody>tr:nth-child(2n-1) td{background-color:#eaeaea;  padding: 3px 0  }
-   #warehouseAll>tbody>tr:nth-child(2n)>td{ }
-   #warehouseAll>tbody>tr:nth-child(2n-1)>td{  }
-   
+        body {
+            padding-bottom: 50px;
+        }
+
+        #supplier-box ul {
+            background: #fff
+        }
+
+        #supplier-box ul li {
+            padding: 11px 13px;
+        }
+
+        #supplier-box ul li .mui-media-body {
+            font-size: 12px;
+        }
+
+        /* .mui-input-row label{ text-align: right; } */
+
+        .mui-input-row-textarea {
+            height: initial !important
+        }
+
+        #mui-card-form .mui-card-footer {
+            justify-content: flex-end;
+        }
+
+        table {
+            width: 100%;
+            background: #fff
+        }
+
+        td {
+            text-align: center;
+        }
+
+        #warehouseAll {
+            width: 98%;
+            margin: 0 auto
+        }
+
+        #warehouseAll thead th {
+            padding: 10px 0
+        }
+
+        #warehouseAll>tbody>tr>td {
+            border: 1px solid #d6d6d6
+        }
+
+        #warehouseAll>tbody>tr:nth-child(2n) td {
+            background-color: #fff;
+            padding: 3px 0
+        }
+
+        #warehouseAll>tbody>tr:nth-child(2n-1) td {
+            background-color: #eaeaea;
+            padding: 3px 0
+        }
+
+        #warehouseAll>tbody>tr:nth-child(2n)>td {}
+
+        #warehouseAll>tbody>tr:nth-child(2n-1)>td {}
     </style>
-      <script src="js/jquery.min.js"></script>
-      <link href="js/webuploader.css" rel="stylesheet">
-      <script src="js/webuploader.min.js"></script>
-      
+    <script src="js/jquery.min.js"></script>
+    <link href="js/webuploader.css" rel="stylesheet">
+    <script src="js/webuploader.min.js"></script>
+
 </head>
 
 <body>
@@ -43,55 +86,55 @@
         <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
         <!-- <a id="promptBtn" class="mui-icon mui-icon-search mui-pull-right"></a> -->
         <!-- <a class="mui-icon mui-icon-checkmarkempty mui-pull-right">   </a> -->
-    </header> 
-    <div class="mui-content" id="supplier-search"> 
-            <form action="" class="mui-content-padded" style="margin: 5px;">
-                <div class="mui-input-row mui-search" id=" ">
-                    <input type="search" class="mui-input-clear" placeholder="如：男鞋">
-                </div>
-            </form> 
-    </div> 
+    </header>
+    <div class="mui-content" id="supplier-search">
+        <form action="" class="mui-content-padded" style="margin: 5px;">
+            <div class="mui-input-row mui-search" id=" ">
+                <input type="search" class="mui-input-clear" placeholder="如：男鞋">
+            </div>
+        </form>
+    </div>
     <div>
-         
-       <table id="warehouseAll">
-         <thead>
-           <tr>
-             <th> 仓库名 </th>
-             <th> 货号信息 </th> 
-           </tr>
-         </thead>
-         <tbody>
-           <tr>
-             <td> A仓 </td>
-             <td>
-                 <table>
-                     <tbody>
-                         <tr>
-                             <td>s001</td>
-                             <td>12</td>
-                         </tr>
-                     </tbody>
-                 </table>
-             </td>
-           </tr>
-           <tr>
-             <td> B仓 </td>
-             <td>
-                 <table>
-                     <tbody>
-                         <tr>
-                             <td>s001</td>
-                             <td>12</td>
-                         </tr>
-                     </tbody>
-                 </table>
-             </td>
-           </tr>
-           
-           <tr>
-             <td> 一仓 </td>
-             <td>
-                    <table>
+
+        <table id="warehouseAll">
+            <thead>
+                <tr>
+                    <th> 仓库名 </th>
+                    <th> 货号信息 </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> A仓 </td>
+                    <td>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>s001</td>
+                                    <td>12</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td> B仓 </td>
+                    <td>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>s001</td>
+                                    <td>12</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td> 一仓 </td>
+                    <td>
+                        <table>
                             <tbody>
                                 <tr>
                                     <td>s001</td>
@@ -103,42 +146,68 @@
                                 </tr>
                             </tbody>
                         </table>
-             </td>
-            
-           </tr>
-         </tbody>
-       </table>
-    </div> 
+                    </td>
+
+                </tr>
+                <tr>
+                    <td> 二仓 </td>
+                    <td>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>s001</td>
+                                    <td>12</td>
+                                </tr>
+                                <tr>
+                                    <td>s001</td>
+                                    <td>12</td>
+                                </tr>
+                                <tr>
+                                    <td>s001</td>
+                                    <td>12</td>
+                                </tr>
+                                <tr>
+                                    <td>s001</td>
+                                    <td>12</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
     <nav class="mui-bar mui-bar-tab" id="bar-down">
-       
-            <div class="mui-tab-item mui-active" data-href="./index.html">
-                <span class="mui-icon mui-icon-home"></span>
-                <span class="mui-tab-label">首页</span>
-            </div>
-            <div class="mui-tab-item" data-href="./sales.html">
-                <span class="mui-icon mui-icon-star"> </span>
-                <span class="mui-tab-label">销售管理</span>
-            </div>
-            <div class="mui-tab-item" data-href="./procurement.html">
-                <span class="mui-icon mui-icon-download"> </span>
-                <span class="mui-tab-label">采购管理</span>
-            </div>
-            <div class="mui-tab-item" data-href="./warehouse.html">
-                <span class="mui-icon mui-icon-flag"></span>
-                <span class="mui-tab-label">仓库管理</span>
-            </div>
-            <div class="mui-tab-item" data-href="./basis.html">
-                <span class="mui-icon mui-icon-gear"></span>
-                <span class="mui-tab-label">基础管理</span>
-            </div> 
+
+        <div class="mui-tab-item mui-active" data-href="./index.html">
+            <span class="mui-icon mui-icon-home"></span>
+            <span class="mui-tab-label">首页</span>
+        </div>
+        <div class="mui-tab-item" data-href="./sales.html">
+            <span class="mui-icon mui-icon-star"> </span>
+            <span class="mui-tab-label">销售管理</span>
+        </div>
+        <div class="mui-tab-item" data-href="./procurement.html">
+            <span class="mui-icon mui-icon-download"> </span>
+            <span class="mui-tab-label">采购管理</span>
+        </div>
+        <div class="mui-tab-item" data-href="./warehouse.html">
+            <span class="mui-icon mui-icon-flag"></span>
+            <span class="mui-tab-label">仓库管理</span>
+        </div>
+        <div class="mui-tab-item" data-href="./basis.html">
+            <span class="mui-icon mui-icon-gear"></span>
+            <span class="mui-tab-label">基础管理</span>
+        </div>
     </nav>
- 
+
     <script src="js/mui.min.js"></script>
     <script src="js/song.js"></script>
     <script>
         mui.init({});
 
-      // 底部导航 链接
+        // 底部导航 链接
         mui("#bar-down").on("tap", "div", function () {
             var href = this.getAttribute("data-href");
             if (href !== "") {
