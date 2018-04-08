@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Hello MUI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="css/mui.min.css">
+    <link rel="stylesheet" href="css/icons-extra.css">
+    <link rel="stylesheet" href="css/app.css">
+    <style type="text/css">
+   #supplier-box ul{ background: #fff }
+   #supplier-box ul li{ padding: 11px 13px; }
+   #supplier-box ul li .mui-media-body{ font-size: 12px; }
+   /* .mui-input-row label{ text-align: right; } */
+   .mui-input-row-textarea{ height: initial!important }
+   #mui-card-form .mui-card-footer{    justify-content: flex-end;}
+    </style>
+      <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+      <link href="https://cdn.bootcss.com/webuploader/0.1.1/webuploader.css" rel="stylesheet">
+      <script src="js/webuploader.min.js"></script>
+      
+</head>
+
+<body>
+    <!-- <header id="header" class="mui-bar mui-bar-nav"> -->
+
+        <!-- <h1 class="mui-title">新增商品</h1> -->
+        <!-- <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a> -->
+        <!-- <a id="promptBtn" class="mui-icon mui-icon-search mui-pull-right"></a> -->
+        <!-- <a class="mui-icon mui-icon-checkmarkempty mui-pull-right">   </a> -->
+    <!-- </header>  -->
+ 
+
+<!-- 
+    <div class="mui-content" >
+            <div class="mui-card"  >
+                    <div class="mui-card-header">
+                   请正确填写商品基础信息
+                    </div>
+                    <div id="uploader-demo" class="wu-example">
+                      <div id="fileList" class="uploader-list">
+                      </div>
+                      <div id="filePicker">选择图片</div>
+                  </div>
+                  <script src="./js/getting-started.js"></script>
+                
+                         
+                </div>
+          
+</div>
+  
+    <script src="js/mui.min.js"></script>
+    <script src="js/song.js"></script> -->
+
+     
+    <table id="tb">
+    <tr><th>单价</th><th>数量</th><th>小计</th></tr>
+    <tr><td><input type="text" /></td><td><input type="text" /></td><td><input type="text" readonly/></td></tr>
+    <tr><td><input type="text" /></td><td><input type="text" /></td><td><input type="text" readonly/></td></tr>
+    <tr><td><input type="text" /></td><td><input type="text" /></td><td><input type="text" readonly/></td></tr>
+    <tr><td><input type="text" /></td><td><input type="text" /></td><td><input type="text" readonly/></td></tr>
+    <tr><td>总计：</td><td><input type="text" id="total" readonly /></td></tr>
+    </table>
+    <script>
+            var ipts ;
+        $('#tb input').not('[readonly]').change(function () {
+            var sum = 0, v;
+            $('#tb tr').each(function () {
+                ipts = $(this).find('input');
+                v = (parseFloat(ipts.eq(0).val()) || 0) * (parseFloat(ipts.eq(1).val()) || 0)
+                ipts.eq(2).val(v);
+                sum += v;
+            });
+            $('#total').val(sum);
+        });
+        </script>
+</body>
+
+</html>
