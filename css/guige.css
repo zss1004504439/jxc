@@ -1,33 +1,30 @@
  
-dl,dt,dd{ margin: 0;padding: 0; }
-html,body{ width: 100%;height: 100%; }
-.mui-card-footer table{ width: 100%; }
-.mui-card-footer tbody{text-align: center }
-.mui-card-footer tbody td input{     width: 36px;
+dl,dt,dd{ margin: 0;padding: 0; } 
+#guige-add-list table{ width: 100%; }
+#guige-add-list tbody{text-align: center }
+#guige-add-list tbody td input{     width: 42px;
   border: none;
   color: #6d6d72;
   padding: initial;
   height: initial;
   margin: initial;
   font-size: 14px;
-  text-align: center;}
-
-
+  text-align: center;} 
 #guige-add-list{  }
-
-
+ 
 .jxc-mask{  display: none;  position: absolute;transition: all .3s;
     left: 0;
     right: 0;
     top: 0;
-    bottom: 0;background: rgba(0, 0, 0, .3) }
-#guige-boxNumber{background: #fff; position:fixed; bottom:0; left:0; width: 100%; height: 360px; padding:10px 20px; border:none;z-index: 12; transition: all .3s}
-#guige-boxNumber .title{ text-align: center;margin: 10px 0 20px ;font-size: 18px; }
+    bottom: 0;background: rgba(0, 0, 0, .3);z-index: 100; }
+#guige-boxNumber{background: #fff; position:fixed; bottom:0; left:0; width: 100%; height: 300px; padding:10px 20px; border:none; transition: all .3s;z-index: 101;}
+#guige-boxNumber .title{ text-align: center; font-size: 18px; }
 .guige-boxNumber-color dd,.guige-boxNumber-size dd{ display: flex;justify-content: flex-start;align-items: center;flex-wrap: wrap }
 .guige-boxNumber-color dt,.guige-boxNumber-size dt{ width: 100%;    border-left: 3px solid #dc2e2e;
     padding-left: 6px;
     line-height: 1;
     vertical-align: middle; }
+    #guige-boxNumber-add .mui-input-row{ padding: 10px 0;    height: initial; }
 .guige-boxNumber-color  dd span,.guige-boxNumber-size  dd span{     float: left;
   padding: 5px 6px;    font-size: 14px;
     border: 1px solid #666666;

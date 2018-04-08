@@ -25,7 +25,7 @@ body{  padding-bottom: 50px; }
 
 .input_nor{padding: 0!important;margin: 0!important;border: none!important;height: initial!important;  font-size: 14px;     width: 52px!important;    line-height: 1.4!important; position: relative;}
 .input_nor_line {position: relative; }
-.input_nor_line::after { position: absolute;content: "";height: 1px;bottom: 0px;left: 0;right: 0;background-color: #007aff; }
+.input_nor_line::after { position: absolute;content: "";height: 1px;    bottom: -2px;left: 0;right: 0;background-color: #007aff; }
 .input_bottom_line{ border-bottom: 1px solid #007aff!important }
 
 
@@ -34,3 +34,31 @@ body{  padding-bottom: 50px; }
   #up-img-box #doc{ position: absolute;left: 0;right: 0;top: 0;     height: 100%;opacity: 0; width: 100%;}
  
 /* 图片上传 */
+
+.mui-input-row-textarea label{ width: 25%!important; }
+.mui-input-row-textarea textarea{ width: 75%!important; }
+
+table{width:100%;background:#fff;margin:0 auto}
+td{text-align:center}
+
+.table-style thead th{padding:10px 0}
+.table-style>tbody>tr>td{border-bottom:1px solid #d6d6d6}
+.table-style>tbody>tr:nth-child(2n) td{background-color:#fff;padding:3px 0}
+.table-style>tbody>tr:nth-child(2n-1) td{background-color:#eaeaea;padding:3px 0}
+
+.warehouse-add{    z-index: 99;
+    padding: 5px 10px;
+    border-radius: 4px;}
+
+
+
+    #guige-boxNumber .mui-btn-block{ padding: 6px 0 }
+    #guige-boxNumber .title{ margin-bottom: 5px }
+    #select-pro-list-box {    height: 232px;
+        overflow-y: auto;}
+            #select-pro-list-box .select-pro-list span{display: inline-block; width: 49%;border: 1px solid #ccc }
+            #select-pro-list-box select{margin-bottom: 0}
+            .select-pro-li{    padding: 5px;
+        margin: 5px 0;
+        border-top: 1px dashed #868686;}
+        .select-pro-li-on span{color: #f33  }
