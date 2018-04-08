@@ -1,5 +1,4 @@
- 
- 
+﻿ 
 .weui_toast{position: fixed;z-index:1000;width: 7.6em;min-height: 7.6em;top: 180px;left: 50%;margin-left: -3.8em;background: rgba(40, 40, 40, .75);text-align: center;border-radius: 5px;color: #FFF}
 .weui_toast_content{margin: 0 0 15px}
 .spinner{width: 50px;height: 50px;text-align: center;font-size: 10px;margin: 0 auto;margin-top: 30px}
@@ -16,15 +15,22 @@
     0%,100%,40% { transform: scaleY(.4); -webkit-transform: scaleY(.4); }
     20% { transform: scaleY(1); -webkit-transform: scaleY(1); }
 }
+.f00{ color: #f00 }
 
-
-html,body{ max-width: 640px;margin: 0 auto;font-family: "????";     line-height: 1.4;}
+html,body{ max-width: 640px;margin: 0 auto;/* font-family: "微软雅黑";  */   line-height: 1.4;}
 .mui-grid-view.mui-grid-9 .mui-media .mui-icon{ color: #f33 }
-
+body{  padding-bottom: 50px; }
 #supplier-search input[type=search]{    margin-bottom: 0 }
-
+.mui-card-footer{ justify-content: flex-end }
 
 .input_nor{padding: 0!important;margin: 0!important;border: none!important;height: initial!important;  font-size: 14px;     width: 52px!important;    line-height: 1.4!important; position: relative;}
 .input_nor_line {position: relative; }
 .input_nor_line::after { position: absolute;content: "";height: 1px;bottom: 0px;left: 0;right: 0;background-color: #007aff; }
 .input_bottom_line{ border-bottom: 1px solid #007aff!important }
+
+
+/* 图片上传 */ 
+  #up-img-box{ margin :10px auto; width:100%;position: relative;     text-align: center;}
+  #up-img-box #doc{ position: absolute;left: 0;right: 0;top: 0;     height: 100%;opacity: 0; width: 100%;}
+ 
+/* 图片上传 */

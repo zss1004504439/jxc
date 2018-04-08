@@ -11,9 +11,7 @@
     <link rel="stylesheet" href="css/icons-extra.css">
     <link rel="stylesheet" href="css/app.css">
     <style type="text/css">
-        body {
-            padding-bottom: 50px;
-        }
+      
 
         #supplier-box ul {
             background: #fff
@@ -61,175 +59,37 @@
 <body>
     <header id="header" class="mui-bar mui-bar-nav">
 
-        <h1 class="mui-title"> 销售开单 </h1>
+        <h1 class="mui-title"> 销售开单记录 </h1>
         <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-        <button class="mui-btn mui-btn-blue mui-btn-link mui-pull-right">保存</button>
-        <!-- <a id="promptBtn" class="mui-icon mui-icon-search mui-pull-right"></a> -->
-        <!-- <a class="mui-icon mui-icon-checkmarkempty mui-pull-right">   </a> -->
+        <a id="promptBtn" class="mui-icon mui-icon-plus mui-pull-right" href="./salesAdd.html"></a>
     </header>
-
-    <div class="mui-content">
-        <div class="mui-card">
-            <div class="mui-input-group mui-card-content">
-                <div class="mui-input-row">
-                    <label> 单据编号：</label>
-                    <input type="text" class="mui-input-clear" disabled value="XS1787976980">
-                </div>
-                <div class="mui-input-row" id="guige-boxSize">
-                    <label>选择产品类别</label>
-                    <select class="mui-input-clear">
-                        <option value="男鞋">男鞋</option>
-                        <option value="女鞋" selected>女鞋</option>
-                    </select>
-                </div>
-                <div class="mui-input-row" id="guige-boxSize">
-                    <label>客户编号</label>
-                    <select class="mui-input-clear">
-                        <option value="01">01</option>
-                        <option value="02">02</option>
-                    </select>
-                </div>
-                <ul class="mui-table-view" id="warehouse-click">
-                    <li class="mui-table-view-cell mui-collapse">
-                        <a class="mui-navigate-right" href="#">点击查看客户详情</a>
-                        <div class="mui-collapse-content">
-                            <div class="mui-input-row">
-                                <label>客户名称</label>
-                                <input type="text" placeholder="客户名称">
-                            </div>
-                            <div class="mui-input-row">
-                                <label>联系方式</label>
-                                <input type="text" class="mui-input-clear" placeholder="联系方式">
-                            </div>
-                            <div class="mui-input-row">
-                                <label>联系地址</label>
-                                <input type="text" class="mui-input-clear" placeholder="联系地址">
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-                <div class="mui-input-row" id="guige-boxSize">
-                    <label>销售类型</label>
-                    <select class="mui-input-clear">
-                        <option value="销售">销售</option>
-                        <option value="预售">预售</option>
-                    </select>
-                </div>
-                <div class="mui-input-row">
-                    <label> 总金额：</label>
-                    <input type="text" class="mui-input-clear" disabled value="12000.00">
-                </div>
-                <div class="mui-input-row mui-input-row-textarea">
-                    <label>备注</label>
-                    <textarea id="textarea" rows="2" placeholder=""></textarea>
-                </div>
+    
+    <div class="mui-content" id="supplier-search">
+        <form class="mui-content-padded" style="margin: 5px;">
+            <div class="mui-input-row mui-search" id=" ">
+                <input type="search" class="mui-input-clear" placeholder="如：销售编号">
             </div>
+        </form>
+        <div class=" ">
+           
+            <ul class="mui-table-view mui-table-view-chevron ">
+                <li class="mui-table-view-cell mui-media">
+                    <a class="mui-navigate-right" href="#">
+                        <span class="mui-badge mui-badge-danger">已出库</span> 
+                        <div class="mui-media-body">
+                            <h4 class="title">销售编号：XS3310412176</h4>
+                            <p class="mui-ellipsis"> 数量：<span>12</span>&nbsp;&nbsp;&nbsp;&nbsp; 总金额：<span class="f00">￥1230</span> </p>
+                            <p class="mui-ellipsis"> 客户名称：<span>张某某</span>&nbsp;&nbsp;&nbsp;&nbsp;时间：<span>2018/04/04 </span></p> 
+                            <p class="mui-ellipsis">客户电话：<span>037166666666</span></p>
+                            <p class="mui-ellipsis">客户地址：<span>郑州市冬青街26号河南省电子商务产业园</span></p>
+                        </div>
+                    </a>
+                </li>
+            </ul> 
+    
         </div>
-
-        <div class="mui-content" id="supplier-search">
-            <form class="mui-content-padded" style="margin: 10px;">
-                <div class="mui-input-row mui-search" id=" ">
-                    <input type="search" class="mui-input-clear" placeholder="如：货号">
-                </div>
-            </form>
-        </div>
-        <div id="sales">
-
-            <div class="mui-card">
-
-                <div class="mui-input-group mui-card-content">
-                    <div class="mui-card-content-inner">
-
-                        <div class="mui-ellipsis"> 货品编号：
-                            <span>s001</span>&nbsp;&nbsp;&nbsp;&nbsp;货品箱规格：
-                            <span>s001</span>
-                        </div>
-                        <div class="mui-ellipsis">库存数量：
-                            <span>s001</span>&nbsp;&nbsp;&nbsp;&nbsp;仓库位：
-                            <span>一仓</span>
-                        </div>
-
-                        <div class="mui-ellipsis"> 数量：
-                            <span class="input_nor_line">
-                                <input class="input_nor" type="text" value="88">
-                            </span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="mui-card">
-
-                <div class="mui-input-group mui-card-content">
-                    <div class="mui-card-content-inner">
-
-                        <div class="mui-ellipsis"> 货品编号：
-                            <span>s001</span>&nbsp;&nbsp;&nbsp;&nbsp;货品箱规格：
-                            <span>s001</span>
-                        </div>
-                        <div class="mui-ellipsis">库存数量：
-                            <span>s001</span>&nbsp;&nbsp;&nbsp;&nbsp;仓库位：
-                            <span>一仓</span>
-                        </div>
-
-                        <div class="mui-ellipsis"> 数量：
-                            <span class="input_nor_line">
-                                <input class="input_nor" type="text" value="88">
-                            </span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="mui-card">
-
-                <div class="mui-input-group mui-card-content">
-                    <div class="mui-card-content-inner">
-
-                        <div class="mui-ellipsis"> 货品编号：
-                            <span>s001</span>&nbsp;&nbsp;&nbsp;&nbsp;货品箱规格：
-                            <span>s001</span>
-                        </div>
-                        <div class="mui-ellipsis">库存数量：
-                            <span>s001</span>&nbsp;&nbsp;&nbsp;&nbsp;仓库位：
-                            <span>一仓</span>
-                        </div>
-
-                        <div class="mui-ellipsis"> 数量：
-                            <span class="input_nor_line">
-                                <input class="input_nor" type="text" value="88">
-                            </span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="mui-card">
-                <div class="mui-input-group mui-card-content">
-                    <div class="mui-card-content-inner">
-
-                        <div class="mui-ellipsis"> 货品编号：
-                            <span>s001</span>&nbsp;&nbsp;&nbsp;&nbsp;货品箱规格：
-                            <span>s001</span>
-                        </div>
-                        <div class="mui-ellipsis">库存数量：
-                            <span>s001</span>&nbsp;&nbsp;&nbsp;&nbsp;仓库位：
-                            <span>一仓</span>
-                        </div>
-
-                        <div class="mui-ellipsis"> 数量：
-                            <span class="input_nor_line">
-                                <input class="input_nor" type="text" value="88">
-                            </span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-
     </div>
+
     <nav class="mui-bar mui-bar-tab" id="bar-down">
 
         <div class="mui-tab-item mui-active" data-href="./index.html">
