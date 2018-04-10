@@ -16,8 +16,10 @@
     20% { transform: scaleY(1); -webkit-transform: scaleY(1); }
 }
 .f00{ color: #f00 }
+html,body{ max-width: 640px;margin: 0 auto;font-family: "微软雅黑";    line-height: 1.4;}
+dl,dt,dd,ul,li{ margin: 0;padding: 0; } 
+.df{ display: flex;justify-content: center;align-items: center;flex-wrap: wrap; }
 
-html,body{ max-width: 640px;margin: 0 auto;/* font-family: "微软雅黑";  */   line-height: 1.4;}
 .mui-grid-view.mui-grid-9 .mui-media .mui-icon{ color: #f33 }
 body{  padding-bottom: 50px; }
 #supplier-search input[type=search]{    margin-bottom: 0 }
@@ -50,6 +52,31 @@ td{text-align:center}
     padding: 5px 10px;
     border-radius: 4px;}
 
+
+    /* 蒙层 */
+    .jxc-mask{  display: none;  position: fixed;transition: all .3s;  left: 0;  right: 0;  top: 0;  bottom: 0;background: rgba(0, 0, 0, .3);z-index: 100; }
+    /* 蒙层 */
+    #popup-area{display: none;  position:fixed; bottom:0; left:0; width: 100%; /* height: 400px;  */padding:0px 10px; border:none; transition: all .3s;z-index: 101;}
+    #popup-area>div{ margin-bottom: 6px;background-color: #fff; border-radius: 5px; }
+        .popup-area-box{    height: 286px; overflow-y: auto; }
+        .popup-area-tit{ text-align: center;font-size: 18px;padding: 10px 0 ;     }
+        .popup-area-tit .mui-content-padded {  margin:0 10px }
+        .popup-area-tit input[type=search]{  margin-bottom: 0 }
+        
+        .popup-area-box  .mui-checkbox.mui-left input[type=checkbox]{ top: 50%;margin-top: -13px;left: 11px; }
+        .popup-area-box  .mui-checkbox.mui-left input:checked +label span b{color: #f33  }
+        #popup-area-btn a{    font-size: 16px;;    line-height: 38px; display: block;    flex: 1;text-align: center}
+        #popup-area-btn a:first-child{ }
+
+        
+        .popup-area-box ul .mui-checkbox.mui-left label  {    padding-right: 10px;
+            padding-left: 48px;}
+        .popup-area-box ul{ background-color: #f3f3f3;  }
+        .popup-area-box ul li{ background-color: #fff!important;     margin-bottom: 2px; }
+        .popup-area-box ul li label div{ line-height: 1.4; }
+        .popup-area-box ul li label  .title{line-height: 1.6;font-size: 16px; }
+        .popup-area-box ul li label div.df span{flex: 2;display: block; }
+        .popup-area-box ul li label div.df span+span{flex: 3; }
 
 
     #guige-boxNumber .mui-btn-block{ padding: 6px 0 }
