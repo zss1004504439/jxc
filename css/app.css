@@ -58,11 +58,7 @@ td{text-align:center}
     /* 蒙层 */
     #popup-area{display: none;  position:fixed; bottom:0; left:0; width: 100%; /* height: 400px;  */padding:0px 10px; border:none; transition: all .3s;z-index: 101;}
     #popup-area>div{ margin-bottom: 6px;background-color: #fff; border-radius: 5px; }
-<<<<<<< HEAD
         .popup-area-box{    height:322px; overflow-y: auto; }
-=======
-        .popup-area-box{    height: 286px; overflow-y: auto; }
->>>>>>> 6414d889da46b09256559b6ccd808d45b1dcb959
         .popup-area-tit{ text-align: center;font-size: 18px;padding: 10px 0 ;     }
         .popup-area-tit .mui-content-padded {  margin:0 10px }
         .popup-area-tit input[type=search]{  margin-bottom: 0 }
@@ -71,32 +67,18 @@ td{text-align:center}
         .popup-area-box  .mui-checkbox.mui-left input:checked +label span b{color: #f33  }
         #popup-area-btn a{    font-size: 16px;;    line-height: 38px; display: block;    flex: 1;text-align: center}
         #popup-area-btn a:first-child{ }
-<<<<<<< HEAD
-=======
 
         
         .popup-area-box ul .mui-checkbox.mui-left label  {    padding-right: 10px;
             padding-left: 48px;}
         .popup-area-box ul{ background-color: #f3f3f3;  }
         .popup-area-box ul li{ background-color: #fff!important;     margin-bottom: 2px; }
-        .popup-area-box ul li label div{ line-height: 1.4; }
+        /* .popup-area-box ul li label div{ line-height: 1.4; } */
         .popup-area-box ul li label  .title{line-height: 1.6;font-size: 16px; }
-        .popup-area-box ul li label div.df span{flex: 2;display: block; }
-        .popup-area-box ul li label div.df span+span{flex: 3; }
+        /* .popup-area-box ul li label div.df span{flex: 2;display: block; } */
+        /* .popup-area-box ul li label div.df span+span{flex: 3; } */
 
->>>>>>> 6414d889da46b09256559b6ccd808d45b1dcb959
-
-        
-        .popup-area-box ul .mui-checkbox.mui-left label  {    padding-right: 10px;
-            padding-left: 48px;}
-        .popup-area-box ul{ background-color: #f3f3f3;  }
-        .popup-area-box ul li{ background-color: #fff!important;     margin-bottom: 2px; }
-        .popup-area-box ul li label div{ line-height: 1.4; }
-        .popup-area-box ul li label  .title{line-height: 1.6;font-size: 16px; }
-        .popup-area-box ul li label div.df span{flex: 2;display: block; }
-        .popup-area-box ul li label div.df span+span{flex: 3; }
-
-        #guige-boxNumber{background: #fff; position:fixed; bottom:0; left:0; width: 100%; min-height: 300px; padding:10px 20px; border:none; transition: all .3s;z-index: 101;}
+        #guige-boxNumber{background: #fff; position:fixed; bottom:0; left:0; width: 100%;   padding:10px 20px; border:none; transition: all .3s;z-index: 101;}
         #guige-boxNumber .title{ text-align: center; font-size: 18px; }
     #guige-boxNumber .mui-btn-block{ padding: 6px 0 }
     #guige-boxNumber .title{ margin-bottom: 5px }
@@ -112,3 +94,38 @@ td{text-align:center}
         .select-pro-li  div label{    padding-left: 48px!important; }
         .select-pro-li  div input[type=checkbox]:checked+label span{   color: #f33  }
         .mui-bar button.mui-btn.mui-pull-right{ font-size: 20px; }
+
+        /*=========================上传样式 start===========================*/
+/*上传样式*/
+
+.logo li{     width: 80%;   text-align: center;  padding: 2%;  margin: 0 auto; }
+.logo li img{    width: 100%; }
+
+
+.upload-box{ position:relative;  vertical-align:middle; zoom:1; *display:inline;}
+.upload-box .upload-btn{   zoom:1; *display:inline; }
+.upload-box .upload-progress{ display: none; position:absolute; top:0; left:0; padding:2px 5px; width:115px; height:26px; border:1px solid #d7d7d7; background:#fff; overflow:hidden; }
+.upload-box .upload-progress .txt{ display:block; padding-right:10px; font-weight:normal; font-style:normal; font-size:11px; line-height:18px; height:18px; text-overflow:ellipsis; overflow:hidden; }
+.upload-box .upload-progress .bar{ position:relative; display:block; width:112px; height:4px; border:1px solid #1da76b; }
+.upload-box .upload-progress .bar b{ display:block; width:0%; height:4px; font-weight:normal; text-indent:-99em; background:#28B779; overflow:hidden; }
+.upload-box .upload-progress .close{ position:absolute; display:block; top:1px; right:1px; width:14px; height:14px; text-indent:-99em; background:url(skin_icons.png) -56px -196px no-repeat; cursor:pointer; overflow:hidden; }
+/*=====================以下部分是WebUploader必须的====================*/
+.webuploader-container{ position:relative; }
+.webuploader-element-invisible{ position:absolute !important; clip: rect(1px 1px 1px 1px); /* IE6, IE7 */ clip: rect(1px,1px,1px,1px); }
+.webuploader-pick{ position:relative; /* display:inline-block; width:65px; */margin: 10px; line-height:32px; height:32px; border:1px solid #007aff; cursor:pointer; background-color: #007aff;color:#fff; text-align:center; overflow:hidden; zoom:1; *display:inline; /* border-radius:2px; */}
+.webuploader-pick-hover{ background:#3995f9; }
+.webuploader-pick-disable{ opacity:0.6; pointer-events:none; }
+/*=====================以上部分是WebUploader必须的====================*/
+
+
+/* 列表项  */
+.list-show .df{display: flex; justify-content: center;align-items: center; line-height: 1.4}
+.list-show .df span{ display: block;flex: 2;  }
+.list-show .df span+span{ flex: 3}
+.list-show .df span b{   }
+/* 列表项  */
+
+
+ /* 搜索框去bug */
+ .mui-search.mui-active:before {margin-top: -14px; }
+ /* 搜索框去bug */

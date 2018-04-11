@@ -15,6 +15,8 @@
   <link rel="stylesheet" href="./css/guige.css">
   <script src="js/mui.min.js"></script>
   <script src="js/song.js"></script>
+  <script src="js/webuploader.min.js"></script>
+  <script src="js/uploader.js"></script>
   <style type="text/css">
     #supplier-box ul {
       background: #fff
@@ -46,8 +48,7 @@
       font-size: 12px; 
     }
 
-    .mui-btn-block{ padding: 10px 0; }
-    #guige-boxNumber{ height: 300px; }
+    .mui-btn-block{ padding: 10px 0; } 
   </style>
 
 
@@ -239,37 +240,24 @@
         <form class="mui-input-group">
        
             <div style="padding-top: 10px"> 
-              <div id="up-img-box">
-                  <button class="mui-btn-primary">选择图片上传</button>
-                  <input type="file" name="file" id="doc" multiple="multiple"   onchange="javascript:setImagePreviews();buttonImg();"
-                    accept="image/*" />
-                  <div id="dd"></div>
-                </div>
+                <ul class="logo">
+                    <div id="tupian"></div>
+                    <input type="hidden" id="txtImgUrl" name="txtImgUrl" class="input normal upload-path" />
+                    <div class="upload-box upload-img"></div>
+                </ul> 
             </div>
             <div class="mui-input-row mui-input-row-textarea">
               <label>描述</label>
               <textarea name="" class="mui-input-clear" id="" rows="4" placeholder="图片描述" ></textarea> 
             </div> 
           </form>
-        <button type="button" class="mui-btn mui-btn-primary mui-btn-block" id=""> 确认添加 </button>
+        <button type="button" class="mui-btn mui-btn-primary mui-btn-block" id=""> 确认退货 </button>
     </div>
 
     <div class="jxc-mask"></div>
  
 
-
-  <script src="./js/up-img.js"></script>
-  <script type="text/javascript"> 
-   function buttonImg(){  if($("#dd").html() !==""){ $("#up-img-box button").hide(); $("#guige-boxNumber").css({  "height": "420px"  }); }   }  
-        //  展开选择框
-        $("#tuihuo").on("click", function () {
-            showBOX()
-        }) 
-        //  隐藏选择框
-        $(".jxc-mask").on("click", function () {
-            hideBOX()
-        })
-  </script>
+  
 
   <nav class="mui-bar mui-bar-tab" id="bar-down">
 
@@ -296,6 +284,22 @@
   </nav>
  
   <script>
+      //  展开选择框
+      $("#tuihuo").on("click", function () {
+            showBOX()
+        }) 
+        //  隐藏选择框
+        $(".jxc-mask").on("click", function () {
+            hideBOX()
+        })
+        $(function () {
+            $(".upload-img").InitUploader({
+                filesize: "10240",
+                // sendurl: "/tools/upload_ajax.ashx",
+                swf: "/scripts/webuploader/uploader.swf",
+                filetypes: "gif,jpg,png,bmp"
+            });
+        })
     mui.init({});
 
     // 底部导航 链接

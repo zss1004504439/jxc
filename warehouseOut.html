@@ -191,8 +191,7 @@
             <span class="mui-tab-label">基础管理</span>
         </div>
     </nav>
-
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+ 
     <!-- 弹出层 -->
     <div id="guige-boxNumber" style="display:none">
         <div class="title"> 选择货品 </div>
@@ -327,11 +326,7 @@
                 </div> 
             </div>
   
- 
- 
- 
- 
-
+  
 
         </div>
         <button type="button" class="mui-btn mui-btn-primary mui-btn-block" id="sales-submit"> 确认添加 </button>
@@ -342,28 +337,11 @@
     <script src="js/mui.min.js"></script>
     <script src="js/song.js"></script>
     <script>
-        function showBOX() {
-            $(".jxc-mask").css({
-                "display": "block"
-            });
-            $("#guige-boxNumber").css({
-                "display": "block"
-            });
-        }
-
-        function hideBOX() {
-            $(".jxc-mask").css({
-                "display": "none"
-            });
-            $("#guige-boxNumber").css({
-                "display": "none"
-            });
-        }
+    
         //  展开选择框
         $("#warehouse-out-add").on("click", "a.mui-btn-primary", function () {
             showBOX()
-        })
-
+        }) 
         //  隐藏选择框
         $(".jxc-mask").on("click", function () {
             hideBOX()
