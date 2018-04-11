@@ -16,15 +16,10 @@
     20% { transform: scaleY(1); -webkit-transform: scaleY(1); }
 }
 .f00{ color: #f00 }
-<<<<<<< HEAD
 html,body{ max-width: 640px;margin: 0 auto;font-family: "微软雅黑";    line-height: 1.4;}
 dl,dt,dd,ul,li{ margin: 0;padding: 0; } 
 .df{ display: flex;justify-content: center;align-items: center;flex-wrap: wrap; }
 
-=======
-
-html,body{ max-width: 640px;margin: 0 auto;/* font-family: "微软雅黑";  */   line-height: 1.4;}
->>>>>>> f0b177e836731a5c053acfe840320f0025ad2faa
 .mui-grid-view.mui-grid-9 .mui-media .mui-icon{ color: #f33 }
 body{  padding-bottom: 50px; }
 #supplier-search input[type=search]{    margin-bottom: 0 }
@@ -41,7 +36,6 @@ body{  padding-bottom: 50px; }
   #up-img-box #doc{ position: absolute;left: 0;right: 0;top: 0;     height: 100%;opacity: 0; width: 100%;}
  
 /* 图片上传 */
-<<<<<<< HEAD
 
 .mui-input-row-textarea label{ width: 25%!important; }
 .mui-input-row-textarea textarea{ width: 75%!important; }
@@ -135,5 +129,3 @@ td{text-align:center}
  /* 搜索框去bug */
  .mui-search.mui-active:before {margin-top: -14px; }
  /* 搜索框去bug */
-=======
->>>>>>> f0b177e836731a5c053acfe840320f0025ad2faa
