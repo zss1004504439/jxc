@@ -59,7 +59,7 @@
 <body>
     <header id="header" class="mui-bar mui-bar-nav">
 
-        <h1 class="mui-title"> 出库单 </h1>
+        <h1 class="mui-title"> 海外出库单 </h1>
         <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
         <button class="mui-btn mui-btn-blue mui-btn-link mui-pull-right">保存</button>
     </header>
@@ -73,9 +73,10 @@
                 </div>
 
                 <div class="mui-input-row" id="guige-boxSize">
-                    <label>出库类型</label>
+                    <label>出库类型：</label>
                     <select class="mui-input-clear">
-                        <option value="国内出库" selected>国内出库</option>
+                        <option value="0" selected>选择出库类型</option>
+                        <option value="1" selected>国外出库</option>
                     </select>
                 </div>
                 <div class="mui-input-row">
@@ -99,14 +100,11 @@
                     <input type="text" class="mui-input-clear f00" disabled value="12000.00">
                 </div>
                 <div class="mui-input-row mui-input-row-textarea">
-                    <label>备注</label>
+                    <label>备注：</label>
                     <textarea id="textarea" rows="2" placeholder=""></textarea>
                 </div>
             </div>
-        </div>
-
-
-
+        </div> 
         <div class="" id="guige-add-list">
             <table class="table-style">
                 <thead>

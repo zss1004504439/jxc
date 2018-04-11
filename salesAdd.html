@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="css/icons-extra.css">
     <link rel="stylesheet" href="css/app.css">
     <style type="text/css">
-  
         #supplier-box ul {
             background: #fff
         }
@@ -70,18 +69,20 @@
             <div class="mui-input-group mui-card-content">
                 <div class="mui-input-row">
                     <label> 单据编号：</label>
-                    <input type="text" class="mui-input-clear" disabled value="XS1787976980">
+                    <input type="text" disabled value="XS1787976980">
                 </div>
                 <div class="mui-input-row" id="guige-boxSize">
-                    <label>选择产品类别</label>
-                    <select class="mui-input-clear">
+                    <label>产品类别：</label>
+                    <select>
+                        <option value="0">选择产品类别</option>
                         <option value="男鞋">男鞋</option>
                         <option value="女鞋" selected>女鞋</option>
                     </select>
                 </div>
                 <div class="mui-input-row" id="guige-boxSize">
-                    <label>客户编号</label>
-                    <select class="mui-input-clear">
+                    <label>客户编号：</label>
+                    <select>
+                        <option value="0">选择产品类别</option>
                         <option value="01">01</option>
                         <option value="02">02</option>
                     </select>
@@ -106,8 +107,9 @@
                     </li>
                 </ul>
                 <div class="mui-input-row" id="guige-boxSize">
-                    <label>销售类型</label>
-                    <select class="mui-input-clear">
+                    <label>销售类型：</label>
+                    <select>
+                        <option value="0">选择销售类型</option>
                         <option value="销售">销售</option>
                         <option value="预售">预售</option>
                     </select>
@@ -123,13 +125,17 @@
             </div>
         </div>
 
-        <div class="mui-content" id="supplier-search">
+        <!--      <div class="mui-content" id="supplier-search">
             <form class="mui-content-padded" style="margin: 10px;">
                 <div class="mui-input-row mui-search" id=" ">
                     <input type="search" class="mui-input-clear" placeholder="如：货号">
                 </div>
             </form>
+        </div> -->
+        <div class="mui-content-padded">
+            <button type="button" style="width: 100%;" id="popup-area-show" class="mui-btn mui-btn-success  mui-icon mui-icon-plus">点击添加货品</button>
         </div>
+
         <div id="sales">
 
             <div class="mui-card">
@@ -201,28 +207,7 @@
                 </div>
 
             </div>
-            <div class="mui-card">
-                <div class="mui-input-group mui-card-content">
-                    <div class="mui-card-content-inner">
-
-                        <div class="mui-ellipsis"> 货品编号：
-                            <span>s001</span>&nbsp;&nbsp;&nbsp;&nbsp;货品箱规格：
-                            <span>s001</span>
-                        </div>
-                        <div class="mui-ellipsis">库存数量：
-                            <span>s001</span>&nbsp;&nbsp;&nbsp;&nbsp;仓库位：
-                            <span>一仓</span>
-                        </div>
-
-                        <div class="mui-ellipsis"> 数量：
-                            <span class="input_nor_line">
-                                <input class="input_nor" type="text" value="88">
-                            </span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+        
         </div>
 
 
@@ -251,47 +236,119 @@
         </div>
     </nav>
 
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+
     <!-- 弹出层 -->
-    <div id="guige-boxNumber" style="display:none">
-        <div class="title"> 选择货品箱包含商品颜色数量 </div>
-        <button type="button" class="mui-btn mui-btn-primary mui-btn-block" id="sales-submit"> 确认添加 </button>
+    <div id="popup-area" class="popup-area">
+        <div id="popup-area-tit" class="popup-area-tit">
+            <form action="" class="mui-content-padded">
+                <input type="search" class="mui-input-clear" placeholder="请输入编号搜索">
+            </form>
+        </div>
+        <div id="popup-area-box" class="popup-area-box">
+            <ul>
+                <li class="mui-input-row mui-checkbox mui-left">
+                    <input name="checkbox" value="pro1" type="checkbox">
+                    <label>
+                        <div class="title"> s006 </div>
+                        <div class="mui-ellipsis"> 供应商供应商供应商供应商 </div>
+                        <div class="df">
+                            <span>货品价格：
+                                <b>15.00</b>
+                            </span>
+                            <span>实际价格：
+                                <b>12.00</b>
+                            </span>
+                        </div>
+                        <div class="df">
+                            <span>库存数量：
+                                <b>12000</b>
+                            </span>
+                            <!-- <span class="mui-ellipsis">货箱规格：<b>货箱规格</b> </span>  -->
+                        </div>
+                    </label>
+                </li>
+                <li class="mui-input-row mui-checkbox mui-left">
+                    <input name="checkbox" value="pro1" type="checkbox">
+                    <label>
+                        <div class="title"> s006 </div>
+                        <div class="mui-ellipsis"> 供应商供应商供应商供应商 </div>
+                        <div class="df">
+                            <span>货品价格：
+                                <b>15.00</b>
+                            </span>
+                            <span>实际价格：
+                                <b>12.00</b>
+                            </span>
+                        </div>
+                        <div class="df">
+                            <span>库存数量：
+                                <b>12000</b>
+                            </span>
+                        </div>
+                    </label>
+                </li>
+                <li class="mui-input-row mui-checkbox mui-left">
+                    <input name="checkbox" value="pro1" type="checkbox">
+                    <label>
+                        <div class="title"> s006 </div>
+                        <div class="mui-ellipsis"> 供应商供应商供应商供应商 </div>
+                        <div class="df">
+                            <span>货品价格：
+                                <b>15.00</b>
+                            </span>
+                            <span>实际价格：
+                                <b>12.00</b>
+                            </span>
+                        </div>
+                        <div class="df">
+                            <span>库存数量：
+                                <b>12000</b>
+                            </span>
+                        </div>
+                    </label>
+                </li>
+                <li class="mui-input-row mui-checkbox mui-left">
+                    <input name="checkbox" value="pro1" type="checkbox">
+                    <label>
+                        <div class="title"> s006 </div>
+                        <div class="mui-ellipsis"> 供应商供应商供应商供应商 </div>
+                        <div class="df">
+                            <span>货品价格：
+                                <b>15.00</b>
+                            </span>
+                            <span>实际价格：
+                                <b>12.00</b>
+                            </span>
+                        </div>
+                        <div class="df">
+                            <span>库存数量：
+                                <b>12000</b>
+                            </span>
+                        </div>
+                    </label>
+                </li>
+            </ul>
+
+        </div>
+        <div id="popup-area-btn" class="df">
+            <!-- 放在第一个 -->
+            <a class="mui-btn-danger " id="popup-area-close"> 关闭窗口 </a>
+            <a class="mui-btn-primary" href="">立即提交</a>
+        </div>
     </div>
 
     <div class="jxc-mask"></div>
-    <!-- 弹出层 -->
 
 
     <script src="js/mui.min.js"></script>
     <script src="js/song.js"></script>
     <script>
-        function showBOX() {
-            $(".jxc-mask").css({
-                "display": "block"
-            });
-            $("#guige-boxNumber").css({
-                "display": "block"
-            });
-        }
-
-        function hideBOX() {
-            $(".jxc-mask").css({
-                "display": "none"
-            });
-            $("#guige-boxNumber").css({
-                "display": "none"
-            });
-        }
-        //  展开选择框
-        $("#guige-boxNumber-btn").on("click", function () {
-            showBOX()
+        $("#popup-area-close,.jxc-mask").on("click", function () {
+            hidePopup()
         })
-
-        //  隐藏选择框
-        $(".jxc-mask").on("click", function () {
-            hideBOX()
+        $("#popup-area-show").on("click", function () {
+            showPopup()
         })
-
         mui.init({});
 
         // 底部导航 链接

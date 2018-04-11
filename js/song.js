@@ -1,16 +1,36 @@
-//通用配置服务器URL
-//var serverurl = "http://yun.xrhyun.com";
-//var serverurlnew = "http://yun.xrhyun.com";
-var serverurl = "http://xrh.yuanfangyun.com/";
-var serverurlnew = "http://xrh.yuanfangyun.com/";
+//通用配置服务器URL 
+// var serverurl = "http://xrh.yuanfangyun.com/";
+// var serverurlnew = "http://xrh.yuanfangyun.com/";
 
-var appid = "wx3b54ec901b96d83a";
+// 两种底部弹出层
+function showPopup(){
+    $("#popup-area").css({ "display":"block" })
+    $(".jxc-mask").css({ "display":"block" }) 
+    }
+    function hidePopup(){
+        $("#popup-area").css({ "display":"none" })
+    $(".jxc-mask").css({ "display":"none" })
+    }
 
- 
- 
- 
- 
- 
+function showBOX() {
+    $(".jxc-mask").css({
+        "display": "block"
+    });
+    $("#guige-boxNumber").css({
+        "display": "block"
+    });
+}
+
+function hideBOX() {
+    $(".jxc-mask").css({
+        "display": "none"
+    });
+    $("#guige-boxNumber").css({
+        "display": "none"
+    });
+} 
+
+  
 
 //获取url当前传递参数
 function getQueryString(name) {

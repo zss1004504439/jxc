@@ -55,7 +55,7 @@
 
 <body>
   <header id="header" class="mui-bar mui-bar-nav">
-    <h1 class="mui-title">国内入库</h1>
+    <h1 class="mui-title">海外入仓</h1>
     <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
     <button class="mui-btn mui-btn-blue mui-btn-link mui-pull-right">保存</button>
     <!-- <a id="promptBtn" class="mui-icon mui-icon-search mui-pull-right"></a> -->
@@ -66,32 +66,33 @@
 
     <div class="mui-card">
       <div class="mui-card-header">
-        新增国内入库单
+        新增海外入库单
       </div>
 
       <div class="mui-input-group mui-card-content">
         <div class="mui-input-row">
-          <label>入库单编号</label>
-          <input type="text" disabled value="GG88888888">
+          <label>入仓单编号：</label>
+          <input type="text"  disabled value="DY8888888"  >
         </div>
+
         <div class="mui-input-row">
-          <label>入库单类型：</label>
-          <select >
-            <option value="0">选择入库单类型</option>
+          <label>入仓单类型：</label>
+          <select>
+            <option value="0">选择入仓类型</option>
             <option value="1">采购入库</option>
-            <option value="2">销售退货入库</option>
-            <option value="3">借货入库</option>
+            <option value="2">销售退货入库</option> 
           </select>
         </div>
         <div class="mui-input-row">
-          <label>关联订单号</label>
+          <label>关联运单号：</label>
           <select class="f00">
-              <option value="0">选择订单号</option>
+            <option value="0">点击选择海运运单号</option>
             <option value="DY66666666">DY66666666</option>
             <option value="DY66666666">DY66666666</option>
             <option value="DY66666666">DY66666666</option>
           </select>
-        </div> 
+        </div>
+
         <ul class="mui-table-view" id="warehouse-click">
           <li class="mui-table-view-cell mui-collapse">
             <a class="mui-navigate-right" href="#">点击查看订单详情</a>
@@ -224,8 +225,7 @@
       <div class="mui-card-footer">
           <div class="mui-button-row">
               <button type="button" class="mui-btn mui-btn-primary">提交保存</button>&nbsp;&nbsp; 
-              <button type="button" class="mui-btn  ">取消</button>&nbsp;&nbsp; 
-              <button type="button" class="mui-btn mui-btn-danger" id="tuihuo">确定退货</button>
+              <button type="button" class="mui-btn ">取消</button> 
           </div> 
         </div>
     </div>
@@ -294,7 +294,8 @@
       <span class="mui-tab-label">基础管理</span>
     </div>
   </nav>
- 
+
+
   <script>
     mui.init({});
 
