@@ -10,7 +10,14 @@
 
   var fileList = docObj.files;
 
+<<<<<<< HEAD
   for (var i = 0; i < fileList.length; i++) { 
+=======
+  for (var i = 0; i < fileList.length; i++) {
+
+
+
+>>>>>>> f0b177e836731a5c053acfe840320f0025ad2faa
     dd.innerHTML += "<div style='float:none;text-align: center;' > <img id='img" + i + "'  /> </div>";
 
     var imgObjPreview = document.getElementById("img" + i);

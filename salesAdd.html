@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="css/icons-extra.css">
     <link rel="stylesheet" href="css/app.css">
     <style type="text/css">
+<<<<<<< HEAD
+=======
+  
+>>>>>>> f0b177e836731a5c053acfe840320f0025ad2faa
         #supplier-box ul {
             background: #fff
         }
@@ -69,20 +73,33 @@
             <div class="mui-input-group mui-card-content">
                 <div class="mui-input-row">
                     <label> 单据编号：</label>
+<<<<<<< HEAD
                     <input type="text" disabled value="XS1787976980">
                 </div>
                 <div class="mui-input-row" id="guige-boxSize">
                     <label>产品类别：</label>
                     <select>
                         <option value="0">选择产品类别</option>
+=======
+                    <input type="text" class="mui-input-clear" disabled value="XS1787976980">
+                </div>
+                <div class="mui-input-row" id="guige-boxSize">
+                    <label>选择产品类别</label>
+                    <select class="mui-input-clear">
+>>>>>>> f0b177e836731a5c053acfe840320f0025ad2faa
                         <option value="男鞋">男鞋</option>
                         <option value="女鞋" selected>女鞋</option>
                     </select>
                 </div>
                 <div class="mui-input-row" id="guige-boxSize">
+<<<<<<< HEAD
                     <label>客户编号：</label>
                     <select>
                         <option value="0">选择产品类别</option>
+=======
+                    <label>客户编号</label>
+                    <select class="mui-input-clear">
+>>>>>>> f0b177e836731a5c053acfe840320f0025ad2faa
                         <option value="01">01</option>
                         <option value="02">02</option>
                     </select>
@@ -107,9 +124,14 @@
                     </li>
                 </ul>
                 <div class="mui-input-row" id="guige-boxSize">
+<<<<<<< HEAD
                     <label>销售类型：</label>
                     <select>
                         <option value="0">选择销售类型</option>
+=======
+                    <label>销售类型</label>
+                    <select class="mui-input-clear">
+>>>>>>> f0b177e836731a5c053acfe840320f0025ad2faa
                         <option value="销售">销售</option>
                         <option value="预售">预售</option>
                     </select>
@@ -125,17 +147,25 @@
             </div>
         </div>
 
+<<<<<<< HEAD
         <!--      <div class="mui-content" id="supplier-search">
+=======
+        <div class="mui-content" id="supplier-search">
+>>>>>>> f0b177e836731a5c053acfe840320f0025ad2faa
             <form class="mui-content-padded" style="margin: 10px;">
                 <div class="mui-input-row mui-search" id=" ">
                     <input type="search" class="mui-input-clear" placeholder="如：货号">
                 </div>
             </form>
+<<<<<<< HEAD
         </div> -->
         <div class="mui-content-padded">
             <button type="button" style="width: 100%;" id="popup-area-show" class="mui-btn mui-btn-success  mui-icon mui-icon-plus">点击添加货品</button>
         </div>
 
+=======
+        </div>
+>>>>>>> f0b177e836731a5c053acfe840320f0025ad2faa
         <div id="sales">
 
             <div class="mui-card">
@@ -207,7 +237,32 @@
                 </div>
 
             </div>
+<<<<<<< HEAD
         
+=======
+            <div class="mui-card">
+                <div class="mui-input-group mui-card-content">
+                    <div class="mui-card-content-inner">
+
+                        <div class="mui-ellipsis"> 货品编号：
+                            <span>s001</span>&nbsp;&nbsp;&nbsp;&nbsp;货品箱规格：
+                            <span>s001</span>
+                        </div>
+                        <div class="mui-ellipsis">库存数量：
+                            <span>s001</span>&nbsp;&nbsp;&nbsp;&nbsp;仓库位：
+                            <span>一仓</span>
+                        </div>
+
+                        <div class="mui-ellipsis"> 数量：
+                            <span class="input_nor_line">
+                                <input class="input_nor" type="text" value="88">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+>>>>>>> f0b177e836731a5c053acfe840320f0025ad2faa
         </div>
 
 
@@ -236,6 +291,7 @@
         </div>
     </nav>
 
+<<<<<<< HEAD
 
     <!-- 弹出层 -->
     <div id="popup-area" class="popup-area">
@@ -338,17 +394,58 @@
     </div>
 
     <div class="jxc-mask"></div>
+=======
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+    <!-- 弹出层 -->
+    <div id="guige-boxNumber" style="display:none">
+        <div class="title"> 选择货品箱包含商品颜色数量 </div>
+        <button type="button" class="mui-btn mui-btn-primary mui-btn-block" id="sales-submit"> 确认添加 </button>
+    </div>
+
+    <div class="jxc-mask"></div>
+    <!-- 弹出层 -->
+>>>>>>> f0b177e836731a5c053acfe840320f0025ad2faa
 
 
     <script src="js/mui.min.js"></script>
     <script src="js/song.js"></script>
     <script>
+<<<<<<< HEAD
         $("#popup-area-close,.jxc-mask").on("click", function () {
             hidePopup()
         })
         $("#popup-area-show").on("click", function () {
             showPopup()
         })
+=======
+        function showBOX() {
+            $(".jxc-mask").css({
+                "display": "block"
+            });
+            $("#guige-boxNumber").css({
+                "display": "block"
+            });
+        }
+
+        function hideBOX() {
+            $(".jxc-mask").css({
+                "display": "none"
+            });
+            $("#guige-boxNumber").css({
+                "display": "none"
+            });
+        }
+        //  展开选择框
+        $("#guige-boxNumber-btn").on("click", function () {
+            showBOX()
+        })
+
+        //  隐藏选择框
+        $(".jxc-mask").on("click", function () {
+            hideBOX()
+        })
+
+>>>>>>> f0b177e836731a5c053acfe840320f0025ad2faa
         mui.init({});
 
         // 底部导航 链接
