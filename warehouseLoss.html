@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Hello MUI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="css/mui.min.css">
+    <link rel="stylesheet" href="css/icons-extra.css">
+    <link rel="stylesheet" href="css/app.css">
+  
+    <script src="js/jquery.min.js"></script> 
+    <script src="js/webuploader.min.js"></script>
+    <script src="js/uploader.js"></script>
+<style>
+  .list-show .df span{ flex: 3 }
+</style>
+</head>
+
+<body>
+    <header id="header" class="mui-bar mui-bar-nav"> 
+        <h1 class="mui-title">历史报损货品</h1>
+        <a class="mui-action-back mui-icon mui-icon-undo mui-pull-left"></a>
+        <a class="mui-icon mui-icon-plus mui-pull-right" href="./warehouseLossAdd.html"></a>
+    </header>
+    <div class="mui-content"> 
+      <div class="mui-content-padded">
+            <!-- 操作区 -->
+            <ul class="mui-table-view mui-grid-view mui-grid-9">
+               
+                <li class="mui-table-view-cell mui-media  mui-col-xs-6" data-href="warehouseAll.html">
+                    <div class="mui-media-title">
+                        <span class="mui-icon mui-icon-compose"></span>
+                    </div>
+                    <div class="mui-media-body">库存盘点</div>
+      
+                </li>
+                <li class="mui-table-view-cell mui-media  mui-col-xs-6" data-href="warehouseTransfers.html">
+                    <div class="mui-media-title">
+                        <span class="mui-icon mui-icon-settings"></span>
+                    </div>
+                    <div class="mui-media-body">库存调拨</div> 
+                </li>
+              
+            </ul>
+            <!-- 操作区 -->
+      </div>
+  
+        <ul class="">
+            <li class="mui-table-view-cell mui-media mui-card"> 
+                    <div class="mui-media-body list-show">
+                        <h4 class="title"> 报损货品：s001 </h4>
+                        <p class="df"> 
+                            <span>仓库位：<b>A仓</b></span>
+                            <span>报损箱数：<b>1200</b></span> </p>
+                        <p class="df">
+                            <span>操作人：<b> yiwebcms </b></span>
+                            <span>报损日期：<b> 2018/04/04</b> </span>
+                        </p> 
+                        <p class="df"><span>原因： 暂无暂无暂无暂无暂无暂无暂无暂无暂无暂无暂无暂无暂无暂无 </span></p> 
+                    </div> 
+            </li>
+            <li class="mui-table-view-cell mui-media mui-card"> 
+                    <div class="mui-media-body list-show">
+                        <h4 class="title"> 报损货品：s001 </h4>
+                        <p class="df"> 
+                            <span>仓库位：<b>A仓</b></span>
+                            <span>报损箱数：<b>1200</b></span> </p>
+                        <p class="df">
+                            <span>操作人：<b> yiwebcms </b></span>
+                            <span>报损日期：<b> 2018/04/04</b> </span>
+                        </p> 
+                        <p class="df"><span>原因： 暂无暂无暂无暂无暂无暂无暂无暂无暂无暂无暂无暂无暂无暂无 </span></p> 
+                    </div> 
+            </li>
+            <li class="mui-table-view-cell mui-media mui-card"> 
+                    <div class="mui-media-body list-show">
+                        <h4 class="title"> 报损货品：s001 </h4>
+                        <p class="df"> 
+                            <span>仓库位：<b>A仓</b></span>
+                            <span>报损箱数：<b>1200</b></span> </p>
+                        <p class="df">
+                            <span>操作人：<b> yiwebcms </b></span>
+                            <span>报损日期：<b> 2018/04/04</b> </span>
+                        </p> 
+                        <p class="df"><span>原因： 暂无暂无暂无暂无暂无暂无暂无暂无暂无暂无暂无暂无暂无暂无 </span></p> 
+                    </div> 
+            </li>
+        </ul>
+     
+    </div>
+
+    <nav class="mui-bar mui-bar-tab" id="bar-down">
+
+        <div class="mui-tab-item mui-active" data-href="./index.html">
+            <span class="mui-icon mui-icon-home"></span>
+            <span class="mui-tab-label">首页</span>
+        </div>
+        <div class="mui-tab-item" data-href="./sales.html">
+            <span class="mui-icon mui-icon-star"> </span>
+            <span class="mui-tab-label">销售管理</span>
+        </div>
+        <div class="mui-tab-item" data-href="./procurement.html">
+            <span class="mui-icon mui-icon-download"> </span>
+            <span class="mui-tab-label">采购管理</span>
+        </div>
+        <div class="mui-tab-item" data-href="./warehouse.html">
+            <span class="mui-icon mui-icon-flag"></span>
+            <span class="mui-tab-label">仓库管理</span>
+        </div>
+        <div class="mui-tab-item" data-href="./basis.html">
+            <span class="mui-icon mui-icon-gear"></span>
+            <span class="mui-tab-label">基础管理</span>
+        </div>
+    </nav>
+
+    <script src="js/mui.min.js"></script>
+    <script src="js/song.js"></script>
+
+    <script> 
+        mui.init({}); 
+        mui(".mui-table-view").on("tap", "li", function () {
+            showLoading()
+            var href = this.getAttribute("data-href");
+            if (href !== "") {
+                gotoUrl(href);
+                return;
+            }
+        }, false)
+        // 底部导航 链接
+        mui("#bar-down").on("tap", "div", function () {
+            var href = this.getAttribute("data-href");
+            if (href !== "") {
+                gotoUrl(href);
+                return;
+            }
+        }, false);
+    </script>
+</body>
+
+</html>

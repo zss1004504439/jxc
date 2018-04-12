@@ -39,10 +39,15 @@
     <li class="mui-table-view-cell mui-media">
         <a class="mui-navigate-right" href="./guigeShow.html">
             
-            <div class="mui-media-body">
+            <div class="mui-media-body list-show">
                 <h4 class="title">货品箱名称</h4>
-                <p class="mui-ellipsis"> 体积：<span>512.00</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;长*宽*高：<span>40*40*40</span> </p> 
-                <p class="mui-ellipsis"> 货品单位数量：<span>40</span></p> 
+                <div class="df"> 
+                    <span>体积：<b>512.00</b></span>
+                    <span>长*宽*高：<b>40*40*40</b></span>
+                 </div> 
+                <div class="df"> 
+                    <span>货品单位数量：<b>40</b></span>
+                </div> 
             </div>
         </a>
     </li> 
@@ -81,13 +86,7 @@
     <script>
         mui.init({});
         //当前页面执行
-       /*  mui(".mui-table-view").on("tap", "li", function () {
-            var href = this.getAttribute("data-href");
-            if (href !== "") {
-                gotoUrl(href);
-                return;
-            }
-        }, false) */
+   
         mui("#bar-down").on("tap", "div", function () {
             var href = this.getAttribute("data-href");
             if (href !== "") {

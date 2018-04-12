@@ -2,7 +2,8 @@
 
 #guige-add-list table{ width: 100%; }
 #guige-add-list tbody{text-align: center }
-#guige-add-list tbody td input{     width: 42px;
+#guige-add-list tbody tr td{ width: 20%;}
+#guige-add-list tbody td input[type="text"]{     width:100%;
   border: none;
   color: #6d6d72;
   padding: initial;

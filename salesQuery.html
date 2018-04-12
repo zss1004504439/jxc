@@ -59,52 +59,63 @@
 <body>
     <header id="header" class="mui-bar mui-bar-nav">
 
-        <h1 class="mui-title"> 销售管理 </h1>
+        <h1 class="mui-title"> 搜索库存 </h1>
         <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
         <a id="promptBtn" class="mui-icon mui-icon-plus mui-pull-right" href="./salesAdd.html"></a>
-    </header>
-    
+    </header> 
     <div class="mui-content" id="supplier-search">
-
-            <ul class="mui-table-view mui-grid-view mui-grid-9">
-            
-                    <li class="mui-table-view-cell mui-media  mui-col-xs-4  " data-href="./salesAdd.html">
-                        <div class="mui-media-title">
-                            <span class="mui-icon mui-icon-compose">
-                            </span>
-                        </div>
-                        <div class="mui-media-body">销售开单</div> 
-                    </li>
-                  
-                    <li class="mui-table-view-cell mui-media  mui-col-xs-4  " data-href="salesList.html">
-                        <div class="mui-media-title">
-                            <span class="mui-icon mui-icon-list"></span>
-                        </div>
-                        <div class="mui-media-body">销售记录</div> 
-                    </li>
-                    <li class="mui-table-view-cell mui-media  mui-col-xs-4  " data-href="salesQuery.html">
-                        <div class="mui-media-title">
-                            <span class="mui-icon mui-icon-search"></span>
-                        </div>
-                        <div class="mui-media-body">库存查询</div> 
-                    </li>
-                     
-                    <li class="mui-table-view-cell mui-media  mui-col-xs-6" data-href="./salesPresell.html">
-                        <div class="mui-media-title">
-                            <span class="mui-icon mui-icon-bars"></span>
-                        </div>
-                        <div class="mui-media-body">预售订单</div> 
-                    </li>
-                    <li class="mui-table-view-cell mui-media  mui-col-xs-6" data-href="">
-                        <div class="mui-media-title">
-                            <span class="mui-icon mui-icon-paperplane"></span>
-                        </div>
-                        <div class="mui-media-body">采购申请</div> 
-                    </li>
-        
-                </ul>
- 
+            <form class="mui-content-padded" style="margin: 5px;">
+                    <div class="mui-input-row mui-search" id=" ">
+                        <input type="search" class="mui-input-clear" placeholder="如：销售编号">
+                    </div>
+            </form>
+           
     </div>
+
+    <div> 
+            <table id="warehouseAll" class="table-style">
+                <thead>
+                    <tr>
+                        <th> 仓库编号 </th>
+                        <th> 仓库名称 </th>
+                        <th> 货品编号 </th>
+                        <th> 货品箱名 </th>
+                        <th> 库存数量 </th>
+                        <th> 价格 </th>
+                        <th> 备注 </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> CK001 </td>
+                        <td> A仓 </td>
+                        <td> S001 </td>
+                        <td> 大箱80 </td>
+                        <td> 17 </td>
+                        <td> 0.00 </td>
+                        <td> <a href="">查看</a> </td>
+                    </tr> 
+                    <tr>
+                        <td> CK001 </td>
+                        <td> A仓 </td>
+                        <td> S001 </td>
+                        <td> 大箱80 </td>
+                        <td> 17 </td>
+                        <td> 0.00 </td>
+                        <td> <a href="">查看</a> </td>
+                    </tr> 
+                    <tr>
+                        <td> CK001 </td>
+                        <td> A仓 </td>
+                        <td> S001 </td>
+                        <td> 大箱80 </td>
+                        <td> 17 </td>
+                        <td> 0.00 </td>
+                        <td> <a href="">查看</a> </td>
+                    </tr> 
+                </tbody>
+            </table>
+        </div>
 
     <nav class="mui-bar mui-bar-tab" id="bar-down">
 
@@ -137,14 +148,7 @@
     <script>
       
         mui.init({});
-        mui(".mui-table-view").on("tap", "li", function () {
-            showLoading()
-            var href = this.getAttribute("data-href");
-            if (href !== "") {
-                gotoUrl(href);
-                return;
-            }
-        }, false)
+     
         // 底部导航 链接
         mui("#bar-down").on("tap", "div", function () {
             var href = this.getAttribute("data-href");

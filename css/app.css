@@ -17,11 +17,36 @@
 }
 .f00{ color: #f00 }
 html,body{ max-width: 640px;margin: 0 auto;font-family: "微软雅黑";    line-height: 1.4;}
-dl,dt,dd,ul,li{ margin: 0;padding: 0; } 
+body{  padding-bottom: 50px; }
+dl,dt,dd,ul,li{ margin: 0;padding: 0;list-style: none; } 
 .df{ display: flex;justify-content: center;align-items: center;flex-wrap: wrap; }
 
+.table-style{width:98%;}
+
+/* 登录页面 */
+#login-box{background-color: transparent;    height: 100%; display: flex; justify-content: center; align-items: center;   } 
+#login-box .mui-input-group { margin-top: 10px; }
+#login-box .mui-card-header{     justify-content: center;} 
+#login-box  .mui-btn { padding: 10px; }
+#login-box #login{ margin-top: 20px }
+#login-box .mui-input-group .mui-input-row:after{ right: 15px;height: 1px!important; }
+#login-box .mui-input-row label{ width: 25%; }
+#login-box .mui-input-row label~input{ width: 75% }
+#login-box .mui-card{    border-radius: 5px;}
+/* 登录页面 */
+
+.mui-table-view-cell:after,.mui-input-group .mui-input-row:after { right: 15px; }
+.mui-input-row-textarea {
+    height: initial !important
+}
+
+#mui-card-form .mui-card-footer {
+    justify-content: flex-end;
+}
+
 .mui-grid-view.mui-grid-9 .mui-media .mui-icon{ color: #f33 }
-body{  padding-bottom: 50px; }
+.mui-grid-view.mui-grid-9{ background-color: #fff }
+
 #supplier-search input[type=search]{    margin-bottom: 0 }
 .mui-card-footer{ justify-content: flex-end }
 
@@ -78,7 +103,7 @@ td{text-align:center}
         /* .popup-area-box ul li label div.df span{flex: 2;display: block; } */
         /* .popup-area-box ul li label div.df span+span{flex: 3; } */
 
-        #guige-boxNumber{background: #fff; position:fixed; bottom:0; left:0; width: 100%;   padding:10px 20px; border:none; transition: all .3s;z-index: 101;}
+        #guige-boxNumber{background: #fff; position:fixed; bottom:0; left:0; width: 100%;   padding:10px 20px; border:none; transition: all .3s;z-index: 102;}
         #guige-boxNumber .title{ text-align: center; font-size: 18px; }
     #guige-boxNumber .mui-btn-block{ padding: 6px 0 }
     #guige-boxNumber .title{ margin-bottom: 5px }
@@ -114,13 +139,14 @@ td{text-align:center}
 .webuploader-element-invisible{ position:absolute !important; clip: rect(1px 1px 1px 1px); /* IE6, IE7 */ clip: rect(1px,1px,1px,1px); }
 .webuploader-pick{ position:relative; /* display:inline-block; width:65px; */margin: 10px; line-height:32px; height:32px; border:1px solid #007aff; cursor:pointer; background-color: #007aff;color:#fff; text-align:center; overflow:hidden; zoom:1; *display:inline; /* border-radius:2px; */}
 .webuploader-pick-hover{ background:#3995f9; }
+.webuploader-pick+div{ width: 100%!important;height: 100%!important; }
 .webuploader-pick-disable{ opacity:0.6; pointer-events:none; }
 /*=====================以上部分是WebUploader必须的====================*/
 
 
 /* 列表项  */
-.list-show .df{display: flex; justify-content: center;align-items: center; line-height: 1.4}
-.list-show .df span{ display: block;flex: 2;  }
+.list-show .df{display: flex; justify-content: center;align-items: center;    color: #666; line-height: 1.4}
+.list-show .df span{ display: block;flex: 3;  }
 .list-show .df span+span{ flex: 3}
 .list-show .df span b{   }
 /* 列表项  */

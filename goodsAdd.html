@@ -41,50 +41,44 @@
 </head>
 
 <body>
-    <header id="header" class="mui-bar mui-bar-nav">
-
+    <header id="header" class="mui-bar mui-bar-nav"> 
         <h1 class="mui-title">新增商品</h1>
-        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <a class="mui-action-back mui-icon mui-icon-undo mui-pull-left"></a>
         <!-- <a id="promptBtn" class="mui-icon mui-icon-search mui-pull-right"></a> -->
         <!-- <a class="mui-icon mui-icon-checkmarkempty mui-pull-right">   </a> -->
-    </header>
-
-    <div class="mui-content">
-
-
+    </header> 
+    <div class="mui-content"> 
         <div class="mui-card">
             <div class="mui-card-header">
                 请正确填写商品基础信息
-            </div>
-
-            <div class="mui-input-group mui-card-content">
-
-
+            </div> 
+            <div class="mui-input-group mui-card-content"> 
                 <div class="mui-input-row">
-                    <label>选择供应商</label>
+                    <label>供应商：</label>
                     <select class="mui-input-clear">
+                        <option value="0">点击选择供应商</option>
                         <option value="供应商1">供应商1</option>
-                        <option value="供应商2" selected>供应商2</option>
+                        <option value="供应商2"  >供应商2</option>
                         <option value="供应商3">供应商3</option>
                         <option value="供应商3">供应商3</option>
-                        <option value="供应商3">供应商3</option>
-                        <option value="供应商3">供应商3</option>
-                        <option value="供应商3">供应商3</option>
+                        <option value="供应商3">供应商3</option> 
                     </select>
                 </div>
                 <div class="mui-input-row">
-                    <label>选择商品类别</label>
+                    <label>所属类别：</label>
                     <select class="mui-input-clear">
+                        <option value="0">点击选择所属类别</option>
                         <option value="男鞋">男鞋</option>
-                        <option value="女鞋" selected>女鞋</option>
+                        <option value="女鞋"  >女鞋</option>
                         <option value="其他">其他</option>
                     </select>
                 </div>
                 <div class="mui-input-row">
-                    <label>选择商品单位</label>
+                    <label>单位：</label>
                     <select class="mui-input-clear">
+                        <option value="0">点击选择货品单位</option>
+                        <option value="双" >双</option>
                         <option value="个">个</option>
-                        <option value="双" selected>双</option>
                         <option value="件">件</option>
                     </select>
                 </div>
@@ -105,32 +99,36 @@
             <div class="mui-input-group mui-card-content">
                 <div class="mui-input-row">
                     <label>货品名称</label>
-                    <input type="text" class="mui-input-clear" placeholder="商货品名称">
+                    <input type="text" class="mui-input-clear" placeholder="货品名称">
                 </div>
                 <div class="mui-input-row">
                     <label>货品货号</label>
                     <input type="text" class="mui-input-clear" placeholder="">
-                </div>
-
+                </div> 
+                <div class="mui-input-row mui-checkbox">
+                        <label>货品是否显示： 
+                        </label>
+                        <input name="goodscHeckbox" type="checkbox" checked>
+                      </div>
                 <div class="mui-input-row">
                     <label>进货价格</label>
                     <input type="text" class="mui-input-clear" placeholder="￥0.00">
                 </div>
                 <div class="mui-input-row">
-                    <label>批发价</label>
+                    <label>批发价格</label>
                     <input type="text" class="mui-input-clear" placeholder="￥0.00">
                 </div>
                 <div class="mui-input-row">
-                    <label>仓储最小值</label>
+                    <label>预警最小值</label>
                     <input type="text" class="mui-input-clear" placeholder="0">
                 </div>
                 <div class="mui-input-row">
-                    <label>仓储最大值</label>
+                    <label>预警最大值</label>
                     <input type="text" class="mui-input-clear" placeholder="0">
                 </div>
                 <div class="mui-input-row">
                     <label>货品材质</label>
-                    <input type="text" class="mui-input-clear" placeholder="联系地址">
+                    <input type="text" class="mui-input-clear" placeholder="">
                 </div>
                 <div class="mui-input-row">
                     <label>期初库存数量</label>
@@ -143,8 +141,7 @@
                 <div class="mui-input-row">
                     <label>期初批发价格</label>
                     <input type="text" class="mui-input-clear" placeholder="￥0.00">
-                </div>
-
+                </div> 
                 <div class="mui-input-row mui-input-row-textarea">
                     <label>备注</label>
                     <textarea id="textarea" rows="4" placeholder=""></textarea>
@@ -155,11 +152,7 @@
                     <button type="button" class="mui-btn mui-btn-primary">提交保存</button>&nbsp;&nbsp;
                 </div>
             </div>
-        </div>
-        <div class="mui-card">
-
-        </div>
-
+        </div> 
     </div>
 
     <nav class="mui-bar mui-bar-tab" id="bar-down">

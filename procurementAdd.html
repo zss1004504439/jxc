@@ -356,48 +356,24 @@
     </div>
 
     <div class="jxc-mask"></div>
-
-
-
-    <!-- 弹出层 -->
-
-
+ 
+    <!-- 弹出层 -->  
     <!--  图片修改弹出层 -->
 
     <div id="guige-boxNumber" style="display:none; ">
         <div class="title"> 编辑商品图 </div>
-        <form class="">
-
+        
             <ul class="logo">
                 <div id="tupian"></div>
                 <input type="hidden" id="txtImgUrl" name="txtImgUrl" class="input normal upload-path" />
                 <div class="upload-box upload-img"></div>
             </ul> 
-        </form>
+       
         <button type="button" class="mui-btn mui-btn-success mui-btn-block" id=""> 确认编辑 </button>
     </div>
-    <script type="text/javascript">
-        $(function () {
-            $(".upload-img").InitUploader({
-                filesize: "10240",
-                // sendurl: "/tools/upload_ajax.ashx",
-                swf: "/scripts/webuploader/uploader.swf",
-                filetypes: "gif,jpg,png,bmp"
-            });
-        })
- 
-        //  展开选择框
-        $("#goodsList li a img").on("click", function () {
-            showBOX()
-        })
-        //  隐藏选择框
-        $(".jxc-mask").on("click", function () {
-            hideBOX()
-        })
-    </script>
+   
     <!--  图片修改弹出层 -->
-
-
+ 
     <script>
         $("#popup-area-close,.jxc-mask").on("click", function () {
             hidePopup()
@@ -406,6 +382,22 @@
             showPopup()
         })
 
+   $(function () {
+            $(".upload-img").InitUploader({
+                filesize: "10240",
+                // sendurl: "/tools/upload_ajax.ashx",
+                swf: "/scripts/webuploader/uploader.swf",
+                filetypes: "gif,jpg,png,bmp"
+            });
+        })
+        //  展开选择框
+        $("#goodsList li a img").on("click", function () {
+            showBOX()
+        })
+        //  隐藏选择框
+        $(".jxc-mask").on("click", function () {
+            hideBOX()
+        })
         mui.init({});
         // 底部导航 链接
         mui("#bar-down").on("tap", "div", function () {

@@ -11,54 +11,49 @@
     <link rel="stylesheet" href="css/icons-extra.css">
     <link rel="stylesheet" href="css/app.css">
     <style type="text/css"> 
-    html,body{   height:100%;; }
-    body{ background: url('./images/login_bg.jpg') no-repeat center bottom;background-size: cover; }
-    .mui-content{ background-color: transparent;    height: 100%; display: flex; justify-content: center; align-items: center; }
-    .mui-input-group { margin-top: 10px; }
-			.mui-card-header{     justify-content: center;} 
-      .mui-btn { padding: 10px; }
-#login{ margin-top: 20px }
-.mui-input-group .mui-input-row:after{ right: 15px;height: 1px!important; }
-.mui-input-row label{ width: 25%; }
-.mui-input-row label~input{ width: 75% }
-.mui-card{    border-radius: 5px;}
-    </style>
+        html,body{   height:100%;; }
+        body{ background: url('./images/login_bg.jpg') no-repeat center bottom;background-size: cover; }
+
+        </style>
+    <script src="js/mui.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/song.js"></script>
 </head>
 
 <body>
-    <header id="header" class="mui-bar mui-bar-nav"> 
+    <header id="header" class="mui-bar mui-bar-nav">
         <h1 class="mui-title">用户登录</h1>
-        <!-- <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a> --> 
+        <!-- <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a> -->
         <a class="mui-icon mui-icon-help mui-pull-right"></a>
     </header>
 
-    <div class="mui-content ">
+    <div class="mui-content" id="login-box">
         <div class="mui-card">
-<div class="mui-card-header">
-  <h4>一网科技用户登录</h4>
-</div>
-          <form id='login-form' class="mui-input-group">
-              <div class="mui-input-row">
-                <label>账号</label>
-                <input id='account' type="text" class="mui-input-clear mui-input" placeholder="请输入账号">
-              </div>
-              <div class="mui-input-row">
-                <label>密码</label>
-                <input id='password' type="password" class="mui-input-clear mui-input" placeholder="请输入密码">
-              </div>
-            </form> 
-            <div class="  mui-content-padded">
-              <button id='login' class="mui-btn mui-btn-block mui-btn-primary">登录</button> 
+            <div class="mui-card-header">
+                <h4>一网科技用户登录</h4>
             </div>
-           
+            <form id='login-form' class="mui-input-group">
+                <div class="mui-input-row">
+                    <label>账号</label>
+                    <input id='account' type="text" class="mui-input-clear mui-input" placeholder="请输入账号">
+                </div>
+                <div class="mui-input-row">
+                    <label>密码</label>
+                    <input id='password' type="password" class="mui-input-clear mui-input" placeholder="请输入密码">
+                </div>
+            </form>
+            <div class=" mui-content-padded">
+                <button id='login' class="mui-btn mui-btn-block mui-btn-primary">登录</button>
+            </div>
+
         </div>
     </div>
 
- 
-    <script src="js/mui.min.js"></script>
-    <script src="js/song.js"></script>
+
+
     <script>
-        mui.init({}); 
+        mui.init({});
+        setTimeout(gotoUrl("index.html") ,2000)
     </script>
 </body>
 

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title> 新增销售 </title>
+    <title> 新增预售 </title>
     <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -59,51 +59,52 @@
 <body>
     <header id="header" class="mui-bar mui-bar-nav">
 
-        <h1 class="mui-title"> 销售管理 </h1>
+        <h1 class="mui-title"> 预售开单记录 </h1>
         <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
         <a id="promptBtn" class="mui-icon mui-icon-plus mui-pull-right" href="./salesAdd.html"></a>
     </header>
     
     <div class="mui-content" id="supplier-search">
 
-            <ul class="mui-table-view mui-grid-view mui-grid-9">
-            
-                    <li class="mui-table-view-cell mui-media  mui-col-xs-4  " data-href="./salesAdd.html">
-                        <div class="mui-media-title">
-                            <span class="mui-icon mui-icon-compose">
-                            </span>
-                        </div>
-                        <div class="mui-media-body">销售开单</div> 
-                    </li>
-                  
-                    <li class="mui-table-view-cell mui-media  mui-col-xs-4  " data-href="salesList.html">
-                        <div class="mui-media-title">
-                            <span class="mui-icon mui-icon-list"></span>
-                        </div>
-                        <div class="mui-media-body">销售记录</div> 
-                    </li>
-                    <li class="mui-table-view-cell mui-media  mui-col-xs-4  " data-href="salesQuery.html">
-                        <div class="mui-media-title">
-                            <span class="mui-icon mui-icon-search"></span>
-                        </div>
-                        <div class="mui-media-body">库存查询</div> 
-                    </li>
-                     
-                    <li class="mui-table-view-cell mui-media  mui-col-xs-6" data-href="./salesPresell.html">
-                        <div class="mui-media-title">
-                            <span class="mui-icon mui-icon-bars"></span>
-                        </div>
-                        <div class="mui-media-body">预售订单</div> 
-                    </li>
-                    <li class="mui-table-view-cell mui-media  mui-col-xs-6" data-href="">
-                        <div class="mui-media-title">
-                            <span class="mui-icon mui-icon-paperplane"></span>
-                        </div>
-                        <div class="mui-media-body">采购申请</div> 
-                    </li>
-        
-                </ul>
- 
+        <form class="mui-content-padded" style="margin: 5px;">
+            <div class="mui-input-row mui-search" id=" ">
+                <input type="search" class="mui-input-clear" placeholder="如：销售编号">
+            </div>
+        </form>
+        <div class=" "> 
+            <ul class="mui-table-view mui-table-view-chevron ">
+                <li class="mui-table-view-cell mui-media">
+                    <!-- <a class="mui-navigate-right" href="./salesAdd.html"> -->
+                    <a class=" " href="./salesAdd.html">
+                        <span class="mui-badge mui-badge-danger">点击开单</span> 
+                        <div class="mui-media-body list-show">
+                            <h4 class="title">预售编号：XS3310412176</h4>
+                            <p class="df"> 
+                              <span>货品：<b>s001</b></span>  
+                              <span>销售次数：<b class="f00">1</b></span>
+                              </p>
+                            <p class="df"> 
+                              <span>总箱数：<b>12</b></span>  
+                              <span>总金额：<b class="f00">￥1230</b></span>
+                              </p>
+                            <p class="df">  
+                              <span>已售箱数：<b>10</b></span>  
+                              <span>剩余箱数：<b>2</b></span>  
+                             </p>
+                            <p class="df"> 
+                              <span>客户名称：<b>张某某</b></span> 
+                              <span>时间：<b>2018/08/06</b></span>
+                            </p>  
+                            <p class="df">
+                                <span>客户电话：<b>037166666666</b></span> 
+                            </p>
+                            <p class="mui-ellipsis"><span>客户地址：郑州市冬青街26号河南省电子商务产业园</span></p>
+                        </div> 
+                    </a>
+                </li>
+            </ul> 
+    
+        </div>
     </div>
 
     <nav class="mui-bar mui-bar-tab" id="bar-down">
@@ -137,14 +138,7 @@
     <script>
       
         mui.init({});
-        mui(".mui-table-view").on("tap", "li", function () {
-            showLoading()
-            var href = this.getAttribute("data-href");
-            if (href !== "") {
-                gotoUrl(href);
-                return;
-            }
-        }, false)
+
         // 底部导航 链接
         mui("#bar-down").on("tap", "div", function () {
             var href = this.getAttribute("data-href");

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Hello MUI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="stylesheet" href="css/mui.min.css">
+  <link rel="stylesheet" href="css/icons-extra.css">
+  <link rel="stylesheet" href="css/app.css">
+  <style type="text/css">
+    #supplier-box ul {
+      background: #fff
+    }
+
+    #supplier-box ul li {
+      padding: 11px 13px;
+    }
+
+    #supplier-box ul li .mui-media-body {
+      font-size: 12px;
+    }
+
+    /* .mui-input-row label{ text-align: right; } */
+
+    .mui-input-row-textarea {
+      height: initial !important
+    } 
+  </style>
+  <script src="js/jquery.min.js"></script>
+  <!-- <link href="js/webuploader.css" rel="stylesheet"> -->
+  <script src="js/webuploader.min.js"></script>
+  <script src="js/uploader.js"></script>
+
+</head>
+
+<body>
+  <header id="header" class="mui-bar mui-bar-nav">
+    <h1 class="mui-title">商品信息</h1>
+    <a class="mui-action-back mui-icon mui-icon-undo mui-pull-left"></a>
+    <!-- <a id="promptBtn" class="mui-icon mui-icon-search mui-pull-right"></a> -->
+    <!-- <a class="mui-icon mui-icon-checkmarkempty mui-pull-right">   </a> -->
+  </header>
+  <div class="mui-content">
+    <div class="mui-card">
+      <div class="mui-card-header">
+        查看商品基础信息
+      </div>
+      <div class="mui-input-group mui-card-content">
+        <div class="mui-input-row">
+          <label>供应商：</label>
+          <select class="mui-input-clear">
+            <option value="0">点击选择供应商</option>
+            <option value="供应商1">供应商1</option>
+            <option value="供应商2" selected>供应商2</option>
+            <option value="供应商3">供应商3</option>
+            <option value="供应商3">供应商3</option>
+            <option value="供应商3">供应商3</option>
+          </select>
+        </div>
+        <div class="mui-input-row">
+          <label>所属类别：</label>
+          <select class="mui-input-clear">
+            <option value="0">点击选择所属类别</option>
+            <option value="男鞋">男鞋</option>
+            <option value="女鞋" selected>女鞋</option>
+            <option value="其他">其他</option>
+          </select>
+        </div>
+        <div class="mui-input-row">
+          <label>货品单位：</label>
+          <select class="mui-input-clear">
+            <option value="0">点击选择货品单位</option>
+            <option value="双" selected>双</option>
+            <option value="个">个</option>
+            <option value="件">件</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="mui-content-padded">
+      <ul class="logo">
+        <div id="tupian">
+          <li>
+            <img src="./images/cbd.jpg" alt="">
+          </li>
+        </div>
+        <input type="hidden" id="txtImgUrl" name="txtImgUrl" class="input normal upload-path" />
+        <div class="upload-box upload-img"></div>
+      </ul>
+
+    </div>
+    <div class=" ">
+ 
+      <form class="mui-input-group ">
+        <div class="mui-input-row">
+          <label>货品名称：</label>
+          <input type="text" class="mui-input-clear" value="s001">
+        </div>
+        <div class="mui-input-row">
+          <label>货品货号：</label>
+          <input type="text" class="mui-input-clear" value="s001">
+        </div>
+        <div class="mui-input-row mui-checkbox">
+          <label>货品是否显示： 
+          </label>
+          <input name="goodscHeckbox" type="checkbox" checked>
+        </div>
+        <div class="mui-input-row">
+          <label>进货价格：</label>
+          <input type="text" class="mui-input-clear" value="10.00">
+        </div>
+        <div class="mui-input-row">
+          <label>批发价格：</label>
+          <input type="text" class="mui-input-clear" value="18.00">
+        </div>
+        <div class="mui-input-row">
+          <label>预警最小值：</label>
+          <input type="text" class="mui-input-clear" value="10">
+        </div>
+        <div class="mui-input-row">
+          <label>预警最大值：</label>
+          <input type="text" class="mui-input-clear" value="100">
+        </div>
+        <div class="mui-input-row">
+          <label>货品材质：</label>
+          <input type="text" class="mui-input-clear" value="">
+        </div>
+        <div class="mui-input-row">
+          <label>期初库存数量：</label>
+          <input type="text" class="mui-input-clear" value="0">
+        </div>
+        <div class="mui-input-row">
+          <label>期初进货价格：</label>
+          <input type="text" class="mui-input-clear" value="0.00">
+        </div>
+        <div class="mui-input-row">
+          <label>期初批发价格：</label>
+          <input type="text" class="mui-input-clear" value="0.00">
+        </div>
+        <div class="mui-input-row mui-input-row-textarea">
+          <label>备注：</label>
+          <textarea id="textarea" rows="4"> </textarea>
+        </div>
+        <div class="mui-button-row">
+          <button type="button" class="mui-btn mui-btn-primary">保存修改</button>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <button type="button" class="mui-btn mui-btn-danger">删除商品</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+  <nav class="mui-bar mui-bar-tab" id="bar-down">
+
+    <div class="mui-tab-item mui-active" data-href="./index.html">
+      <span class="mui-icon mui-icon-home"></span>
+      <span class="mui-tab-label">首页</span>
+    </div>
+    <div class="mui-tab-item" data-href="./sales.html">
+      <span class="mui-icon mui-icon-star"> </span>
+      <span class="mui-tab-label">销售管理</span>
+    </div>
+    <div class="mui-tab-item" data-href="./procurement.html">
+      <span class="mui-icon mui-icon-download"> </span>
+      <span class="mui-tab-label">采购管理</span>
+    </div>
+    <div class="mui-tab-item" data-href="./warehouse.html">
+      <span class="mui-icon mui-icon-flag"></span>
+      <span class="mui-tab-label">仓库管理</span>
+    </div>
+    <div class="mui-tab-item" data-href="./basis.html">
+      <span class="mui-icon mui-icon-gear"></span>
+      <span class="mui-tab-label">基础管理</span>
+    </div>
+  </nav>
+
+  <script src="js/mui.min.js"></script>
+  <script src="js/song.js"></script>
+
+  <script>
+    $(function () {
+      $(".upload-img").InitUploader({
+        filesize: "10240",
+        // sendurl: "/tools/upload_ajax.ashx",
+        swf: "/scripts/webuploader/uploader.swf",
+        filetypes: "gif,jpg,png,bmp"
+      });
+    })
+    mui.init({});
+
+    // 底部导航 链接
+    mui("#bar-down").on("tap", "div", function () {
+      var href = this.getAttribute("data-href");
+      if (href !== "") {
+        gotoUrl(href);
+        return;
+      }
+    }, false);
+  </script>
+</body>
+
+</html>

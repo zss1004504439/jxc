@@ -11,17 +11,21 @@
     <link rel="stylesheet" href="css/icons-extra.css">
     <link rel="stylesheet" href="css/app.css">
     <style type="text/css">
-    .mui-grid-view.mui-grid-9{ background-color: #fff }
-    #index-quick .mui-media-body{ font-size: 14px; }
+        .mui-grid-view.mui-grid-9 {
+            background-color: #fff
+        }
+
+        #index-quick .mui-media-body {
+            font-size: 14px;
+        }
     </style>
 </head>
 
 <body>
-    <header id="header" class="mui-bar mui-bar-nav"> 
+    <header id="header" class="mui-bar mui-bar-nav">
         <h1 class="mui-title">首页</h1>
-        <!-- <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a> -->
-        <!-- <a class="mui-icon mui-icon-gear mui-pull-left"></a> -->
-        <a class="mui-icon mui-icon-help mui-pull-right"></a>
+        <!-- <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a> --> 
+        <!-- <a class="mui-icon mui-icon-help mui-pull-right"></a> -->
     </header>
 
     <div class="mui-content">
@@ -35,16 +39,16 @@
             </li>
             <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3" data-href="procurement.html">
                 <div class="mui-media-title">
-                    <span class="mui-icon mui-icon-download"> 
+                    <span class="mui-icon mui-icon-download">
                     </span>
                 </div>
-                <div class="mui-media-body">采购管理</div> 
+                <div class="mui-media-body">采购管理</div>
             </li>
             <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3" data-href="guige.html">
                 <div class="mui-media-title">
-                    <span class="mui-icon mui-icon-starhalf">   </span>
+                    <span class="mui-icon mui-icon-starhalf"> </span>
                 </div>
-                <div class="mui-media-body">货品箱规格</div> 
+                <div class="mui-media-body">货品箱规格</div>
             </li>
             <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3" data-href="sales.html">
                 <div class="mui-media-title">
@@ -77,24 +81,27 @@
                 <div class="mui-media-title">
                     <span class="mui-icon mui-icon mui-icon-locked"></span>
                 </div>
-                <div class="mui-media-body">财务管理</div>
-
+                <div class="mui-media-body">财务管理</div> 
             </li>
-            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3" data-href="admin.html">
-
+            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3" data-href="admin.html"> 
                 <div class="mui-media-title">
                     <span class="mui-icon mui-icon-contact"></span>
                 </div>
-                <div class="mui-media-body">用户管理</div>
-
+                <div class="mui-media-body">用户管理</div> 
             </li>
-            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3" data-href="msg.html">
+            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3" data-href="msgWarning.html"> 
+                <div class="mui-media-title">
+                    <span class="mui-icon  mui-icon-info"></span>
+                </div>
+                <div class="mui-media-body">库存预警</div> 
+            </li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3" data-href="msgSystem.html">
                 <div class="mui-media-title">
                     <span class="mui-icon mui-icon-email">
                         <span class="mui-badge">5</span>
                     </span>
                 </div>
-                <div class="mui-media-body">消息管理</div> 
+                <div class="mui-media-body">系统消息</div>
             </li>
             <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3" data-href="indexMore.html">
                 <div class="mui-media-title">
@@ -103,80 +110,80 @@
                 <div class="mui-media-body">MORE</div>
 
             </li>
-            
+
         </ul>
 
     </div>
     <div class="mui-content-padded" id="index-quick">
-            <ul class="mui-table-view mui-grid-view mui-grid-9">
-                    <li class="mui-table-view-cell mui-media  mui-col-xs-3  " data-href="warehouseAdd.html">
-                            <div class="mui-media-title">
-                                <span class="mui-icon mui-icon-download">
-                                </span>
-                            </div>
-                            <div class="mui-media-body">国内入库</div> 
-                        </li>
-                      
-                        <li class="mui-table-view-cell mui-media  mui-col-xs-3  " data-href="warehouseOut.html">
-                            <div class="mui-media-title">
-                                <span class="mui-icon mui-icon-upload"></span>
-                            </div>
-                            <div class="mui-media-body">国内出库</div>
-            
-                        </li>
-                        <li class="mui-table-view-cell mui-media  mui-col-xs-3" data-href="warehouseSeaAdd.html">
-                            <div class="mui-media-title">
-                                <span class="mui-icon mui-icon-plus"></span>
-                            </div>
-                            <div class="mui-media-body">海外入仓</div> 
-                        </li>
-                        <li class="mui-table-view-cell mui-media  mui-col-xs-3  " data-href="warehouseSeaOut.html">
-                            <div class="mui-media-title">
-                                <span class="mui-icon mui-icon-minus"></span>
-                            </div>
-                            <div class="mui-media-body">海外出仓</div> 
-                        </li>
-                        <li class="mui-table-view-cell mui-media  mui-col-xs-6 " data-href="procurementAdd.html">
-                                <div class="mui-media-title">
-                                    <span class="mui-icon mui-icon-compose"></span>
-                                </div>
-                                <div class="mui-media-body">新建采购</div>
-                
-                            </li>
-                            <li class="mui-table-view-cell mui-media  mui-col-xs-6  " data-href="salesAdd.html">
-                                <div class="mui-media-title">
-                                    <span class="mui-icon mui-icon-star"></span>
-                                </div>
-                                <div class="mui-media-body">新建销售</div> 
-                            </li>
-            </ul>
+        <ul class="mui-table-view mui-grid-view mui-grid-9">
+            <li class="mui-table-view-cell mui-media  mui-col-xs-3  " data-href="warehouseAdd.html">
+                <div class="mui-media-title">
+                    <span class="mui-icon mui-icon-download">
+                    </span>
+                </div>
+                <div class="mui-media-body">国内入库</div>
+            </li>
+
+            <li class="mui-table-view-cell mui-media  mui-col-xs-3  " data-href="warehouseOut.html">
+                <div class="mui-media-title">
+                    <span class="mui-icon mui-icon-upload"></span>
+                </div>
+                <div class="mui-media-body">国内出库</div>
+
+            </li>
+            <li class="mui-table-view-cell mui-media  mui-col-xs-3" data-href="warehouseSeaAdd.html">
+                <div class="mui-media-title">
+                    <span class="mui-icon mui-icon-plus"></span>
+                </div>
+                <div class="mui-media-body">海外入仓</div>
+            </li>
+            <li class="mui-table-view-cell mui-media  mui-col-xs-3  " data-href="warehouseSeaOut.html">
+                <div class="mui-media-title">
+                    <span class="mui-icon mui-icon-minus"></span>
+                </div>
+                <div class="mui-media-body">海外出仓</div>
+            </li>
+            <li class="mui-table-view-cell mui-media  mui-col-xs-6 " data-href="procurementAdd.html">
+                <div class="mui-media-title">
+                    <span class="mui-icon mui-icon-compose"></span>
+                </div>
+                <div class="mui-media-body">新建采购</div>
+
+            </li>
+            <li class="mui-table-view-cell mui-media  mui-col-xs-6  " data-href="salesAdd.html">
+                <div class="mui-media-title">
+                    <span class="mui-icon mui-icon-star"></span>
+                </div>
+                <div class="mui-media-body">新建销售</div>
+            </li>
+        </ul>
     </div>
 
 
     <nav class="mui-bar mui-bar-tab" id="bar-down">
-       
-            <div class="mui-tab-item mui-active" data-href="./index.html">
-                <span class="mui-icon mui-icon-home"></span>
-                <span class="mui-tab-label">首页</span>
-            </div>
-            <div class="mui-tab-item" data-href="./sales.html">
-                <span class="mui-icon mui-icon-star"> </span>
-                <span class="mui-tab-label">销售管理</span>
-            </div>
-            <div class="mui-tab-item" data-href="./procurement.html">
-                <span class="mui-icon mui-icon-download"> </span>
-                <span class="mui-tab-label">采购管理</span>
-            </div>
-            <div class="mui-tab-item" data-href="./warehouse.html">
-                <span class="mui-icon mui-icon-flag"></span>
-                <span class="mui-tab-label">仓库管理</span>
-            </div>
-            <div class="mui-tab-item" data-href="./basis.html">
-                <span class="mui-icon mui-icon-gear"></span>
-                <span class="mui-tab-label">基础管理</span>
-            </div>
-      
-    </nav> 
+
+        <div class="mui-tab-item mui-active" data-href="./index.html">
+            <span class="mui-icon mui-icon-home"></span>
+            <span class="mui-tab-label">首页</span>
+        </div>
+        <div class="mui-tab-item" data-href="./sales.html">
+            <span class="mui-icon mui-icon-star"> </span>
+            <span class="mui-tab-label">销售管理</span>
+        </div>
+        <div class="mui-tab-item" data-href="./procurement.html">
+            <span class="mui-icon mui-icon-download"> </span>
+            <span class="mui-tab-label">采购管理</span>
+        </div>
+        <div class="mui-tab-item" data-href="./warehouse.html">
+            <span class="mui-icon mui-icon-flag"></span>
+            <span class="mui-tab-label">仓库管理</span>
+        </div>
+        <div class="mui-tab-item" data-href="./basis.html">
+            <span class="mui-icon mui-icon-gear"></span>
+            <span class="mui-tab-label">基础管理</span>
+        </div>
+
+    </nav>
     <script src="js/mui.min.js"></script>
     <script src="js/song.js"></script>
     <script>
