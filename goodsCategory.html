@@ -23,13 +23,15 @@
   </header> 
   <div class="mui-content">
       <div class="mui-content-padded">
-          <button type="button" style="width: 100%;" id="popup-area-show" class="mui-btn mui-btn-success  mui-icon mui-icon-plus">点击新增类别</button>
+          <button type="button" style="width: 100%;" id="popup-area-show" class="addItem mui-btn mui-btn-success  mui-icon mui-icon-plus">点击新增类别</button>
       </div>
       <div class="mui-card">   
           <div class="mui-card-content">
             <div class="mui-card-content-inner  ">
                 <a class="mui-icon mui-icon-list f00"></a>
                 <span class="mui-icon">男鞋</span> 
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <span>单位：双</span>
             </div>
           </div>  
         </div>
@@ -37,7 +39,9 @@
           <div class="mui-card-content">
             <div class="mui-card-content-inner  ">
                 <a class="mui-icon mui-icon-list f00"></a>
-                <span class="mui-icon">女鞋</span> 
+                <span class="mui-icon">女鞋</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <span>单位：双</span>
             </div>
           </div>  
         </div>
@@ -46,6 +50,8 @@
             <div class="mui-card-content-inner  ">
                 <a class="mui-icon mui-icon-list f00"></a>
                 <span class="mui-icon">其他</span> 
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <span>单位：*</span>
             </div>
           </div>  
         </div> 
@@ -88,11 +94,20 @@
                   <label>商品类别：</label>
                   <input type="text" class="mui-input-clear" placeholder="商品类别名称">
               </div> 
+              <div class="mui-input-row">
+                  <label>商品单位：</label>
+                  <select name="" id="">
+                    <option value="0">点击选择货品单位</option>
+                    <option value="1">双</option>
+                    <option value="1">个</option>
+                    <option value="1">只</option>
+                  </select> 
+              </div> 
         </div>
         <div id="popup-area-btn" class="df">
             <!-- 放在第一个 -->
             <a class="mui-btn-danger " id="popup-area-close"> 关闭窗口 </a>
-            <a class="mui-btn-primary" href="">立即提交</a>
+            <a class="mui-btn-primary" href="">保存</a>
         </div>
     </div>
 
