@@ -17,15 +17,19 @@
             max-width: 90px;
             height: 90px;
         }
-        .list-show .df {font-size: 14px; line-height: 1.6 }
-        .list-show .df span{flex: 3}
+
+        .list-show .df {
+            font-size: 14px;
+            line-height: 1.5
+        } 
+        .mui-table-view-cell>a>.mui-badge{ top: 25px; border-radius: 2px;}
     </style>
 </head>
 
 <body>
     <header id="header" class="mui-bar mui-bar-nav">
 
-        <h1 class="mui-title">订单详情</h1>
+        <h1 class="mui-title">采购单详情</h1>
         <a class="mui-action-back mui-icon mui-icon-undo mui-pull-left"></a>
         <a class="mui-icon  mui-icon-plus mui-pull-right" href="./procurementAdd.html"></a>
     </header>
@@ -37,28 +41,36 @@
             <div class="mui-card-content">
                 <div class="mui-card-content-inner list-show">
                     <div class="df">
-                            <span>采购日期：<b>2018/04/04</b></span>
-                            <span>入库日期：<b> 暂无</b> </span>
+                        <span>采购日期：
+                            <b>2018/04/04</b>
+                        </span>
+                        <span>入库日期：
+                            <b> 暂无</b>
+                        </span>
+                    </div>
+
+                    <div class="df">
+                        <span>实付总金额：
+                            <b>5120.00</b>
+                        </span>
+                        <span>预付款：
+                            <b class="f00">5120.00</b>
+                        </span>
                     </div>
                     <div class="df">
-                            <span>现金：<b>0.00</b></span>
-                            <span>刷卡：<b> 10000.00</b> </span>
+                        <span> 采购总箱数：
+                            <b>200</b>
+                        </span>
+                        <span>录入人：
+                            <b>yiwebcms</b>
+                        </span>
                     </div>
-                  
                     <div class="df">
-                            <span>总计金额：<b>5120.00</b></span>
-                            <span>实付金额：<b class="f00">5120.00</b></span>
+                        <span class="mui-ellipsis"> 供应商：郑州壹网无忧信息技术有限公司</span>
                     </div>
-                    <div class="df"> 
-                        <span> 采购总数量：<b>200</b> </span>
-                        <span>录入人：<b>yiwebcms</b> </span>
-                    </div> 
                     <div class="df">
-                            <span class="mui-ellipsis"> 供应商：郑州壹网无忧信息技术有限公司</span> 
-                        </div>
-                    <div class="df"> 
-                        <span> 备注：郑州壹网无忧信息技术有限公司郑州壹网无忧信息技术有限公司 </span> 
-                    </div> 
+                        <span> 备注：郑州壹网无忧信息技术有限公司郑州壹网无忧信息技术有限公司 </span>
+                    </div>
                 </div>
             </div>
             <div class="mui-card-footer">
@@ -68,71 +80,84 @@
                     <a href="javascript:;" id="returnGeason">[查看原因]</a>
                 </div>
             </div>
-        </div> 
-        <div class="mui-card">
-            <div class="mui-card-header">订单包含货品详情</div>
+        </div>
+        <div class="mui-content-padded" >
+
+            <div class=" mui-btn mui-btn-success addItem"  >采购单包含的货品详情</div>
+        </div>
+        <div class="">
             <div class="mui-card-content">
-                <ul class="mui-table-view mui-table-view-chevron">
-                    <li class="mui-table-view-cell mui-media">
+                <ul class="mui-table-view " id="goodsList">
+                    <div class="mui-table-view-cell mui-media">
+                 
+                                <!-- <span class=" mui-badge mui-badge-primary">预览货品箱信息</span> -->
                             <img class="mui-media-object mui-pull-left" src="./images/cbd.jpg">
-                        <div class="mui-media-body">
-                            <h4 class="title"> 货品编号 </h4>
-                            <p class="mui-ellipsis"> 货品箱规格：
-                                <span>大箱80</span>
-                            </p>
-                            <p class="mui-ellipsis">数量（箱）：
-                                <span> 1000 </span>
-                            </p>
-                            <p class="mui-ellipsis"> 货品金额：
-                                <span>900.00</span>
-                            </p>
-                        </div>
-                    </li> 
-                    <li class="mui-table-view-cell mui-media">
-                            <img class="mui-media-object mui-pull-left" src="./images/cbd.jpg">
-                        <div class="mui-media-body">
-                            <h4 class="title"> 货品编号 </h4>
-                            <p class="mui-ellipsis"> 货品箱规格：
-                                <span>大箱80</span>
-                            </p>
-                            <p class="mui-ellipsis">数量（箱）：
-                                <span> 1000 </span>
-                            </p>
-                            <p class="mui-ellipsis"> 货品金额：
-                                <span>900.00</span>
-                            </p>
-                        </div>
-                    </li> 
-                    <li class="mui-table-view-cell mui-media">
-                            <img class="mui-media-object mui-pull-left" src="./images/cbd.jpg">
-                        <div class="mui-media-body">
-                            <h4 class="title"> 货品编号 </h4>
-                            <p class="mui-ellipsis"> 货品箱规格：
-                                <span>大箱80</span>
-                            </p>
-                            <p class="mui-ellipsis">数量（箱）：
-                                <span> 1000 </span>
-                            </p>
-                            <p class="mui-ellipsis"> 货品金额：
-                                <span>900.00</span>
-                            </p>
-                        </div>
-                    </li> 
-                    <li class="mui-table-view-cell mui-media">
-                            <img class="mui-media-object mui-pull-left" src="./images/cbd.jpg">
-                        <div class="mui-media-body">
-                            <h4 class="title"> 货品编号 </h4>
-                            <p class="mui-ellipsis"> 货品箱规格：
-                                <span>大箱80</span>
-                            </p>
-                            <p class="mui-ellipsis">数量（箱）：
-                                <span> 1000 </span>
-                            </p>
-                            <p class="mui-ellipsis"> 货品金额：
-                                <span>900.00</span>
-                            </p>
-                        </div>
-                    </li> 
+                            <div class="mui-media-body list-show">
+                                <h4 class="title">货号：s001   </h4>
+                                <p class="df">
+                                    <span>历史单价：
+                                        <b>20.00</b>
+                                    </span>
+                                    <span>
+                                        本次单价：
+                                        <b class="f00"> 20.00 </b>
+                                    </span>
+                                </p>
+                                <p class="df">
+                                    <span> 采购箱数：<b>100</b>
+                                    </span>
+                                    <span>
+                                        货品箱：<b class="f00">中箱60 </b> 
+                                    </span>
+                                </p>
+                                <p class="df">
+                                    <span>总数量：<b>10900</b>
+                                    </span>
+                                    <span>总金额：<b>1000.00</b>
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="" id=" ">
+                                <div class="mui-table-view-cell mui-collapse">
+                                    <a class="mui-navigate-right" href="#">点击查看单个货品箱规格</a>
+                                    <div class="mui-collapse-content">
+                                        <table class="table-style">
+                                            <tbody>
+                                                <tr>
+                                                    <td>码数</td>
+                                                    <td>28</td>
+                                                    <td>27</td>
+                                                    <td>21</td>
+                                                    <td>20</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>绿色</td>
+                                                    <td>1</td>
+                                                    <td>1</td>
+                                                    <td>1</td>
+                                                    <td>1</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>红色</td>
+                                                    <td>2</td>
+                                                    <td>2</td>
+                                                    <td>2</td>
+                                                    <td>2</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>黄色</td>
+                                                    <td>3</td>
+                                                    <td>3</td>
+                                                    <td>3</td>
+                                                    <td>3</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                      
+                    </li>
                 </ul>
             </div>
         </div>
@@ -150,7 +175,7 @@
     </div>
 
     <!-- 退回原因 -->
- 
+
     <nav class="mui-bar mui-bar-tab" id="bar-down">
 
         <div class="mui-tab-item mui-active" data-href="./index.html">
@@ -184,7 +209,7 @@
         $("#returnGeason").on("click", function () {
             layer.open({
                 content: $("#returnGeasonBox").html(),
-                btn: ['确认','<a style="display:block" href="tel:13273803580">联系供应商</a>' ]
+                btn: ['确认', '<a style="display:block" href="tel:13273803580">联系供应商</a>']
             });
         })
         mui.init({});

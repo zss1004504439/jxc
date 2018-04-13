@@ -20,9 +20,8 @@
 <body>
     <header id="header" class="mui-bar mui-bar-nav">
         <h1 class="mui-title">商品管理</h1>
-        <a class="mui-action-back mui-icon mui-icon mui-icon-undo mui-pull-left"></a>
-        <!-- <a id="promptBtn" class="mui-icon mui-icon-search mui-pull-right"></a> -->
-        <a class="mui-icon  mui-icon-plus mui-pull-right" href="./goodsAdd.html"></a>
+        <a class="mui-action-back mui-icon mui-icon mui-icon-undo mui-pull-left"></a> 
+        <!-- <a class="mui-icon  mui-icon-plus mui-pull-right" href="./goodsAdd.html"></a> -->
     </header>
 <!-- input弹出的手机键盘搜索  https://blog.csdn.net/xinlingdexueba/article/details/78342695 -->
     <div class="mui-content" id="supplier-search"> 
@@ -31,6 +30,9 @@
                     <input type="search" class="mui-input-clear" placeholder="如：男鞋">
                 </div>
             </form> 
+            <div class="mui-content-padded">
+                    <a href="./goodsAdd.html" id="popup-area-show" class="addItem mui-btn mui-btn-success mui-icon mui-icon-plus">新增商品</a>
+            </div>
     </div> 
   <ul class="mui-table-view mui-table-view-chevron" id="goodsList">
     <li class="mui-table-view-cell mui-media">

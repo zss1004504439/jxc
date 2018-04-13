@@ -65,7 +65,7 @@
                     </select>
                 </div>
                 <div class="mui-input-row">
-                    <label>所属类别：</label>
+                    <label>商品类别：</label>
                     <select class="mui-input-clear">
                         <option value="0">点击选择所属类别</option>
                         <option value="男鞋">男鞋</option>
@@ -98,50 +98,41 @@
 
             <div class="mui-input-group mui-card-content">
                 <div class="mui-input-row">
+                    <label>货号</label>
+                    <input type="text" class="mui-input-clear" placeholder="货号">
+                </div> 
+                <div class="mui-input-row">
                     <label>货品名称</label>
                     <input type="text" class="mui-input-clear" placeholder="货品名称">
                 </div>
+ 
                 <div class="mui-input-row">
-                    <label>货品货号</label>
-                    <input type="text" class="mui-input-clear" placeholder="">
-                </div> 
-                <div class="mui-input-row mui-checkbox">
-                        <label>货品是否显示： 
-                        </label>
-                        <input name="goodscHeckbox" type="checkbox" checked>
-                      </div>
-                <div class="mui-input-row">
-                    <label>进货价格</label>
+                    <label>单价</label>
                     <input type="text" class="mui-input-clear" placeholder="￥0.00">
                 </div>
                 <div class="mui-input-row">
-                    <label>批发价格</label>
+                    <label>期望销售价格</label>
                     <input type="text" class="mui-input-clear" placeholder="￥0.00">
                 </div>
                 <div class="mui-input-row">
-                    <label>预警最小值</label>
+                    <label>预警最小值（箱）</label>
                     <input type="text" class="mui-input-clear" placeholder="0">
                 </div>
                 <div class="mui-input-row">
-                    <label>预警最大值</label>
+                    <label>预警最大值（箱）</label>
                     <input type="text" class="mui-input-clear" placeholder="0">
                 </div>
                 <div class="mui-input-row">
                     <label>货品材质</label>
-                    <input type="text" class="mui-input-clear" placeholder="">
+                    <!--  做出下拉框 -->
+                    <select class="mui-input-clear">
+                            <option value="0">点击选择货品材质</option>
+                            <option value="双" >货品材质</option>
+                            <option value="个">货品材质</option>
+                            <option value="件">货品材质</option>
+                        </select>
                 </div>
-                <div class="mui-input-row">
-                    <label>期初库存数量</label>
-                    <input type="text" class="mui-input-clear" placeholder="0">
-                </div>
-                <div class="mui-input-row">
-                    <label>期初进货价格</label>
-                    <input type="text" class="mui-input-clear" placeholder="￥0.00">
-                </div>
-                <div class="mui-input-row">
-                    <label>期初批发价格</label>
-                    <input type="text" class="mui-input-clear" placeholder="￥0.00">
-                </div> 
+                 
                 <div class="mui-input-row mui-input-row-textarea">
                     <label>备注</label>
                     <textarea id="textarea" rows="4" placeholder=""></textarea>

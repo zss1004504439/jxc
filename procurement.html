@@ -21,64 +21,37 @@
 
         <h1 class="mui-title">采购历史订单</h1>
         <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-        <!-- <a id="promptBtn" class="mui-icon mui-icon-search mui-pull-right"></a> -->
-        <a class="mui-icon  mui-icon-plus mui-pull-right" href="./procurementAdd.html"></a>
+        <!-- <a id="promptBtn" class="mui-icon mui-icon-search mui-pull-right"></a> --> 
     </header>
  
   <div class="mui-content" id="supplier-search"> 
         <form class="mui-content-padded" style="margin: 5px;">
             <div class="mui-input-row mui-search" id=" ">
-                <input type="search" class="mui-input-clear" placeholder="如：编号">
+                <input type="search" class="mui-input-clear" placeholder="如：货号">
             </div>
         </form>
-</div>
-
+        <div class="mui-content-padded">
+                <a href="./procurementAdd.html" id="popup-area-show" class="addItem mui-btn mui-btn-success mui-icon mui-icon-plus">新增采购单</a>
+        </div>
+</div> 
   <ul class="mui-table-view mui-table-view-chevron">
     <li class="mui-table-view-cell mui-media">
         <a class="mui-navigate-right" href="./procurementShow.html"> 
             <div class="mui-media-body list-show">
                 <h4 class="title"> 采购单编号：DY4858794899 </h4>
                 <p class="df"> 
-                    <span>总计金额：<b>5120.00</b></span>
-                    <span>实付金额：<b class="f00">5120.00</b></span> </p>
+                    <span>实付总金额：<b>0.00</b></span>
+                    <span>预付款：<b class="f00">5120.00</b></span> </p>
                 <p class="df">
                     <span>采购日期：<b>2018/04/04</b></span>
-                    <span>入库日期：<b> 暂无</b> </span>
+                    <span>入库日期：<b>2018/04/04</b> </span>
                 </p> 
                 <p class="df"> <span>订单状态：<b>已下单生产</b></span></p> 
+                <p class="df"> <span>货号：<b>s001</b>，<b>s001</b>，<b>s001</b></span></p> 
             </div>
         </a>
     </li>  
-    <li class="mui-table-view-cell mui-media">
-        <a class="mui-navigate-right" href="./procurementShow.html"> 
-            <div class="mui-media-body list-show">
-                <h4 class="title"> 采购单编号：DY4858794899 </h4>
-                <p class="df"> 
-                    <span>总计金额：<b>5120.00</b></span>
-                    <span>实付金额：<b class="f00">5120.00</b></span> </p>
-                <p class="df">
-                    <span>采购日期：<b>2018/04/04</b></span>
-                    <span>入库日期：<b> 暂无</b> </span>
-                </p> 
-                <p class="df"> <span>订单状态：<b>已下单生产</b></span></p> 
-            </div>
-        </a>
-    </li>  
-    <li class="mui-table-view-cell mui-media">
-        <a class="mui-navigate-right" href="./procurementShow.html"> 
-            <div class="mui-media-body list-show">
-                <h4 class="title"> 采购单编号：DY4858794899 </h4>
-                <p class="df"> 
-                    <span>总计金额：<b>5120.00</b></span>
-                    <span>实付金额：<b class="f00">5120.00</b></span> </p>
-                <p class="df">
-                    <span>采购日期：<b>2018/04/04</b></span>
-                    <span>入库日期：<b> 暂无</b> </span>
-                </p> 
-                <p class="df"> <span>订单状态：<b>已下单生产</b></span></p> 
-            </div>
-        </a>
-    </li>  
+  
 </ul>  
 
 <!-- 底部导航 -->
