@@ -8,51 +8,21 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <link rel="stylesheet" href="css/mui.min.css">
-    <link rel="stylesheet" href="css/icons-extra.css">
     <link rel="stylesheet" href="css/app.css">
     <style type="text/css">
-        #supplier-box ul {
-            background: #fff
+        #warehouse-click {
+            height: initial;
         }
 
-        #supplier-box ul li {
-            padding: 11px 13px;
-        }
-
-        #supplier-box ul li .mui-media-body {
-            font-size: 12px;
-        }
-
-        /* .mui-input-row label{ text-align: right; } */
-
-        .mui-input-row-textarea {
-            height: initial !important
-        }
-
-        #mui-card-form .mui-card-footer {
-            justify-content: flex-end;
-        }
-
-        #guige-boxSize input {
-            width: 21.3333%;
-            font-size: 14px;
-        }
-        #warehouse-click { height: initial; }
         #warehouse-click .mui-input-row {
-            font-size: 13px; 
+            font-size: 13px;
         }
 
         #warehouse-click .mui-input-row input {
-            font-size: 12px; 
-        }
-        #goodsList li a img {
-            max-width: 90px;
-            height: 90px;
+            font-size: 12px;
         }
     </style>
-    <link rel="stylesheet" href="./css/guige.css">
     <script src="js/jquery.min.js"></script>
-    <!-- <link href="./js/theme/default/layer.css" rel="stylesheet"> -->
     <script src="./js/layer.js"></script>
 </head>
 
@@ -62,8 +32,6 @@
         <h1 class="mui-title"> 销售开单 </h1>
         <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
         <button class="mui-btn mui-btn-blue mui-btn-link mui-pull-right">保存</button>
-        <!-- <a id="promptBtn" class="mui-icon mui-icon-search mui-pull-right"></a> -->
-        <!-- <a class="mui-icon mui-icon-checkmarkempty mui-pull-right">   </a> -->
     </header>
 
     <div class="mui-content">
@@ -73,8 +41,8 @@
                     <label> 单据编号：</label>
                     <input type="text" disabled value="XS1787976980">
                 </div>
-          
-                <div class="mui-input-row" >
+
+                <div class="mui-input-row">
                     <label>客户编号：</label>
                     <select>
                         <option value="0">选择客户编号</option>
@@ -101,7 +69,7 @@
                         </div>
                     </li>
                 </ul>
-                <div class="mui-input-row" id="guige-boxSize">
+                <div class="mui-input-row">
                     <label>销售类型：</label>
                     <select>
                         <option value="0">选择销售类型</option>
@@ -119,14 +87,14 @@
                 </div>
                 <div class="mui-input-row">
                     <label> 实付总金额：</label>
-                    <input type="text" class="mui-input-clear f00"   value="12000.00">
+                    <input type="text" class="mui-input-clear f00" value="12000.00">
                 </div>
                 <div class="mui-input-row">
                     <label> 本次预付款：</label>
-                    <input type="text" class="mui-input-clear f00"   value="0.00">
+                    <input type="text" class="mui-input-clear f00" value="0.00">
                 </div>
                 <div class="mui-input-row">
-                    <label> 付款方式：</label> 
+                    <label> 付款方式：</label>
                     <select name="" id="">
                         <option value="0"> 点击选择付款方式 </option>
                         <option value=""> 付款方式1 </option>
@@ -137,65 +105,76 @@
                     <input type="text" class="mui-input-clear f00" value="0.00">
                 </div>
                 <div class="mui-input-row mui-input-row-textarea">
-                        <textarea id="" rows="2" placeholder="备注信息"></textarea>
+                    <textarea id="" rows="2" placeholder="备注信息"></textarea>
                 </div>
             </div>
         </div>
 
- 
+
         <div class="mui-content-padded">
             <button type="button" style="width: 100%;" id="popup-area-show" class="addItem mui-btn mui-btn-success  mui-icon mui-icon-plus">点击添加货品</button>
         </div>
 
-        <div id="sales">  
-            <ul class="mui-table-view " id="goodsList">
-                    <li class="mui-table-view-cell mui-media">
-                        <a href="javascript:;">
-                            <img class="mui-media-object mui-pull-left" src="./images/cbd.jpg">
-                            <div class="mui-media-body list-show">
-                                <h4 class="title">货号：s001</h4>
-                                <p class="df">  
-                                    <span>历史单价：<b>20.00</b></span>  
-                                    <span>
-                                           本次单价：
-                                            <b class="input_nor_line">
-                                                <input class="input_nor" type="text" value="20.00">
-                                            </b>
-                                    </span>
-                                </p>
-                                <p class="df">
-                                    <span>
-                                            采购箱数：<label class="input_nor_line">
-                                            <input class="input_nor input_nor_line" type="text" value="100"> </label></span>
-                                        
-                                        <span id="guige-choose-show"> 
-                                                货品箱：
-                                                <!-- 加颜色 -->
-                                                <b> 大箱80 </b>
-                                    </span>
-                                </p>
-                                <p class="df">
-                                    <span>总数量：<b>10900</b></span> 
-                                    <span>总金额：<b>10000.00</b></span>
-                                </p>
-                                <p class="df">
-                                    <span>仓库位：<b>一仓</b></span> 
-                                    <span>
-                                        本次提货箱数：
-                                        <label class="input_nor_line">
-                                                <input class="input_nor input_nor_line" type="text" value="12"> </label>
-                                    </span>
-                                </p>
-                                <p class="df"> 
-                                    <span>
-                                        本次销售金额：
-                                        <b>2000.00</b>
-                                    </span>
-                                </p>
-                            </div>
-                        </a>
-                    </li> 
-                </ul>
+        <div id="sales">
+            <ul class="mui-table-view " id=" ">
+                <li class="mui-table-view-cell mui-media">
+                    <a href="javascript:;">
+                        <img class="mui-media-object mui-pull-left" src="./images/cbd.jpg">
+                        <div class="mui-media-body list-show">
+                            <h4 class="title">货号：s001</h4>
+                            <p class="df">
+                                <span>历史单价：
+                                    <b>20.00</b>
+                                </span>
+                                <span>
+                                    本次单价：
+                                    <label class="input_nor_line">
+                                        <input class="input_nor" type="text" value="20.00">
+                                    </label>
+                                </span>
+                            </p>
+                            <p class="df">
+                                <span>
+                                    采购箱数：
+                                    <label class="input_nor_line">
+                                        <input class="input_nor input_nor_line" type="text" value="100"> </label>
+                                </span>
+
+                                <span id="guige-choose-show">
+                                    货品箱：
+                                    <!-- 加颜色 -->
+                                    <b> 大箱80 </b>
+                                </span>
+                            </p>
+                            <p class="df">
+                                <span>总数量：
+                                    <b>10900</b>
+                                </span>
+                                <span>总金额：
+                                    <b>10000.00</b>
+                                </span>
+                            </p>
+                            <p class="df">
+                                <span>仓库位：
+                                    <b>一仓</b>
+                                </span>
+                                <span>
+                                    本次提货箱数：
+                                    <label class="input_nor_line">
+                                        <input class="input_nor input_nor_line" type="text" value="12"> </label>
+                                </span>
+                            </p>
+                            <p class="df">
+                                <span>
+                                    本次销售金额：
+                                    <b>2000.00</b>
+                                </span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+               
+            </ul>
         </div>
 
 
@@ -237,8 +216,16 @@
                 <li class="mui-input-row mui-checkbox mui-left">
                     <input name="checkbox" value="pro1" type="checkbox">
                     <label class="list-show">
-                        <div class="title"> s006 </div>
-                        <div class="df"> 商品类别：<b>男鞋</b> </div>
+                        <div class="title">货号： s006 </div>
+                        <div class="df">
+                            <span>
+                                商品类别：
+                                <b>男鞋</b>
+                            </span>
+                            <span>库存数量：
+                                <b>12000</b>
+                            </span>
+                        </div>
                         <div class="df">
                             <span>货品价格：
                                 <b>15.00</b>
@@ -247,22 +234,16 @@
                                 <b>12.00</b>
                             </span>
                         </div>
-                        <div class="df">
-                            <span>库存数量：
-                                <b>12000</b>
-                            </span>
-                            <!-- <span class="mui-ellipsis">货箱规格：<b>货箱规格</b> </span>  -->
-                        </div>
+
                     </label>
                 </li>
-               
-               
-            
+
+
+
             </ul>
 
         </div>
-        <div id="popup-area-btn" class="df">
-            <!-- 放在第一个 -->
+        <div id="popup-area-btn" class="df"> 
             <a class="mui-btn-danger " id="popup-area-close"> 关闭窗口 </a>
             <a class="mui-btn-primary" href="">立即提交</a>
         </div>

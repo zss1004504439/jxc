@@ -57,24 +57,18 @@
   <header id="header" class="mui-bar mui-bar-nav">
     <h1 class="mui-title">海外入仓</h1>
     <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-    <button class="mui-btn mui-btn-blue mui-btn-link mui-pull-right">保存</button>
-    <!-- <a id="promptBtn" class="mui-icon mui-icon-search mui-pull-right"></a> -->
-    <!-- <a class="mui-icon mui-icon-checkmarkempty mui-pull-right">   </a> -->
-  </header>
-
-  <div class="mui-content" id="supplier-search">
-
+    <button class="mui-btn mui-btn-blue mui-btn-link mui-pull-right">保存</button> 
+  </header> 
+  <div class="mui-content" > 
     <div class="mui-card">
       <div class="mui-card-header">
         新增海外入库单
-      </div>
-
+      </div> 
       <div class="mui-input-group mui-card-content">
         <div class="mui-input-row">
           <label>入仓单编号：</label>
           <input type="text"  disabled value="DY8888888"  >
-        </div>
-
+        </div> 
         <div class="mui-input-row">
           <label>入仓单类型：</label>
           <select>
@@ -129,62 +123,40 @@
         </ul>
       </div>
     </div>
-
-    <form action="" class="mui-content-padded" style="margin: 10px;">
-      <div class="mui-input-row mui-search" id=" ">
-        <input type="search" class="mui-input-clear" placeholder="如：男鞋">
-      </div>
-    </form> 
+ 
     <div id=" ">
       <ul class="mui-table-view " id="">
         <li class="mui-table-view-cell mui-media"> 
-            <span class="mui-badge mui-badge-danger warehouse-add">添加</span> 
-            <div class="mui-media-body">
-              <h4 class="title">商品货号编号</h4>
-              <p class="mui-ellipsis"> 货品箱规格：
-                <span> 货品箱规格 </span>
-              </p>
-              <p class="mui-ellipsis"> 总数量：
-                <span>1000</span>&nbsp;&nbsp;&nbsp; 入库数量：
-                <span class="input_nor_line">
-                  <input class="input_nor" type="text" value="100">
-                </span>
-              </p>
-              <p class="mui-ellipsis">
-                选择仓库
-                <span class="input_nor_line">
-                    <select class="mui-input-clear input_nor">
-                        <option value="A仓">A仓</option>
-                        <option value="B仓">B仓</option>
-                      </select>
-                </span>
-              </p>
-            </div>  
-        </li>
-        <li class="mui-table-view-cell mui-media"> 
-            <span class="mui-badge mui-badge-danger warehouse-add">添加</span> 
-            <div class="mui-media-body">
-              <h4 class="title">商品货号编号</h4>
-              <p class="mui-ellipsis"> 货品箱规格：
-                <span> 货品箱规格 </span>
-              </p>
-              <p class="mui-ellipsis"> 总数量：
-                <span>1000</span>&nbsp;&nbsp;&nbsp; 入库数量：
-                <span class="input_nor_line">
-                  <input class="input_nor" type="text" value="100">
-                </span>
-              </p>
-              <p class="mui-ellipsis">
-                选择仓库
-                <span class="input_nor_line">
-                    <select class="mui-input-clear input_nor">
-                        <option value="A仓">A仓</option>
-                        <option value="B仓">B仓</option>
-                      </select>
-                </span>
-              </p>
-            </div>  
-        </li>
+            <!-- <a class="mui-navigate-right"> -->
+            <a class="">
+                <span class="mui-badge mui-badge-danger warehouse-add">添加</span> 
+                <img src="./images/cbd.jpg" class="mui-media-object mui-pull-left " >
+                <div class="mui-media-body list-show">
+                  <h4 class="title">货号：s001</h4>
+                  <p class="df"> 
+                    <span>货品箱规格：<b>大箱80</b></span>
+                    <span>总箱数：<b>80</b></span>
+                  </p>
+                  <p class="df"> 
+                    <span>
+                      入库数量：
+                     <label  class="input_nor_line">
+                       <input class="input_nor" type="text" value="10">
+                      </label>
+                    </span>
+                    <span>
+                      选择仓库：
+                      <label  class="input_nor_line"> 
+                          <select class="input_nor">
+                              <option value="A仓">A仓</option>
+                              <option value="B仓">B仓</option>
+                            </select>
+                        </label>
+                    </span>
+                  </p> 
+                </div>  
+            </a>
+        </li> 
       </ul>
 
     </div>

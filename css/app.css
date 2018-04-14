@@ -1,8 +1,8 @@
 ﻿ 
-.weui_toast{position: fixed;z-index:1000;width: 7.6em;min-height: 7.6em;top: 180px;left: 50%;margin-left: -3.8em;background: rgba(40, 40, 40, .75);text-align: center;border-radius: 5px;color: #FFF}
+.weui_toast{position: fixed;z-index:1000;width: 7.6em;min-height: 7.6em;top: 180px;left: 50%;margin-left: -3.8em;background: rgba(40, 40, 40, 0);text-align: center;border-radius: 5px;color: #FFF}
 .weui_toast_content{margin: 0 0 15px}
 .spinner{width: 50px;height: 50px;text-align: center;font-size: 10px;margin: 0 auto;margin-top: 30px}
-.spinner>div{background-color: #CCCCCE;height: 100%;width: 6px;display: inline-block;margin-right: 3px;-webkit-animation: stretchdelay 1.2s infinite ease-in-out;animation: stretchdelay 1.2s infinite ease-in-out}
+.spinner>div{background-color: #4cd964;height: 100%;width: 4px;display: inline-block;margin-right: 3px;-webkit-animation: stretchdelay 1.2s infinite ease-in-out;animation: stretchdelay 1.2s infinite ease-in-out}
 .spinner .rect2{-webkit-animation-delay: -1.1s;animation-delay: -1.1s}
 .spinner .rect3{-webkit-animation-delay: -1s;animation-delay: -1s}
 .spinner .rect4 { -webkit-animation-delay: -.9s; animation-delay: -.9s; }
@@ -21,8 +21,17 @@ body{  padding-bottom: 50px; }
 dl,dt,dd,ul,li{ margin: 0;padding: 0;list-style: none; } 
 .df{ display: flex;justify-content: center;align-items: center;  }
 
-.table-style{width:98%;}
-.addItem{ width: 100%; font-size: 16px!important;padding: 10px  }
+.table-style{width:100%;}
+.table-style tbody td{width:20%;}
+.table-style tbody td  input[type="text"]{     width:100%;
+    border: none;
+    color: #6d6d72;
+    padding: initial;
+    height: initial;
+    margin: initial;
+    font-size: 14px;
+    text-align: center;}
+.addItem{ width: 100%; padding: 10px  }
 /* 登录页面 */
 #login-box{background-color: transparent;    height: 100%; display: flex; justify-content: center; align-items: center;   } 
 #login-box .mui-input-group { margin-top: 10px; }
@@ -62,6 +71,7 @@ td{text-align:center}
 
 .table-style thead th{padding:10px 0;text-align: center;}
 .table-style>tbody>tr>td{border-bottom:1px solid #d6d6d6}
+.table-style>tbody>tr>td{   display: table-cell;}
 .table-style>tbody>tr:nth-child(2n) td{background-color:#fff;padding:3px 0}
 .table-style>tbody>tr:nth-child(2n-1) td{background-color:#eaeaea;padding:3px 0}
 
@@ -122,9 +132,7 @@ td{text-align:center}
 /*上传样式*/
 
 .logo li{     width: 80%;   text-align: center;  padding: 2%;  margin: 0 auto; }
-.logo li img{    width: 100%; }
-
-
+.logo li img{    width: 100%; } 
 .upload-box{ position:relative;  vertical-align:middle; zoom:1; *display:inline;}
 .upload-box .upload-btn{   zoom:1; *display:inline; }
 .upload-box .upload-progress{ display: none; position:absolute; top:0; left:0; padding:2px 5px; width:115px; height:26px; border:1px solid #d7d7d7; background:#fff; overflow:hidden; }
@@ -143,13 +151,18 @@ td{text-align:center}
 
 
 /* 列表项  */
+img.mui-media-object.mui-pull-left{
+    max-width: 90px;
+    height: 90px;
+}
+
 .list-show{ position: relative }
 .list-show>img{    position: absolute; top: 50%;  transform: translateY(-50%);  right: 20px; }
 .list-show .df{  color: #666; line-height: 1.6;overflow: hidden;}
 .list-show .df span{ display: block;flex: 3;    overflow: hidden; display: flex; }
 .list-show .df span+span{ flex: 3}
 .list-show .df span label{ flex: 1  }
-.list-show .df .mui-badge {    margin-right: 2px; border-radius: 4px  }
+.list-show .df .mui-badge {   line-height: initial; margin-right: 2px; border-radius: 4px  }
 /* 列表项  */
 
 
@@ -190,3 +203,51 @@ td{text-align:center}
  .purchase-flow .purchase-flow-l span{text-align: right}
  .purchase-flow .purchase-flow-r{padding-left: 8%; width: 60%;height: 100%;padding-bottom: 10px;}
  /* 订单流程 */
+
+
+ /* =========================== 货品箱规格 =========================== */
+
+.guige-boxNumber-color dd,
+.guige-boxNumber-size dd {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap
+}
+
+.guige-boxNumber-color dt,
+.guige-boxNumber-size dt {
+  width: 100%;
+  border-left: 3px solid #dc2e2e;
+  padding-left: 6px;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+#guige-boxNumber-add .mui-input-row {
+  padding: 10px 0;
+  height: initial;
+}
+
+.guige-boxNumber-color dd span,
+.guige-boxNumber-size dd span {
+  float: left;
+  padding: 5px 6px;
+  font-size: 14px;
+  border: 1px solid #666666;
+  border-radius: 4px;
+  margin: 15px 10px 15px 0;
+}
+
+span.guige-on {
+  color: #ffffff;
+  background: #F03C03;
+  border: 1px solid #F03C03!important;
+}
+
+#guige-boxNumber-add label {
+  padding-left: 0px;
+  width: initial;
+  font-size: 14px;
+}
+ /* =========================== 货品箱规格 =========================== */

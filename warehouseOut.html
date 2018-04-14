@@ -11,49 +11,8 @@
     <link rel="stylesheet" href="css/icons-extra.css">
     <link rel="stylesheet" href="css/app.css">
     <style type="text/css">
-        #supplier-box ul {
-            background: #fff
-        }
-
-        #supplier-box ul li {
-            padding: 11px 13px;
-        }
-
-        #supplier-box ul li .mui-media-body {
-            font-size: 12px;
-        }
-
-        /* .mui-input-row label{ text-align: right; } */
-
-        .mui-input-row-textarea {
-            height: initial !important
-        }
-
-        #mui-card-form .mui-card-footer {
-            justify-content: flex-end;
-        }
-
-        #guige-boxSize input {
-            width: 21.3333%;
-            font-size: 14px;
-        }
-
-        #warehouse-click .mui-input-row {
-            font-size: 13px;
-        }
-
-        #warehouse-click .mui-input-row input {
-            font-size: 12px;
-        }
-
-        #warehouse-out-add {
-            text-align: center;
-        }
-        .input_nor_line { 
-    display: table-cell;
-}
+       
     </style>
-    <link rel="stylesheet" href="./css/guige.css">
     <script src="js/jquery.min.js"></script>
     <script src="./js/layer.js"></script>
 </head>
@@ -74,10 +33,11 @@
                     <input type="text" class="mui-input-clear" disabled value="XS1787976980">
                 </div>
 
-                <div class="mui-input-row" id="guige-boxSize">
-                    <label>出库类型</label>
-                    <select class="mui-input-clear">
-                        <option value="国内出库" selected>国内出库</option>
+                <div class="mui-input-row">
+                    <label>出库类型：</label>
+                    <select class=" ">
+                        <option value="0">点击选择出库类型</option>
+                        <option value="国内出库">国内出库</option>
                     </select>
                 </div>
                 <div class="mui-input-row">
@@ -88,9 +48,17 @@
                     <label> 集装箱编号：</label>
                     <input type="text" class="mui-input-clear " placeholder="集装箱编号">
                 </div>
+                <!--  <div class="mui-input-row">
+                    <label> 集装箱体积：</label>
+                    <input type="text" class="mui-input-clear " disabled placeholder="集装箱编号">
+                </div> -->
                 <div class="mui-input-row">
-                    <label> 体积：</label>
-                    <input type="text" class="mui-input-clear " placeholder="体积">
+                    <label> 总箱数：</label>
+                    <input type="text" class="mui-input-clear " disabled value="19">
+                </div>
+                <div class="mui-input-row">
+                    <label> 总体积：</label>
+                    <input type="text" class="mui-input-clear " disabled value="1038.00">
                 </div>
                 <div class="mui-input-row">
                     <label> 时间：</label>
@@ -101,12 +69,10 @@
                     <input type="text" class="mui-input-clear f00" disabled value="12000.00">
                 </div>
                 <div class="mui-input-row mui-input-row-textarea">
-                        <textarea id="" rows="2" placeholder="备注信息"></textarea>
+                    <textarea id="" rows="2" placeholder="备注信息"></textarea>
                 </div>
             </div>
         </div>
-
-
 
         <div class="" id="guige-add-list">
             <table class="table-style">
@@ -122,7 +88,7 @@
                 <tbody>
                     <tr>
                         <td> s001 </td>
-                        <td> ***** </td>
+                        <td> 中箱80 </td>
                         <td class="input_nor_line">
                             <input type="text" value="20">
                         </td>
@@ -135,9 +101,10 @@
             </table>
         </div>
 
-        <div class="mui-content-padded" id="warehouse-out-add">
-            <a class="mui-btn mui-btn-primary"> 点击添加货品 </a>
-            <a class="mui-btn mui-btn-danger"> 计算汇总 </a>
+        <div class="mui-content-padded df" id="warehouse-out-add">
+            <a class="mui-btn mui-btn-primary mui-icon mui-icon-plus"> 点击添加货品 </a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a class="mui-btn mui-btn-danger mui-icon mui-icon-settings"> 计算汇总 </a>
         </div>
 
         <div class="" id="warehouse-out-tot">
@@ -192,7 +159,7 @@
             <span class="mui-tab-label">基础管理</span>
         </div>
     </nav>
- 
+
     <!-- 弹出层 -->
     <div id="guige-boxNumber" style="display:none">
         <div class="title"> 选择货品 </div>
@@ -211,33 +178,41 @@
             </span>
         </div>
         <div id="select-pro-list-box">
-            
+
             <div class="select-pro-li  ">
                 <div class="mui-input-row mui-checkbox mui-left">
                     <input name="checkbox" value="Item 1" type="checkbox">
-                        <label class="list-show">
-                            <div class="df">
-                                <span>货品编号：<b>s001</b></span>
-                                <span>货品箱规格：<b>大箱80</b></span>
-                            </div>
-                            <div class="df">
-                                <span>仓库位：<b>一仓</b></span>
-                                <span>库存数量：<b>1000</b></span>
-                            </div>
-                            <div class="df">
-                                <span>供应商：郑州壹网无忧信息技术有限公司 </span> 
-                            </div>
-                          <!--   <div class="mui-ellipsis">
+                    <label class="list-show">
+                        <div class="df">
+                            <span>货品编号：
+                                <b>s001</b>
+                            </span>
+                            <span>货品箱规格：
+                                <b>大箱80</b>
+                            </span>
+                        </div>
+                        <div class="df">
+                            <span>仓库位：
+                                <b>一仓</b>
+                            </span>
+                            <span>库存数量：
+                                <b>1000</b>
+                            </span>
+                        </div>
+                        <div class="df">
+                            <span>供应商：郑州壹网无忧信息技术有限公司 </span>
+                        </div>
+                        <!--   <div class="mui-ellipsis">
                                 转出数量：
                                 <span class="input_nor_line">
                                     <input class="input_nor" type="text" value="88">
                                 </span>
                             </div> -->
-                        </label>
-                </div> 
+                    </label>
+                </div>
             </div>
-  
-   
+
+
         </div>
         <button type="button" class="mui-btn mui-btn-primary mui-btn-block" id="sales-submit"> 确认添加 </button>
     </div>
@@ -247,20 +222,19 @@
     <script src="js/mui.min.js"></script>
     <script src="js/song.js"></script>
     <script>
-    
         //  展开选择框
         $("#warehouse-out-add").on("click", "a.mui-btn-primary", function () {
             showBOX()
-        }) 
+        })
         //  隐藏选择框
         $(".jxc-mask").on("click", function () {
             hideBOX()
         })
 
         mui.init({});
-      /*   $(".select-pro-li").on("click", function () { 
-            $(this).toggleClass("select-pro-li-on"); 
-        }); */
+        /*   $(".select-pro-li").on("click", function () { 
+              $(this).toggleClass("select-pro-li-on"); 
+          }); */
         // 底部导航 链接
         mui("#bar-down").on("tap", "div", function () {
             var href = this.getAttribute("data-href");
