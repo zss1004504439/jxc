@@ -117,13 +117,7 @@
            
             </div>
         </div>
-        <!-- <div  id="supplier-search">
-            <form class="mui-content-padded"  >
-                <div class="mui-input-row mui-search" id="">
-                    <input type="search" class="mui-input-clear" placeholder="如：货品编号">
-                </div>
-            </form>
-        </div> -->
+ 
         <div class="mui-content-padded">
                 <button type="button" id="popup-area-show" class="addItem mui-btn mui-btn-success mui-icon mui-icon-plus">勾选采购货号</button>
             </div>
@@ -194,11 +188,9 @@
                             <option value="1">付款方式1</option>
                             <option value="1">付款方式1</option> 
                     </select> 
-                </div>
-               
-                <div class="mui-input-row mui-input-row-textarea">
-                    <label>备注：</label>
-                    <textarea id="textarea" rows="2" placeholder=""></textarea>
+                </div> 
+                <div class="mui-input-row mui-input-row-textarea"> 
+                        <textarea id="" rows="2" placeholder="备注信息"></textarea>
                 </div>
             </div>
             <div class="mui-card-footer">
@@ -207,9 +199,7 @@
                 </div>
             </div>
         </div>
-
-
-
+ 
     </div>
     <nav class="mui-bar mui-bar-tab" id="bar-down">
 
@@ -307,15 +297,15 @@
     <!--  图片修改弹出层 -->
 
     <div id="guige-boxNumber" style="display:none; ">
-        <div class="title"> 编辑商品图 </div>
-        
+        <div class="title"> 查看货品图片 </div>
             <ul class="logo">
-                <div id="tupian"></div>
+                <div id="tupian">
+                        <li><img src="./images/cbd.jpg" alt=""></li>
+                </div>
                 <input type="hidden" id="txtImgUrl" name="txtImgUrl" class="input normal upload-path" />
                 <div class="upload-box upload-img"></div>
-            </ul> 
-       
-        <button type="button" class="mui-btn mui-btn-success mui-btn-block" id=""> 确认编辑 </button>
+            </ul>  
+        <button type="button" class="mui-btn mui-btn-success mui-btn-block" id=""> 确认 </button>
     </div>
    
     <!--  图片修改弹出层 -->
@@ -453,7 +443,8 @@
                 filesize: "10240",
                 // sendurl: "/tools/upload_ajax.ashx",
                 swf: "/scripts/webuploader/uploader.swf",
-                filetypes: "gif,jpg,png,bmp"
+                filetypes: "gif,jpg,png,bmp",
+                btntext: "点击编辑图片"
             });
         })
         //  展开选择框

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> 库存调拨 </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="css/mui.min.css">
+    <link rel="stylesheet" href="css/icons-extra.css">
+    <link rel="stylesheet" href="css/app.css">
+    <style type="text/css">
+    .mui-table-view .mui-media-object {
+    line-height: 42px;
+    max-width:66px;
+    height: 66px;
+}
+    </style>
+    <link rel="stylesheet" href="./css/guige.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="./js/layer.js"></script>
+</head>
+
+<body>
+    <header id="header" class="mui-bar mui-bar-nav">
+        <h1 class="mui-title"> 调拨清单 </h1>
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <a class="mui-icon  mui-icon-plus mui-pull-right" href="./warehouseTransfersAdd.html"></a>
+    </header>
+    <div class="mui-content" id="supplier-search"> 
+        <div class="mui-card">
+            <div class="mui-input-group mui-card-content">
+                <div class="mui-input-row">
+                    <label> 单据编号：</label>
+                    <input type="text" class="mui-input-clear" disabled value="XS1787976980">
+                </div>
+                <div class="mui-input-row">
+                    <label>转入仓库：</label>
+                    <select disabled>
+                        <option value="0">点击选择转入仓库</option>
+                        <option selected value="A仓" >A仓</option>
+                        <option value="B仓">B仓</option>
+                    </select>
+                </div>
+                <div class="mui-input-row mui-input-row-textarea">
+                    <textarea id="" rows="2" placeholder="备注信息"></textarea>
+                </div>
+            </div>
+        </div>
+  
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell mui-media">
+              <a href="javascript:;">
+                <img class="mui-media-object mui-pull-left"  src="./images/cbd.jpg">
+                <div class="mui-media-body list-show">
+                    <div class="df">
+                        <span>货号：
+                            <b>s001</b>
+                        </span>
+                        <span>货品箱规格：
+                            <b>中箱80</b>
+                        </span>
+                    </div>
+                    <div class="df"> 
+                        <span>原仓位：
+                            <b>一仓</b>
+                        </span>
+                        <span>转入仓位：
+                            <b>B仓</b>
+                        </span>
+                    </div>
+                    <div class="df">
+                        <span>
+                            调转箱数：
+                            <b class="f00"> 88 </b>
+                        </span> 
+                    </div>
+                </div>
+              </a>
+            </li> 
+            <li class="mui-table-view-cell mui-media">
+              <a href="javascript:;">
+                <img class="mui-media-object mui-pull-left"  src="./images/cbd.jpg">
+                <div class="mui-media-body list-show">
+                    <div class="df">
+                        <span>货号：
+                            <b>s001</b>
+                        </span>
+                        <span>货品箱规格：
+                            <b>中箱80</b>
+                        </span>
+                    </div>
+                    <div class="df"> 
+                        <span>原仓位：
+                            <b>一仓</b>
+                        </span>
+                        <span>转入仓位：
+                            <b>B仓</b>
+                        </span>
+                    </div>
+                    <div class="df">
+                        <span>
+                            调转箱数：
+                            <b class="f00"> 88 </b>
+                        </span> 
+                    </div>
+                </div>
+              </a>
+            </li> 
+          </ul>
+ 
+
+
+    </div>
+
+
+    <nav class="mui-bar mui-bar-tab" id="bar-down"> 
+        <div class="mui-tab-item mui-active" data-href="./index.html">
+            <span class="mui-icon mui-icon-home"></span>
+            <span class="mui-tab-label">首页</span>
+        </div>
+        <div class="mui-tab-item" data-href="./sales.html">
+            <span class="mui-icon mui-icon-star"> </span>
+            <span class="mui-tab-label">销售管理</span>
+        </div>
+        <div class="mui-tab-item" data-href="./procurement.html">
+            <span class="mui-icon mui-icon-download"> </span>
+            <span class="mui-tab-label">采购管理</span>
+        </div>
+        <div class="mui-tab-item" data-href="./warehouse.html">
+            <span class="mui-icon mui-icon-flag"></span>
+            <span class="mui-tab-label">仓库管理</span>
+        </div>
+        <div class="mui-tab-item" data-href="./basis.html">
+            <span class="mui-icon mui-icon-gear"></span>
+            <span class="mui-tab-label">基础管理</span>
+        </div>
+    </nav>
+
+    <!-- 弹出层 -->
+    <div id="guige-boxNumber" style="display:none">
+        <div class="title"> 选择货品 </div>
+
+        <div class="select-pro-list">
+            <span>
+                <select name="" id="">
+                    <option value="">男鞋</option>
+                    <option value="">女鞋</option>
+                </select>
+            </span>
+            <span>
+                <select name="" id="">
+                    <option value="">产品1</option>
+                    <option value="">产品2</option>
+                </select>
+            </span>
+        </div>
+        <div id="select-pro-list-box">
+            <div class="select-pro-li ">
+                <div class="mui-input-row mui-checkbox mui-left">
+                    <input name="checkbox" value="Item 1" type="checkbox">
+                    <label>
+                        <div class="mui-ellipsis">
+                            货品编号：
+                            <span>s001</span>&nbsp;&nbsp;&nbsp;&nbsp;货品箱规格：
+                            <span>s001</span>
+                        </div>
+                        <div class="mui-ellipsis">
+                            库存数量：
+                            <span>1000</span>&nbsp;&nbsp;&nbsp;&nbsp;原仓库位：
+                            <span>一仓</span>
+                        </div>
+                        <div class="mui-ellipsis">
+                            转出数量：
+                            <span class="input_nor_line">
+                                <input class="input_nor" type="text" value="88">
+                            </span>
+                        </div>
+                    </label>
+                </div>
+            </div>
+         
+        </div>
+        <button type="button" class="mui-btn mui-btn-primary mui-btn-block" id="sales-submit"> 确认添加 </button>
+    </div>
+
+    <div class="jxc-mask"></div>
+    <!-- 弹出层 -->
+
+
+    <script src="js/mui.min.js"></script>
+    <script src="js/song.js"></script>
+    <script>
+      
+        mui.init({});
+
+        // 底部导航 链接
+   
+        mui("#bar-down").on("tap", "div", function () {
+            var href = this.getAttribute("data-href");
+            if (href !== "") {
+                gotoUrl(href);
+                return;
+            }
+        }, false);
+    </script>
+</body>
+
+</html>

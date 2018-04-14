@@ -10,10 +10,7 @@
     <link rel="stylesheet" href="css/mui.min.css">
     <link rel="stylesheet" href="css/icons-extra.css">
     <link rel="stylesheet" href="css/app.css">
-    <style type="text/css">
-    #goodsList li a img{ max-width: 90px; height: 90px;  } 
-    #goodsList li a  div p{  font-size: 12px;  }
-    #goodsList li a  div h4{  font-size: 15px;  }
+    <style type="text/css"> 
     </style>
 </head>
 
@@ -23,61 +20,66 @@
         <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
         <!-- <a id="promptBtn" class="mui-icon mui-icon-search mui-pull-right"></a> -->
         <a class="mui-icon  mui-icon-plus mui-pull-right" href="./warehouseTransfersAdd.html"></a>
-    </header> 
-    <div class="mui-content" id="supplier-search"> 
-            <form action="" class="mui-content-padded" style="margin: 5px;">
-                <div class="mui-input-row mui-search" id=" ">
-                    <input type="search" class="mui-input-clear" placeholder="如：s001">
+    </header>
+    <div class="mui-content" id="supplier-search">
+        <form action="" class="mui-content-padded" style="margin: 5px;">
+            <div class="mui-input-row mui-search" id=" ">
+                <input type="search" class="mui-input-clear" placeholder="如：s001">
+            </div>
+        </form>
+        <div class="mui-content-padded">
+            <a class="addItem mui-btn mui-btn-success mui-icon mui-icon-plus" href="./warehouseTransfersAdd.html">点击新增仓库调拨</a>
+        </div>
+    </div>
+    <ul class="mui-table-view mui-table-view-chevron mui-card" id="goodsList">
+        <li class="mui-table-view-cell mui-media">
+            <a class="mui-navigate-right" href="./warehouseTransfersShow.html">
+                <div class="mui-media-body list-show">
+                    <h4 class="title">调拨编号：DB5201219240</h4>
+                    <p class="df">
+                        <span>转入仓库：
+                            <b class="f00">B仓</b>
+                        </span>
+                    </p>
+                    <p class="df">
+                        <span>操作日期：
+                            <b>2018/04/18</b>
+                        </span>
+                    </p>
+                    <p class="df">
+                        <span>调拨货号：
+                            <b class="mui-badge mui-badge-primary">s001</b>
+                            <b class="mui-badge mui-badge-primary">s005</b>
+                            <b class="mui-badge mui-badge-primary">s006</b>
+                        </span>
+                    </p>
                 </div>
-            </form> 
-    </div> 
-  <ul class="mui-table-view mui-table-view-chevron mui-card" id="goodsList">
-    <li class="mui-table-view-cell mui-media">
-        <a class="mui-navigate-right" href="./goodsShow.html">
-            <div class="mui-media-body">
-                <h4 class="title">调拨编号</h4>
-                <p class="mui-ellipsis"> 原仓库：<span>A仓</span> </p>
-                <p class="mui-ellipsis"> 转入仓库：<span>B仓</span> </p>
-                <p class="mui-ellipsis"> 业务日期：<span>2018/04/18</span></p> 
-            </div>
-        </a>
-    </li> 
-    <li class="mui-table-view-cell mui-media">
-        <a class="mui-navigate-right" href="./goodsShow.html">
-            <div class="mui-media-body">
-                <h4 class="title">调拨编号</h4>
-                <p class="mui-ellipsis"> 原仓库：<span>A仓</span> </p>
-                <p class="mui-ellipsis"> 转入仓库：<span>B仓</span> </p>
-                <p class="mui-ellipsis"> 业务日期：<span>2018/04/18</span></p> 
-            </div>
-        </a>
-    </li> 
-  
-</ul> 
-  
+            </a>
+        </li>
+    </ul>
     <nav class="mui-bar mui-bar-tab" id="bar-down">
-       
-            <div class="mui-tab-item mui-active" data-href="./index.html">
-                <span class="mui-icon mui-icon-home"></span>
-                <span class="mui-tab-label">首页</span>
-            </div>
-            <div class="mui-tab-item" data-href="./sales.html">
-                <span class="mui-icon mui-icon-star"> </span>
-                <span class="mui-tab-label">销售管理</span>
-            </div>
-            <div class="mui-tab-item" data-href="./procurement.html">
-                <span class="mui-icon mui-icon-download"> </span>
-                <span class="mui-tab-label">采购管理</span>
-            </div>
-            <div class="mui-tab-item" data-href="./warehouse.html">
-                <span class="mui-icon mui-icon-flag"></span>
-                <span class="mui-tab-label">仓库管理</span>
-            </div>
-            <div class="mui-tab-item" data-href="./basis.html">
-                <span class="mui-icon mui-icon-gear"></span>
-                <span class="mui-tab-label">基础管理</span>
-            </div>
-      
+
+        <div class="mui-tab-item mui-active" data-href="./index.html">
+            <span class="mui-icon mui-icon-home"></span>
+            <span class="mui-tab-label">首页</span>
+        </div>
+        <div class="mui-tab-item" data-href="./sales.html">
+            <span class="mui-icon mui-icon-star"> </span>
+            <span class="mui-tab-label">销售管理</span>
+        </div>
+        <div class="mui-tab-item" data-href="./procurement.html">
+            <span class="mui-icon mui-icon-download"> </span>
+            <span class="mui-tab-label">采购管理</span>
+        </div>
+        <div class="mui-tab-item" data-href="./warehouse.html">
+            <span class="mui-icon mui-icon-flag"></span>
+            <span class="mui-tab-label">仓库管理</span>
+        </div>
+        <div class="mui-tab-item" data-href="./basis.html">
+            <span class="mui-icon mui-icon-gear"></span>
+            <span class="mui-tab-label">基础管理</span>
+        </div>
+
     </nav>
 
 
@@ -87,13 +89,7 @@
     <script>
         mui.init({});
         //当前页面执行
-       /*  mui(".mui-table-view").on("tap", "li", function () {
-            var href = this.getAttribute("data-href");
-            if (href !== "") {
-                gotoUrl(href);
-                return;
-            }
-        }, false) */
+
         mui("#bar-down").on("tap", "div", function () {
             var href = this.getAttribute("data-href");
             if (href !== "") {
@@ -101,7 +97,6 @@
                 return;
             }
         }, false);
-     
     </script>
 </body>
 

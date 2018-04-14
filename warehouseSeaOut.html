@@ -20,7 +20,7 @@
 
 <body>
     <header id="header" class="mui-bar mui-bar-nav">
-        <h1 class="mui-title">海外储出仓</h1>
+        <h1 class="mui-title">海外出仓记录</h1>
         <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
         <!-- <a id="promptBtn" class="mui-icon mui-icon-search mui-pull-right"></a> -->
         <!-- <a class="mui-icon  mui-icon-plus mui-pull-right" href=""></a> -->
@@ -38,8 +38,8 @@
             <div class="mui-media-body list-show">
                 <h4 class="title">出库编号：<span> xx55555555 </span></h4>
                 <div class="df"> 
-                    <span>数量： <b>10</b> </span> 
-                    <span>金额： <b>55555</b> </span>  
+                    <span>总箱数： <b>10</b> </span> 
+                    <span>总金额： <b>55555</b> </span>  
                 </div>
                 <div class="df"> 
                     <span>客户：<b>某某</b> </span> 
@@ -47,8 +47,8 @@
                 </div>
                 
                 <div class="df"> 
-                    <span>时间：<b>20180418</b> </span> 
-                    <span>销售：<b>yiweb</b> </span>  
+                    <span>时间：<b>2018/04/18</b> </span> 
+                    <span>销售员：<b>yiweb</b> </span>  
                 </div> 
             </div>
         </a>
@@ -80,29 +80,20 @@
             </div>
       
     </nav>
-
-
-
+ 
     <script src="js/mui.min.js"></script>
     <script src="js/song.js"></script>
     <script>
         mui.init({});
         //当前页面执行
-       /*  mui(".mui-table-view").on("tap", "li", function () {
-            var href = this.getAttribute("data-href");
-            if (href !== "") {
-                gotoUrl(href);
-                return;
-            }
-        }, false) */
+     
         mui("#bar-down").on("tap", "div", function () {
             var href = this.getAttribute("data-href");
             if (href !== "") {
                 gotoUrl(href);
                 return;
             }
-        }, false);
-     
+        }, false); 
     </script>
 </body>
 

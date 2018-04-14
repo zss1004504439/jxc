@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title> 国内出库记录 </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="stylesheet" href="css/mui.min.css">
+  <link rel="stylesheet" href="css/icons-extra.css">
+  <link rel="stylesheet" href="css/app.css">
+  <script src="js/jquery.min.js"></script> 
+  <script src="js/layer.js"></script> 
+  <link rel="stylesheet" href="./css/guige.css">
+  <script src="js/mui.min.js"></script>
+  <script src="js/song.js"></script>
+  <script src="js/webuploader.min.js"></script>
+  <script src="js/uploader.js"></script>
+  <style type="text/css">
+      
+  </style>
+ 
+</head>
+
+<body>
+  <header id="header" class="mui-bar mui-bar-nav">
+    <h1 class="mui-title">国内出库记录</h1>
+    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+    <!-- <button class="mui-btn mui-btn-blue mui-btn-link mui-pull-right">保存</button>  -->
+  </header> 
+  <div class="mui-content" id="supplier-search" > 
+    <form action="" class="mui-content-padded"  >
+      <div class="mui-input-row mui-search" id="">
+        <input type="search" class="mui-input-clear" placeholder="如：男鞋">
+      </div>
+    </form> 
+    <div class="mui-content-padded">
+        <a href="./warehouseOut.html"  class="addItem mui-btn mui-btn-success mui-icon mui-icon-plus">新增国内出库&发起海运单</a>
+</div>
+    </div> 
+    <ul class="mui-table-view mui-table-view-chevron">
+        <li class="mui-table-view-cell mui-media">
+            <a class="mui-navigate-right" href="./warehouseOutShow.html"> 
+                <div class="mui-media-body list-show">
+                    <h4 class="title"> 出库编号：DY4858794899 </h4> 
+                    <p class="df">
+                        <span>集装箱编号：<b> jzx098 </b></span> 
+                        <span>操作人：<b>yiwebcms</b></span>
+                    </p> 
+                    <p class="df">
+                        <span>总箱数：<b> 90 </b></span>
+                        <span>总金额：<b>8848</b> </span>
+                    </p> 
+                    <p class="df">
+                        <span>状态：<b> 海外运输中 </b></span>
+                        <span>出库日期：<b>2018/04/04</b> </span>
+                      </p> 
+                      <p class="df"> 
+                          <span>包含货品：
+                            <b class="mui-badge mui-badge-primary">s001</b> 
+                            <b class="mui-badge mui-badge-primary">s001</b> 
+                            <b class="mui-badge mui-badge-primary">s001</b> 
+                            <b class="mui-badge mui-badge-primary">s001</b> 
+                            <b class="mui-badge mui-badge-primary">s001</b>  
+                            <b class="mui-badge mui-badge-primary">s001</b>  
+                          </span>
+                    </p>  
+                </div>
+            </a>
+        </li>  
+        
+      
+    </ul>  
+   
+     
+    <div class="jxc-mask"></div>
+  
+  <nav class="mui-bar mui-bar-tab" id="bar-down">
+
+    <div class="mui-tab-item mui-active" data-href="./index.html">
+      <span class="mui-icon mui-icon-home"></span>
+      <span class="mui-tab-label">首页</span>
+    </div>
+    <div class="mui-tab-item" data-href="./sales.html">
+      <span class="mui-icon mui-icon-star"> </span>
+      <span class="mui-tab-label">销售管理</span>
+    </div>
+    <div class="mui-tab-item" data-href="./procurement.html">
+      <span class="mui-icon mui-icon-download"> </span>
+      <span class="mui-tab-label">采购管理</span>
+    </div>
+    <div class="mui-tab-item" data-href="./warehouse.html">
+      <span class="mui-icon mui-icon-flag"></span>
+      <span class="mui-tab-label">仓库管理</span>
+    </div>
+    <div class="mui-tab-item" data-href="./basis.html">
+      <span class="mui-icon mui-icon-gear"></span>
+      <span class="mui-tab-label">基础管理</span>
+    </div>
+  </nav>
+ 
+  <script>
+    
+    mui.init({});
+
+    // 底部导航 链接
+    mui("#bar-down").on("tap", "div", function () {
+      var href = this.getAttribute("data-href");
+      if (href !== "") {
+        gotoUrl(href);
+        return;
+      }
+    }, false);
+  </script>
+</body>
+
+</html>
