@@ -3,20 +3,20 @@
 
 <head>
     <meta charset="utf-8">
-    <title> 一网科技 </title>
+    <title> 搜索结果 </title>
     <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <link rel="stylesheet" href="css/mui.min.css"> 
     <link rel="stylesheet" href="css/app.css">
     <style type="text/css">
-     
-    </style>
+
+    </style> 
 </head>
 
 <body>
     <header id="header" class="mui-bar mui-bar-nav">
-        <h1 class="mui-title">搜索结果</h1>
+        <h1 class="mui-title">搜索结果:货号s001的状态</h1>
         <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a> 
     </header>
 
@@ -28,7 +28,51 @@
                         </div>
                     </form> 
             </div>  
-    </div> 
+    </div>  
+    <div class="search-box">
+        <dl class=" clearfix">
+            <dt class="fl">
+                <a href="javascript:;">
+                    <img width="100" height="100" src="./images/cbd.jpg" alt="">
+                </a>
+            </dt>
+            <dd class="fl">
+               <p>货号：s001</p>
+               <p>供应商：一网科技</p>
+               <p>供应商：一网科技</p>
+            </dd>
+        </dl>
+        <table class="table-style">
+<thead>
+    <tr>
+        <th> 票据号 </th> 
+        <th> 状态 </th>
+        <th> 箱数 </th>
+        <th> 操作 </th>
+    </tr> 
+</thead>
+<tbody>
+    <tr>
+        <td> <a href="">DY99885450145</a> </td>
+        <td class="f00"> 生产中 </td>
+        <td> 100 </td>
+        <td> <a href=""> 查看 </a> </td>
+    </tr> 
+    <tr>
+        <td> <a href="">DY99885450145</a> </td>
+        <td class="f00"> 生产中 </td>
+        <td> 100 </td>
+        <td> <a href=""> 查看 </a> </td>
+    </tr> 
+    <tr>
+        <td> <a href="">DY99885450145</a> </td>
+        <td class="f00"> 生产中 </td>
+        <td> 100 </td>
+        <td> <a href=""> 查看 </a> </td>
+    </tr> 
+</tbody>
+        </table>
+    </div>
     <nav class="mui-bar mui-bar-tab" id="bar-down">
 
         <div class="mui-tab-item mui-active" data-href="./index.html">
@@ -58,14 +102,7 @@
     <script>
         mui.init({});
         //当前页面执行
-        mui(".mui-table-view").on("tap", "li", function () {
-            showLoading()
-            var href = this.getAttribute("data-href");
-            if (href !== "") {
-                gotoUrl(href);
-                return;
-            }
-        }, false)
+     
         mui("#bar-down").on("tap", "div", function () {
             var href = this.getAttribute("data-href");
             if (href !== "") {

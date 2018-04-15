@@ -20,6 +20,20 @@ html,body{ max-width: 640px;margin: 0 auto;font-family: "微软雅黑";    line-
 body{  padding-bottom: 50px; }
 dl,dt,dd,ul,li{ margin: 0;padding: 0;list-style: none; } 
 .df{ display: flex;justify-content: center;align-items: center;  }
+.fl {
+    float: left;
+  }
+  
+  .fr {
+    float: right;
+  }
+  
+  .clearfix:after {
+    content: " ";
+    display: block;
+    clear:both;
+  }
+
 
 .table-style{width:100%;}
 .table-style tbody td{width:20%;}
@@ -29,8 +43,7 @@ dl,dt,dd,ul,li{ margin: 0;padding: 0;list-style: none; }
     padding: initial;
     height: initial;
     margin: initial;
-    font-size: 14px;
-    text-align: center;}
+    font-size: 14px;vtext-align: center;}
 .addItem{ width: 100%; padding: 10px  }
 /* 登录页面 */
 #login-box{background-color: transparent;    height: 100%; display: flex; justify-content: center; align-items: center;   } 
@@ -251,3 +264,15 @@ span.guige-on {
   font-size: 14px;
 }
  /* =========================== 货品箱规格 =========================== */
+
+
+
+ /* 首页搜索结果页 */
+ .search-box {background: #fff ;    margin-top: 40px; }
+ .search-box dl{padding-left: 4%;border-bottom: 1px solid #ccc }
+ .search-box dl dt{ margin:-20px 15px 0 0 }
+ .search-box dl dt img{ border-radius: 5px;border: 1px solid #ddd }
+ .search-box dl dd p{ margin-bottom: 5px; }
+ .search-box dl dd p:first-child{     padding-top: 4%;font-size: 18px;font-weight: bold;color: #333 }
+ .search-box  table tbody tr td {    padding: 10px 0!important;}
+ /* 首页搜索结果页 */
