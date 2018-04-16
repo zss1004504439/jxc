@@ -16,6 +16,7 @@
     20% { transform: scaleY(1); -webkit-transform: scaleY(1); }
 }
 .f00{ color: #f00 } 
+.font-blue{color:#007aff}
 html,body{ max-width: 640px;margin: 0 auto;font-family: "微软雅黑";    line-height: 1.4;}
 body{  padding-bottom: 50px; }
 dl,dt,dd,ul,li{ margin: 0;padding: 0;list-style: none; } 
@@ -34,6 +35,8 @@ dl,dt,dd,ul,li{ margin: 0;padding: 0;list-style: none; }
     clear:both;
   }
 
+
+.mui-table-view-cell{ padding: 11px 10px  }
 
 .table-style{width:100%;}
 .table-style tbody td{width:20%;}
@@ -178,6 +181,7 @@ img.mui-media-object.mui-pull-left{
 .list-show>img{    position: absolute; top: 50%;  transform: translateY(-50%);  right: 20px; }
 .list-show .df{  color: #666; line-height: 1.6;overflow: hidden;}
 .list-show .df span{ display: block;flex: 3;    overflow: hidden; display: flex; }
+.list-show .df span b{    font-weight: normal;}
 .list-show .df span+span{ flex: 3}
 .list-show .df span label{ flex: 1  }
 .list-show .df .mui-badge {   line-height: initial; margin-right: 2px;    font-weight: 400; border-radius: 4px  }
@@ -189,7 +193,7 @@ img.mui-media-object.mui-pull-left{
  /* 搜索框去bug */
  .mui-search.mui-active:before {margin-top: -14px; }
  /* 搜索框去bug */
- .mui-table-view-chevron .mui-table-view-cell>a:not(.mui-btn){    margin-right: -90px;}
+ .mui-table-view-chevron .mui-table-view-cell>a:not(.mui-btn){  /*   margin-right: -90px; */}
  .mui-navigate-right:after{ right: 40px; }
 
  /* 订单流程 */
@@ -283,3 +287,24 @@ span.guige-on {
  .search-box dl dd p:first-child{     padding-top: 4%;font-size: 18px;font-weight: bold;color: #333 }
  .search-box  table tbody tr td {    padding: 10px 0!important;}
  /* 首页搜索结果页 */
+
+
+  /* 货品详情页 */
+  .pro-show-box {background: #fff ;    margin-top: 40px; }
+  .pro-show-box dl{padding-left: 4%;border-bottom: 1px solid #ccc }
+  .pro-show-box dl dt{ margin:-20px 15px 0 0 }
+  .pro-show-box dl dt img{ border-radius: 5px;border: 1px solid #ddd }
+  .pro-show-box dl dd p{ margin-bottom: 5px; }
+  .pro-show-box dl dd p:first-child{     padding-top: 4%;font-size: 18px;font-weight: bold;color: #333 }
+  .pro-show-box  table tbody tr td {    padding: 10px 0!important;}
+  /* 货品详情页 */
+
+  .salesPresell ul li { padding: 10px }
+  .btn-2 .mui-btn{ width: 50%;border-radius: 0px }
+
+
+  /* 时间区间 */
+  .timeInterval button{width: 48%; margin: 0 1%; float: left; }
+  .timeInterval button{  }
+  .timeInterval button+button{   }
+  /* 时间区间 */

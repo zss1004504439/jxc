@@ -29,7 +29,13 @@ function hideBOX() {
         "display": "none"
     });
 } 
+function hideGuigeBox(){
+    $("#guige-choose-box,.jxc-mask").hide()
+}
+function showGuigeBox(){
+    $("#guige-choose-box,.jxc-mask").show()
 
+}
   
 
 //获取url当前传递参数

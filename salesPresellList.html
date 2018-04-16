@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title> 预售单提货记录 </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="stylesheet" href="css/mui.min.css">
+  <link rel="stylesheet" href="css/app.css">
+  <style type="text/css">
+    span.mui-badge.mui-badge-danger {
+      font-size: 14px;
+      border-radius: 4px;
+      line-height: inherit
+    }
+.salesPresellList .mui-card{ margin: 0 }
+.salesPresellList .mui-card .table-style td{width: initial;font-size: 13px; padding: 8px 0 }
+  </style> 
+  <script src="js/jquery.min.js"></script>
+  <script src="./js/layer.js"></script> 
+</head>
+
+<body>
+  <header id="header" class="mui-bar mui-bar-nav">
+    <h1 class="mui-title"> 预售单提货记录 </h1>
+    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+  </header>
+  <div class="mui-content" id="supplier-search">
+
+    <form class="mui-content-padded" style="margin: 5px;">
+      <div class="mui-input-row mui-search" id=" ">
+        <input type="search" class="mui-input-clear" placeholder="如：预售单号">
+      </div>
+    </form>
+    <div class="salesPresellList">
+
+
+        
+      <div class="mui-card">
+        <div class="mui-card-header">
+          预售单号：XS3310412176 的销售记录
+        </div>
+        <div class="mui-card-content">
+            <table class="table-style">
+                <thead>
+                  <tr>
+                    <th> 开票编号 </th>
+                    <th> 时间 </th>
+                    <th> 开票箱数 </th>
+                    <th> 开票人 </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td> <a href=""> XS3310412176-01 </a> </td>
+                    <td> 2018-04-12 </td>
+                    <td> 12 </td>
+                    <td> yiweb </td>
+                  </tr>
+                  <tr>
+                    <td> <a href=""> XS3310412176-01 </a> </td>
+                    <td> 2018-04-12 </td>
+                    <td> 12 </td>
+                    <td> yiweb </td>
+                  </tr>
+                </tbody>
+              </table> 
+        </div> 
+
+      </div>
+      <ul class="mui-table-view mui-table-view-chevron ">
+        <li class="mui-table-view-cell mui-media">
+          <!-- <a class="mui-navigate-right" href="./salesAdd.html"> -->
+          <a class=" " href="./salesPresellAdd.html">
+            <!-- <span class="mui-badge mui-badge-danger">再次开票</span>  -->
+            <div class="mui-media-body list-show">
+              <h4 class="title">预售单号：XS3310412176 的详情</h4>
+              <p class="df">
+                <span>开票次数：
+                  <b class="f00">1</b>
+                </span>
+                <span>
+                  <b class="mui-badge mui-badge-danger">
+                    再次开票
+                  </b>
+                </span>
+              </p>
+              <p class="df">
+                <span>总箱数：
+                  <b>12</b>
+                </span>
+                <span>总金额：
+                  <b class="f00">￥1230</b>
+                </span>
+              </p>
+              <p class="df">
+                <span>已售箱数：
+                  <b>10</b>
+                </span>
+                <span>剩余箱数：
+                  <b>2</b>
+                </span>
+              </p>
+              <p class="df">
+                <span>客户名称：
+                  <b>张某某</b>
+                </span>
+                <span>预售时间：
+                  <b>2018/08/06</b>
+                </span>
+              </p>
+              <p class="df">
+                <span>货号：
+                  <b class="mui-badge  mui-badge-primary"> s001</b>
+                </span>
+              </p>
+            </div>
+          </a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+  <nav class="mui-bar mui-bar-tab" id="bar-down">
+
+    <div class="mui-tab-item mui-active" data-href="./index.html">
+      <span class="mui-icon mui-icon-home"></span>
+      <span class="mui-tab-label">首页</span>
+    </div>
+    <div class="mui-tab-item" data-href="./sales.html">
+      <span class="mui-icon mui-icon-star"> </span>
+      <span class="mui-tab-label">销售管理</span>
+    </div>
+    <div class="mui-tab-item" data-href="./procurement.html">
+      <span class="mui-icon mui-icon-download"> </span>
+      <span class="mui-tab-label">采购管理</span>
+    </div>
+    <div class="mui-tab-item" data-href="./warehouse.html">
+      <span class="mui-icon mui-icon-flag"></span>
+      <span class="mui-tab-label">仓库管理</span>
+    </div>
+    <div class="mui-tab-item" data-href="./basis.html">
+      <span class="mui-icon mui-icon-gear"></span>
+      <span class="mui-tab-label">基础管理</span>
+    </div>
+  </nav>
+
+  <script src="js/mui.min.js"></script>
+  <script src="js/song.js"></script>
+  <script>
+    mui.init({});
+
+    // 底部导航 链接
+    mui("#bar-down").on("tap", "div", function () {
+      var href = this.getAttribute("data-href");
+      if (href !== "") {
+        gotoUrl(href);
+        return;
+      }
+    }, false);
+  </script>
+</body>
+
+</html>

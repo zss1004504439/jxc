@@ -8,38 +8,9 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <link rel="stylesheet" href="css/mui.min.css">
-    <link rel="stylesheet" href="css/icons-extra.css">
     <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="./css//mui.picker.min.css">
     <style type="text/css">
-      
-
-        #supplier-box ul {
-            background: #fff
-        }
-
-        #supplier-box ul li {
-            padding: 11px 13px;
-        }
-
-        #supplier-box ul li .mui-media-body {
-            font-size: 12px;
-        }
-
-        /* .mui-input-row label{ text-align: right; } */
-
-        .mui-input-row-textarea {
-            height: initial !important
-        }
-
-        #mui-card-form .mui-card-footer {
-            justify-content: flex-end;
-        }
-
-        #guige-boxSize input {
-            width: 21.3333%;
-            font-size: 14px;
-        }
-
         #warehouse-click .mui-input-row {
             font-size: 13px;
             ;
@@ -48,12 +19,13 @@
         #warehouse-click .mui-input-row input {
             font-size: 12px;
             ;
-        }
-
+        }.mui-btn {
+				font-size: 16px;
+				padding: 8px;
+				margin: 3px;
+			}
     </style>
-    <link rel="stylesheet" href="./css/guige.css">
     <script src="js/jquery.min.js"></script>
-    <!-- <link href="./js/theme/default/layer.css" rel="stylesheet"> -->
     <script src="./js/layer.js"></script>
 </head>
 
@@ -64,45 +36,73 @@
         <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
         <a id="promptBtn" class="mui-icon mui-icon-plus mui-pull-right" href="./salesAdd.html"></a>
     </header>
-    
+
     <div class="mui-content" id=" ">
-        <form action="" class="mui-content-padded"  >
+        <form action="" class="mui-content-padded">
             <div class="mui-input-row mui-search" id=" ">
                 <input type="search" class="mui-input-clear" placeholder="如：销售编号">
             </div>
         </form>
-            <div class="mui-content-padded">
-                    <a href="./salesAdd.html" id="popup-area-show" class="addItem mui-btn mui-btn-success mui-icon mui-icon-plus">新增销售单</a>
-            </div>
-        <div class=" "> 
+        <div class="mui-content-padded">
+            <a href="./salesAdd.html" id="popup-area-show" class="addItem mui-btn mui-btn-success mui-icon mui-icon-plus">新增销售单</a>
+        </div>
+
+
+        <div class="timeInterval clearfix">
+
+            <button id='demo1' data-options='{"type":"date","beginYear":2018}' class="btn mui-btn mui-btn-block">开始时间</button>
+            <!-- <button class="mui-btn">—</button> -->
+            <button id='demo2' data-options='{"type":"date","beginYear":2018}' class="btn mui-btn mui-btn-block">结束时间</button>
+        </div>
+
+        <div class="mui-content-padded"> 
+            <h5> 共检索到 5 条记录 </h5>
+            <h5>销售箱数合计：55 箱，销售金额合计：10000.00</h5>
+            <h5>已付款：1200.00，未付款：8800.00</h5>
+        </div>
+
+        <div class=" ">
             <ul class="mui-table-view mui-table-view-chevron ">
                 <li class="mui-table-view-cell mui-media">
                     <a class="mui-navigate-right" href="./salesShow.html">
                         <!-- <span class="mui-badge mui-badge-danger">已出库</span>  -->
                         <div class="mui-media-body list-show">
                             <h4 class="title">销售单号：XS3310412176</h4>
-                            <p class="df"> <span>货号：
-                                <b class="mui-badge mui-badge-primary">s001</b>
-                                <b class="mui-badge mui-badge-primary">s001</b>
-                                <b class="mui-badge mui-badge-primary">s001</b>
-                                <b class="mui-badge mui-badge-primary">s001</b>
-                            </span>   </p>
-                            <p class="df list-show-other">
-                                <span>总金额（当地货币）：<b>1230</b></span> 
-                                 <span>总箱数：<b>12</b></span>  
+                            <p class="df">
+                                <span>货号：
+                                    <b class="mui-badge mui-badge-primary">s001</b>
+                                    <b class="mui-badge mui-badge-primary">s001</b>
+                                    <b class="mui-badge mui-badge-primary">s001</b>
+                                    <b class="mui-badge mui-badge-primary">s001</b>
+                                </span>
                             </p>
-                            <p class="df"> 
-                                <span>已出库箱数：<b>100</b></span> </p>
-                            <p class="df"> 
-                                <span>客户名称：<b>张某某</b></span>
-                                <span>时间：<b>张某某</b></span>
-                                
-                           
-                        </div> 
+                            <p class="df list-show-other">
+                                <span>总金额（当地货币）：
+                                    <b>1230</b>
+                                </span>
+                                <span>总箱数：
+                                    <b>12</b>
+                                </span>
+                            </p>
+                            <p class="df">
+                                <span>已出库箱数：
+                                    <b>100</b>
+                                </span>
+                            </p>
+                            <p class="df">
+                                <span>客户名称：
+                                    <b>张某某</b>
+                                </span>
+                                <span>时间：
+                                    <b>张某某</b>
+                                </span>
+
+
+                        </div>
                     </a>
                 </li>
-            </ul> 
-    
+            </ul>
+
         </div>
     </div>
 
@@ -130,13 +130,48 @@
         </div>
     </nav>
  
-
-
-    <script src="js/mui.min.js"></script>
+    <script src="js/mui.min.js"></script> 
+    <script src="./js/mui.picker.min.js"></script>
     <script src="js/song.js"></script>
     <script>
-      
         mui.init({});
+        var demo1 = document.getElementById('demo1');
+        var demo2 = document.getElementById('demo2'); 
+        demo1.addEventListener('tap', function () {
+            var optionsJson = this.getAttribute('data-options') || '{}';
+            var options = JSON.parse(optionsJson);
+            var id = this.getAttribute('id');
+
+            var picker = new mui.DtPicker(options);
+            picker.show(function (rs) {
+                /*
+                 * rs.value 拼合后的 value
+                 * rs.text 拼合后的 text
+                 * rs.y 年，可以通过 rs.y.vaue 和 rs.y.text 获取值和文本
+                 * rs.m 月，用法同年
+                 * rs.d 日，用法同年
+                 * rs.h 时，用法同年
+                 * rs.i 分（minutes 的第二个字母），用法同年
+                 */
+                demo1.innerText = rs.text;
+
+                picker.dispose();
+            });
+        }, false);
+        demo2.addEventListener('tap', function () {
+            var optionsJson = this.getAttribute('data-options') || '{}';
+            var options = JSON.parse(optionsJson);
+            var id = this.getAttribute('id');
+
+            var picker = new mui.DtPicker(options);
+            picker.show(function (rs) {
+               
+                demo2.innerText = rs.text;
+
+                picker.dispose();
+            });
+        }, false);
+
 
         // 底部导航 链接
         mui("#bar-down").on("tap", "div", function () {
