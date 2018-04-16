@@ -11,36 +11,14 @@
     <link rel="stylesheet" href="css/icons-extra.css">
     <link rel="stylesheet" href="css/app.css">
     <style type="text/css">
-        #supplier-box ul {
-            background: #fff
-        }
-
-        #supplier-box ul li {
-            padding: 11px 13px;
-        }
-
-        #supplier-box ul li .mui-media-body {
-            font-size: 12px;
-        }
-
-        /* .mui-input-row label{ text-align: right; } */
-
-        .mui-input-row-textarea {
-            height: initial !important
-        }
-
-        #mui-card-form .mui-card-footer {
-            justify-content: flex-end;
-        }
+       
     </style>
 </head>
 
 <body>
     <header id="header" class="mui-bar mui-bar-nav">
         <h1 class="mui-title">新增供应商</h1>
-        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-        <!-- <a id="promptBtn" class="mui-icon mui-icon-search mui-pull-right"></a> -->
-        <!-- <a class="mui-icon mui-icon-checkmarkempty mui-pull-right">   </a> -->
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a> 
     </header>
     <div class="mui-content">
         <div class="mui-card" id="mui-card-form">
@@ -57,10 +35,11 @@
                     <input type="text" class="mui-input-clear" placeholder="编号">
                 </div>
                 <div class="mui-input-row">
-                    <label>客户类型</label>
+                    <label>供应商类型</label>
                     <select class="mui-input-clear">
-                        <option value="普通客户">普通客户</option>
-                        <option value="重点客户" selected>重点客户</option>
+                        <option value="0">点击选择</option>
+                        <option value="1">优质供应商</option>
+                        <option value="2">一般供应商</option>
                     </select>
                 </div>
                 <div class="mui-input-row">

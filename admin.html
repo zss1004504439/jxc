@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title> 用户管理 </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="stylesheet" href="css/mui.min.css">
+  <link rel="stylesheet" href="css/icons-extra.css">
+  <link rel="stylesheet" href="css/app.css">
+  <style type="text/css">
+  </style>
+</head>
+
+<body>
+  <header id="header" class="mui-bar mui-bar-nav">
+
+    <h1 class="mui-title">用户管理</h1>
+    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+  </header>
+
+  <div class="mui-content"> 
+          <form action="" class="mui-content-padded" >
+              <div class="mui-input-row mui-search" id=" ">
+                  <input type="search" class="mui-input-clear" placeholder="如：用户角色">
+              </div>
+          </form> 
+ 
+      <div class="mui-card">   
+          <div class="mui-card-content">
+            <div class="mui-card-content-inner mui-input-group"> 
+            
+                <div class="mui-input-row">
+                    <label>用户姓名：</label> 
+                    <input type="text" disabled value="yiwebcms">
+                  </div>
+                <div class="mui-input-row">
+                    <label>用户角色：</label> 
+                    <input type="text" disabled value="采购员">
+                  </div>
+                
+                <div class="mui-input-row mui-checkbox mui-right">
+                    <label>用户是否启用：</label>
+                    <input name="checkbox" value="" checked type="checkbox">
+                  </div>
+            </div>
+          </div>  
+        </div>
+  
+  </div>
+
+
+
+  <!-- 底部导航 -->
+  <nav class="mui-bar mui-bar-tab" id="bar-down">
+
+    <div class="mui-tab-item mui-active" data-href="./index.html">
+      <span class="mui-icon mui-icon-home"></span>
+      <span class="mui-tab-label">首页</span>
+    </div>
+    <div class="mui-tab-item" data-href="./sales.html">
+      <span class="mui-icon mui-icon-star"> </span>
+      <span class="mui-tab-label">销售管理</span>
+    </div>
+    <div class="mui-tab-item" data-href="./procurement.html">
+      <span class="mui-icon mui-icon-download"> </span>
+      <span class="mui-tab-label">采购管理</span>
+    </div>
+    <div class="mui-tab-item" data-href="./warehouse.html">
+      <span class="mui-icon mui-icon-flag"></span>
+      <span class="mui-tab-label">仓库管理</span>
+    </div>
+    <div class="mui-tab-item" data-href="./basis.html">
+      <span class="mui-icon mui-icon-gear"></span>
+      <span class="mui-tab-label">基础管理</span>
+    </div>
+
+  </nav>
+
+
+
+  <script src="js/mui.min.js"></script>
+  <script src="js/song.js"></script>
+  <script>
+    mui.init({});
+    //当前页面执行 
+    mui("#bar-down").on("tap", "div", function () {
+      var href = this.getAttribute("data-href");
+      if (href !== "") {
+        gotoUrl(href);
+        return;
+      }
+    }, false);
+  </script>
+</body>
+
+</html>

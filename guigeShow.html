@@ -10,40 +10,13 @@
     <link rel="stylesheet" href="css/mui.min.css">
     <link rel="stylesheet" href="css/icons-extra.css">
     <link rel="stylesheet" href="css/app.css">
-    <style type="text/css">
- 
-        #supplier-box ul {
-            background: #fff
-        }
-
-        #supplier-box ul li {
-            padding: 11px 13px;
-        }
-
-        #supplier-box ul li .mui-media-body {
-            font-size: 12px;
-        }
-
-        /* .mui-input-row label{ text-align: right; } */
-
-        .mui-input-row-textarea {
-            height: initial !important
-        }
-
-        #mui-card-form .mui-card-footer {
-            justify-content: flex-end;
-        }
-
+    <style type="text/css"> 
         #guige-boxSize input {
-            width: 21.3333%;
+            width: 20%;
             font-size: 14px;
         }
-    </style>
-
-
-    <link rel="stylesheet" href="./css/guige.css">
-    <script src="js/jquery.min.js"></script>
-    <!-- <link href="./js/theme/default/layer.css" rel="stylesheet"> -->
+    </style> 
+    <script src="js/jquery.min.js"></script> 
     <script src="./js/layer.js"></script>
 </head>
 
@@ -51,9 +24,7 @@
     <header id="header" class="mui-bar mui-bar-nav">
 
         <h1 class="mui-title">新增货品箱规格</h1>
-        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-        <!-- <a id="promptBtn" class="mui-icon mui-icon-search mui-pull-right"></a> -->
-        <!-- <a class="mui-icon mui-icon-checkmarkempty mui-pull-right">   </a> -->
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a> 
     </header>
 
     <div class="mui-content">
@@ -69,11 +40,7 @@
                     <input type="text" class=" " value="80.00">
                     <input type="text" class=" " value="80.00">
                 </div>
-                <div class="mui-input-row mui-checkbox">
-                    <label>货品箱是否使用： 
-                    </label>
-                    <input name="goodscHeckbox" type="checkbox" checked>
-                  </div>
+                
                 <div class="mui-input-row mui-input-row-textarea">
                         <textarea id="" rows="2" placeholder="备注信息"></textarea>
                 </div>
@@ -265,7 +232,7 @@
             ];
  
             guigeTr = "<tr><td> " + guigeJSON[0] + " </td><td> " + guigeJSON[1] +
-                "</td><td class=\"input_nor_line\"> <input type=\"text\" value=\"" + guigeJSON[2] +
+                "</td><td class=\"input_nor_line\"> <input type=\"text\"  class=\"input_nor\" value=\"" + guigeJSON[2] +
                 "\"></td> <td> <a > 移除 </a> </td></tr>";
             $("#guige-add-list table tbody").append(guigeTr)
             hideBOX();

@@ -59,61 +59,80 @@
 <body>
     <header id="header" class="mui-bar mui-bar-nav">
 
-        <h1 class="mui-title"> 搜索库存 </h1>
+        <h1 class="mui-title"> 库存查询 </h1>
         <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
         <a id="promptBtn" class="mui-icon mui-icon-plus mui-pull-right" href="./salesAdd.html"></a>
     </header> 
-    <div class="mui-content" id="supplier-search">
-            <form class="mui-content-padded" style="margin: 5px;">
+    <div class="mui-content" id=" ">
+            <form class="mui-content-padded"  >
                     <div class="mui-input-row mui-search" id=" ">
-                        <input type="search" class="mui-input-clear" placeholder="如：销售编号">
+                        <input type="search" class="mui-input-clear" placeholder="如：货号">
                     </div>
             </form>
            
     </div>
-
+    <div class="mui-content-padded"> 
+        <div class="select-pro-list">
+                <span>
+                    <select name="" id="">
+                        <option value="0">点击选择仓库</option>
+                        <option value="">A仓</option>
+                        <option value="">B仓</option>
+                    </select>
+                </span>
+                <span>
+                    <select name="" id="">
+                        <option value="0">点击选择商品类别</option>
+                        <option value="">男鞋</option>
+                        <option value="">女鞋</option> 
+                    </select>
+                </span>
+            </div>
+    </div>
+<!-- <div class="mui-input-group">
+        <div class="mui-input-row">
+                <label>仓库名称：</label>
+                <select>
+                    <option value="0">点击选择仓库</option> 
+                </select>
+        </div>
+        <div class="mui-input-row">
+                <label>品类：</label>
+                <select>
+                    <option value="0">点击选择商品类别</option> 
+                    <option value="0">男鞋</option> 
+                </select>
+        </div>
+</div> -->
+<div class="mui-content-padded">
+    <h5> 你选择的是 <span class="f00">A仓库</span> <span class="f00">男鞋</span> 库存情况如下： </h5>
+</div>
     <div> 
             <table id="warehouseAll" class="table-style">
                 <thead>
-                    <tr>
-                        <th> 仓库编号 </th>
+                    <tr> 
                         <th> 仓库名称 </th>
-                        <th> 货品编号 </th>
-                        <th> 货品箱名 </th>
-                        <th> 库存数量 </th>
-                        <th> 价格 </th>
-                        <th> 备注 </th>
+                        <th> 货号 </th> 
+                        <th> 库存箱数 </th>
+                        <th>库存金额(￥) </th>  
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td> CK001 </td>
+                    <tr> 
                         <td> A仓 </td>
-                        <td> S001 </td>
-                        <td> 大箱80 </td>
+                        <td> S001 </td> 
                         <td> 17 </td>
-                        <td> 0.00 </td>
-                        <td> <a href="">查看</a> </td>
-                    </tr> 
-                    <tr>
-                        <td> CK001 </td>
-                        <td> A仓 </td>
-                        <td> S001 </td>
-                        <td> 大箱80 </td>
-                        <td> 17 </td>
-                        <td> 0.00 </td>
-                        <td> <a href="">查看</a> </td>
-                    </tr> 
-                    <tr>
-                        <td> CK001 </td>
-                        <td> A仓 </td>
-                        <td> S001 </td>
-                        <td> 大箱80 </td>
-                        <td> 17 </td>
-                        <td> 0.00 </td>
-                        <td> <a href="">查看</a> </td>
-                    </tr> 
+                        <td> 0.00 </td>  
+                    </tr>   
                 </tbody>
+                <tfoot>
+                    <tr>
+                        <td> 合计 </td>
+                        <td> 100 </td>
+                        <td> 1000000 </td>
+                        <td> 20000.00 </td>
+                    </tr>
+                </tfoot>
             </table>
         </div>
 
