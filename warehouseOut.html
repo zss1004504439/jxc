@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title> 出库 </title>
+    <title> 新增国内出库单 </title>
     <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -19,7 +19,6 @@
 
 <body>
     <header id="header" class="mui-bar mui-bar-nav">
-
         <h1 class="mui-title"> 新增国内出库单 </h1>
         <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
         <button class="mui-btn mui-btn-blue mui-btn-link mui-pull-right">保存</button>
@@ -36,32 +35,30 @@
                 <div class="mui-input-row">
                     <label>出库类型：</label>
                     <select class=" ">
+                        <option value="">发起海运</option>
                         <option value="0">点击选择出库类型</option>
-                        <option value="国内出库">国内出库</option>
                     </select>
                 </div>
                 <div class="mui-input-row">
                     <label>港口：</label>
-                    <input type="text" class="mui-input-clear " placeholder="港口">
+                    <input type="text" class="mui-input-clear" placeholder="港口">
                 </div>
                 <div class="mui-input-row">
                     <label> 集装箱编号：</label>
-                    <input type="text" class="mui-input-clear " placeholder="集装箱编号">
+                    <input type="text" class="mui-input-clear" placeholder="输入集装箱编号">
                 </div>
-                <!--  <div class="mui-input-row">
-                    <label> 集装箱体积：</label>
-                    <input type="text" class="mui-input-clear " disabled placeholder="集装箱编号">
-                </div> -->
+
                 <div class="mui-input-row">
                     <label> 总箱数：</label>
                     <input type="text" class="mui-input-clear " disabled value="19">
                 </div>
                 <div class="mui-input-row">
-                    <label> 总体积：</label>
+                    <label> 总体积（m³）：</label>
                     <input type="text" class="mui-input-clear " disabled value="1038.00">
                 </div>
                 <div class="mui-input-row">
                     <label> 时间：</label>
+                    <!-- 自动提 可选择  精确到天 -->
                     <input type="text" class="mui-input-clear " placeholder="时间">
                 </div>
                 <div class="mui-input-row">
@@ -74,31 +71,41 @@
             </div>
         </div>
 
-        <div class="" id="guige-add-list">
-            <table class="table-style">
-                <thead>
-                    <tr>
-                        <th>货品编号</th>
-                        <th>货品箱规格</th>
-                        <th>数量（箱）</th>
-                        <th>仓位</th>
-                        <th>操作</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td> s001 </td>
-                        <td> 中箱80 </td>
-                        <td class="input_nor_line">
-                            <input type="text" value="20">
-                        </td>
-                        <td> 一仓 </td>
-                        <td>
-                            <a> 移除 </a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="" id=" ">
+            <ul class="mui-table-view " id="">
+                <li class="mui-table-view-cell mui-media"> 
+                    <img class="mui-media-object mui-pull-left" src="./images/cbd.jpg" alt="">
+                    <div class="mui-media-body list-show">
+                        <h4 class="title">货号：s001</h4>
+                        <p class="df">
+                            <span> 货品箱规格：
+                                <b>大箱80</b>
+                            </span>
+                        </p>
+                        <p class="df">
+                            <span>总箱数：
+                                <b>1000</b>
+                            </span> 
+                            <span>
+                                仓库位：
+                                <b> A库 </b>
+                            </span>
+                        </p>
+                        <p class="df">
+                           
+                        <span>
+                            出库箱数：
+                            <label class="input_nor_line">
+                                <input class="input_nor" type="text" value="100">
+                            </label>
+                        </span>
+                        <span> 
+                        </span>
+                        </p>
+                    </div>
+                </li>
+
+            </ul>
         </div>
 
         <div class="mui-content-padded df" id="warehouse-out-add">
@@ -108,20 +115,24 @@
         </div>
 
         <div class="" id="warehouse-out-tot">
+            <!-- 点击预览图片 -->
+            <!-- 点击预览图片 -->
+            <!-- 点击预览图片 -->
+            <!-- 点击预览图片 -->
             <table class="table-style">
                 <thead>
                     <tr>
-                        <th>货品编号</th>
+                        <th>货号</th>
                         <th>箱数</th>
                         <th>件数</th>
-                        <th>体积</th>
+                        <th>体积(m³)</th>
                         <th>金额</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td> s001 </td>
-                        <td> 1200 </td>
+                        <td> 12 </td>
                         <td> 130000 </td>
                         <td> 10 </td>
                         <td> 90000.00 </td>
@@ -162,16 +173,18 @@
 
     <!-- 弹出层 -->
     <div id="guige-boxNumber" style="display:none">
-        <div class="title"> 选择货品 </div>
+        <div class="title"> 添加货品 </div>
         <div class="select-pro-list">
             <span>
                 <select name="" id="">
+                    <option value="0">选择品类</option>
                     <option value="">男鞋</option>
                     <option value="">女鞋</option>
                 </select>
             </span>
             <span>
                 <select name="" id="">
+                    <option value="">选择货品</option>
                     <option value="">产品1</option>
                     <option value="">产品2</option>
                 </select>
@@ -183,11 +196,15 @@
                 <div class="mui-input-row mui-checkbox mui-left">
                     <input name="checkbox" value="Item 1" type="checkbox">
                     <label class="list-show">
+                        <img class="" height="88" src="./images/cbd.jpg">
+                        <!-- 加图片 -->
                         <div class="df">
-                            <span>货品编号：
+                            <span>货号：
                                 <b>s001</b>
                             </span>
-                            <span>货品箱规格：
+                        </div>
+                        <div class="df">
+                            <span>货品箱：
                                 <b>大箱80</b>
                             </span>
                         </div>
@@ -195,19 +212,13 @@
                             <span>仓库位：
                                 <b>一仓</b>
                             </span>
-                            <span>库存数量：
-                                <b>1000</b>
-                            </span>
                         </div>
                         <div class="df">
-                            <span>供应商：郑州壹网无忧信息技术有限公司 </span>
+
+                            <span>库存箱数：
+                                <b>195</b>
+                            </span>
                         </div>
-                        <!--   <div class="mui-ellipsis">
-                                转出数量：
-                                <span class="input_nor_line">
-                                    <input class="input_nor" type="text" value="88">
-                                </span>
-                            </div> -->
                     </label>
                 </div>
             </div>
@@ -223,7 +234,7 @@
     <script src="js/song.js"></script>
     <script src="js/mui.picker.min.js"></script>
     <script>
-        //  展开选择框
+        //  展开选择框 
         $("#warehouse-out-add").on("click", "a.mui-btn-primary", function () {
             showBOX()
         })
@@ -233,9 +244,7 @@
         })
 
         mui.init({});
-        /*   $(".select-pro-li").on("click", function () { 
-              $(this).toggleClass("select-pro-li-on"); 
-          }); */
+
         // 底部导航 链接
         mui("#bar-down").on("tap", "div", function () {
             var href = this.getAttribute("data-href");

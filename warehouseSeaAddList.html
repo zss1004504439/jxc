@@ -3,82 +3,83 @@
 
 <head>
   <meta charset="utf-8">
-  <title> 国外入库记录 </title>
+  <title> 海外入仓记录 </title>
   <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <link rel="stylesheet" href="css/mui.min.css"> 
+  <link rel="stylesheet" href="css/mui.min.css">
   <link rel="stylesheet" href="css/app.css">
-  <script src="js/jquery.min.js"></script> 
-  <script src="js/layer.js"></script>  
+  <script src="js/jquery.min.js"></script>
+  <script src="js/layer.js"></script>
   <script src="js/mui.min.js"></script>
-  <script src="js/song.js"></script> 
+  <script src="js/song.js"></script>
   <style type="text/css">
-   
- 
-  
-    #warehouse-click .mui-input-row {
-      font-size: 13px; 
-    }
-
-    #warehouse-click .mui-input-row input {
-      font-size: 12px; 
-    }
- 
-  </style>
-
-
+  </style> 
 </head>
 
 <body>
   <header id="header" class="mui-bar mui-bar-nav">
-    <h1 class="mui-title">海外入库记录</h1>
-    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>  
-  </header>
-
-  <div class="mui-content" id=" "> 
-    <form action="" class="mui-content-padded"  >
+    <h1 class="mui-title">海外入仓记录</h1>
+    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+  </header> 
+  <div class="mui-content" id=" ">
+    <form action="" class="mui-content-padded">
       <div class="mui-input-row mui-search" id=" ">
         <input type="search" class="mui-input-clear" placeholder="如：男鞋">
       </div>
-    </form> 
+    </form>
     <div class="mui-content-padded">
-        <a href="./warehouseSeaAdd.html" id="popup-area-show" class="addItem mui-btn mui-btn-success mui-icon mui-icon-plus">新增海外入库单</a>
-</div>
-    </div> 
-    <ul class="mui-table-view mui-table-view-chevron">
-        <li class="mui-table-view-cell mui-media">
-            <a class="mui-navigate-right" href="./warehouseSeaAddListShow.html"> 
-                <div class="mui-media-body list-show">
-                    <h4 class="title"> 入库编号：DY4858794899 </h4>
-                    <p class="df"> 
-                        <span>集装箱编号：<b>HWRK0164185611</b></span>  </p>
-                    <p class="df"> 
-                        <span>总箱数：<b>水浒鞋业</b></span>
-                        <span>总金额：<b>某某</b></span> </p>
-                    <p class="df">
-                      <span>入库日期：<b>2018/04/04</b> </span>
-                      <span>操作人：<b>yiwebcms</b></span>
-                    </p> 
-                    <p class="df"> 
-                      <span>操作人：<b>yiwebcms</b></span>
-                    </p>  
-                    <p class="df">
-                        <span>集装箱包含货号：
-                            <b class="mui-badge mui-badge-primary">s001</b>
-                            <b class="mui-badge mui-badge-primary">s005</b>
-                            <b class="mui-badge mui-badge-primary">s006</b>
-                        </span>
-                    </p>
-                </div>
-            </a>
-        </li>  
-      
-    </ul>  
-   
-     
-    <div class="jxc-mask"></div>
-  
+      <a href="./warehouseSeaAdd.html" class="addItem mui-btn mui-btn-success mui-icon mui-icon-plus">新增海外入仓</a>
+    </div>
+  </div>
+ 
+  <ul class="mui-table-view mui-table-view-chevron">
+    <li class="mui-table-view-cell mui-media">
+      <a class="mui-navigate-right" href="./warehouseSeaAddListShow.html">
+        <div class="mui-media-body list-show">
+          <h4 class="title"> 入仓编号：DY4858794899 </h4>
+          <p class="df">
+            <span>集装箱编号：
+              <b> jzx098 </b>
+            </span>
+            <span>港口：
+              <b>义乌港</b>
+            </span>
+          </p>
+          <p class="df">
+            <span>总箱数：
+              <b> 90 </b>
+            </span>
+            <span>总金额：
+              <b>8848.00</b>
+            </span>
+          </p>
+          <p class="df">
+            <span>状态：
+              <b> 已入库 </b>
+            </span>
+            <span>入仓日期：
+              <b>2018/04/04</b>
+            </span>
+          </p>
+          <p class="df">
+            <span>包含货品：
+              <b class="mui-badge mui-badge-primary">s001</b>
+              <b class="mui-badge mui-badge-primary">s001</b>
+              <b class="mui-badge mui-badge-primary">s001</b>
+              <b class="mui-badge mui-badge-primary">s001</b>
+              <b class="mui-badge mui-badge-primary">s001</b>
+              <b class="mui-badge mui-badge-primary">s001</b>
+            </span>
+          </p>
+        </div>
+      </a>
+    </li>
+  </ul>
+
+
+  <div class="jxc-mask"></div>
+
   <nav class="mui-bar mui-bar-tab" id="bar-down">
 
     <div class="mui-tab-item mui-active" data-href="./index.html">
@@ -102,9 +103,8 @@
       <span class="mui-tab-label">基础管理</span>
     </div>
   </nav>
- 
+
   <script>
-    
     mui.init({});
 
     // 底部导航 链接

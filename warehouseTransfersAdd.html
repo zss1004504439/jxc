@@ -59,7 +59,7 @@
                         <span>货号：
                             <b>s001</b>
                         </span>
-                        <span>货品箱规格：
+                        <span>货品箱：
                             <b>中箱80</b>
                         </span>
                     </div>
@@ -113,17 +113,19 @@
 
     <!-- 弹出层 -->
     <div id="guige-boxNumber" style="display:none">
-        <div class="title"> 选择货品 </div>
+        <div class="title"> 请选择货品 </div>
 
         <div class="select-pro-list">
             <span>
                 <select name="" id="">
+                    <option value="0">选择品类</option>
                     <option value="">男鞋</option>
                     <option value="">女鞋</option>
                 </select>
             </span>
             <span>
                 <select name="" id="">
+                    <option value="0">选择货品</option>
                     <option value="">产品1</option>
                     <option value="">产品2</option>
                 </select>
@@ -133,118 +135,21 @@
             <div class="select-pro-li ">
                 <div class="mui-input-row mui-checkbox mui-left">
                     <input name="checkbox" value="Item 1" type="checkbox">
-                    <label>
-                        <div class="mui-ellipsis">
-                            货品编号：
-                            <span>s001</span>&nbsp;&nbsp;&nbsp;&nbsp;货品箱规格：
-                            <span>s001</span>
+                    <label class="list-show">
+                        <img src="./images/cbd.jpg" height="66" class="fr" alt="">
+                        <div class="df"> 
+                            <span>货号：<b>s001</b></span> 
+                            <!-- <span>货品箱：<b>大箱80</b> </span> -->
                         </div>
-                        <div class="mui-ellipsis">
-                            库存数量：
-                            <span>1000</span>&nbsp;&nbsp;&nbsp;&nbsp;原仓库位：
-                            <span>一仓</span>
-                        </div>
-                        <div class="mui-ellipsis">
-                            转出数量：
-                            <span class="input_nor_line">
-                                <input class="input_nor" type="text" value="88">
-                            </span>
-                        </div>
+                        <div class="df"> 
+                            <span>库存箱数：<b>1000</b></span> 
+                        </div> 
+                        <div class="df">  
+                            <span>原仓库位：<b>一仓</b></span>
+                        </div> 
                     </label>
                 </div>
-            </div>
-            <div class="select-pro-li ">
-                <div class="mui-input-row mui-checkbox mui-left">
-                    <input name="checkbox" value="Item 1" type="checkbox">
-                    <label>
-                        <div class="mui-ellipsis">
-                            货品编号：
-                            <span>s001</span>&nbsp;&nbsp;&nbsp;&nbsp;货品箱规格：
-                            <span>s001</span>
-                        </div>
-                        <div class="mui-ellipsis">
-                            库存数量：
-                            <span>1000</span>&nbsp;&nbsp;&nbsp;&nbsp;原仓库位：
-                            <span>一仓</span>
-                        </div>
-                        <div class="mui-ellipsis">
-                            转出数量：
-                            <span class="input_nor_line">
-                                <input class="input_nor" type="text" value="88">
-                            </span>
-                        </div>
-                    </label>
-                </div>
-            </div>
-            <div class="select-pro-li ">
-                <div class="mui-input-row mui-checkbox mui-left">
-                    <input name="checkbox" value="Item 1" type="checkbox">
-                    <label>
-                        <div class="mui-ellipsis">
-                            货品编号：
-                            <span>s001</span>&nbsp;&nbsp;&nbsp;&nbsp;货品箱规格：
-                            <span>s001</span>
-                        </div>
-                        <div class="mui-ellipsis">
-                            库存数量：
-                            <span>1000</span>&nbsp;&nbsp;&nbsp;&nbsp;原仓库位：
-                            <span>一仓</span>
-                        </div>
-                        <div class="mui-ellipsis">
-                            转出数量：
-                            <span class="input_nor_line">
-                                <input class="input_nor" type="text" value="88">
-                            </span>
-                        </div>
-                    </label>
-                </div>
-            </div>
-            <div class="select-pro-li ">
-                <div class="mui-input-row mui-checkbox mui-left">
-                    <input name="checkbox" value="Item 1" type="checkbox">
-                    <label>
-                        <div class="mui-ellipsis">
-                            货品编号：
-                            <span>s001</span>&nbsp;&nbsp;&nbsp;&nbsp;货品箱规格：
-                            <span>s001</span>
-                        </div>
-                        <div class="mui-ellipsis">
-                            库存数量：
-                            <span>1000</span>&nbsp;&nbsp;&nbsp;&nbsp;原仓库位：
-                            <span>一仓</span>
-                        </div>
-                        <div class="mui-ellipsis">
-                            转出数量：
-                            <span class="input_nor_line">
-                                <input class="input_nor" type="text" value="88">
-                            </span>
-                        </div>
-                    </label>
-                </div>
-            </div>
-            <div class="select-pro-li ">
-                <div class="mui-input-row mui-checkbox mui-left">
-                    <input name="checkbox" value="Item 1" type="checkbox">
-                    <label>
-                        <div class="mui-ellipsis">
-                            货品编号：
-                            <span>s001</span>&nbsp;&nbsp;&nbsp;&nbsp;货品箱规格：
-                            <span>s001</span>
-                        </div>
-                        <div class="mui-ellipsis">
-                            库存数量：
-                            <span>1000</span>&nbsp;&nbsp;&nbsp;&nbsp;原仓库位：
-                            <span>一仓</span>
-                        </div>
-                        <div class="mui-ellipsis">
-                            转出数量：
-                            <span class="input_nor_line">
-                                <input class="input_nor" type="text" value="88">
-                            </span>
-                        </div>
-                    </label>
-                </div>
-            </div>
+            </div> 
         </div>
         <button type="button" class="mui-btn mui-btn-primary mui-btn-block" id="sales-submit"> 确认添加 </button>
     </div>
@@ -257,6 +162,7 @@
     <script src="js/song.js"></script>
     <script>
         //  展开选择框
+            showBOX()
         $("#select-pro").on("click", function () {
             showBOX()
         })

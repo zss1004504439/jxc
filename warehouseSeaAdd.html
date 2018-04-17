@@ -34,13 +34,12 @@
 <body>
   <header id="header" class="mui-bar mui-bar-nav">
     <h1 class="mui-title">海外入仓</h1>
-    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-    <button class="mui-btn mui-btn-blue mui-btn-link mui-pull-right">保存</button> 
+    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>  
   </header> 
   <div class="mui-content" > 
     <div class="mui-card">
       <div class="mui-card-header">
-        新增海外入库单
+        新增海外入仓单
       </div> 
       <div class="mui-input-group mui-card-content">
         <div class="mui-input-row">
@@ -51,14 +50,13 @@
           <label>入仓单类型：</label>
           <select>
             <option value="0">选择入仓类型</option>
-            <option value="1">采购入库</option>
-            <option value="2">销售退货入库</option> 
+            <option value="1"> 海外入仓 </option>
           </select>
         </div>
         <div class="mui-input-row">
           <label>关联运单号：</label>
           <select class="f00">
-            <option value="0">点击选择海运运单号</option>
+            <option value="0">选择海运运单号</option>
             <option value="DY66666666">DY66666666</option>
             <option value="DY66666666">DY66666666</option>
             <option value="DY66666666">DY66666666</option>
@@ -67,31 +65,31 @@
 
         <ul class="mui-table-view" id="warehouse-click">
           <li class="mui-table-view-cell mui-collapse">
-            <a class="mui-navigate-right" href="#">点击查看订单详情</a>
+            <a class="mui-navigate-right" href="#">点击查看海运单详情</a>
             <div class="mui-collapse-content">
               <div class="mui-input-row">
                 <label>制单人</label>
-                <input type="text" placeholder="制单人">
+                <input type="text" disabled value="yiweb">
               </div>
               <div class="mui-input-row">
-                <label>供应商编号</label>
-                <input type="text" class="mui-input-clear" placeholder="供应商编号">
+                <label>集装箱编号</label>
+                <input type="text" class=" " disabled value="jzx098">
               </div>
               <div class="mui-input-row">
-                <label>供应商名称</label>
-                <input type="text" class="mui-input-clear" placeholder="供应商编号">
+                <label>港口</label>
+                <input type="text" class=" " disabled value="义乌港">
               </div>
               <div class="mui-input-row">
-                <label>供应商联系人</label>
-                <input type="text" class="mui-input-clear" placeholder="供应商联系人">
-              </div>
+                <label>总箱数</label>
+                <input type="text" class=" " disabled value="90">
+              </div> 
               <div class="mui-input-row">
-                <label>供应商电话</label>
-                <input type="text" class="mui-input-clear" placeholder="供应商电话">
-              </div>
+                <label>总金额</label>
+                <input type="text" class=" " disabled value="16515.00">
+              </div> 
               <div class="mui-input-row">
                 <label>制单时间</label>
-                <input type="text" class="mui-input-clear" placeholder="制单时间">
+                <input type="text" class=" " disabled value="2018-04-12">
               </div>
               <div class="mui-input-row mui-input-row-textarea">
                   <textarea id="" rows="2" placeholder="备注信息"></textarea>
@@ -112,16 +110,20 @@
                 <div class="mui-media-body list-show">
                   <h4 class="title">货号：s001</h4>
                   <p class="df"> 
-                    <span>货品箱规格：<b>大箱80</b></span>
+                    <span>货品箱：<b>大箱80</b></span>
                     <span>总箱数：<b>80</b></span>
                   </p>
                   <p class="df"> 
                     <span>
-                      入库数量：
+                      入库箱数：
                      <label  class="input_nor_line">
                        <input class="input_nor" type="text" value="10">
                       </label>
+                    </span> 
+                    <span> 
                     </span>
+                  </p> 
+                  <p class="df">
                     <span>
                       选择仓库：
                       <label  class="input_nor_line"> 
@@ -130,6 +132,9 @@
                               <option value="B仓">B仓</option>
                             </select>
                         </label>
+                    </span>
+                    <span>
+
                     </span>
                   </p> 
                 </div>  
@@ -142,16 +147,17 @@
 
     <div class="mui-card">
  
-      <div class="mui-card-header">
+      <div class=" addItem mui-btn mui-btn-danger F16">
         确认入库信息
       </div>
+      <!-- <div class="mui-card-header"> </div> -->
       <div class="mui-card-content">
         <table class="table-style">
             <thead>
                 <tr>
-                    <th> 货品编号 </th>
+                    <th> 货号 </th>
                     <th> 货品箱 </th>
-                    <th> 入库数量 </th>
+                    <th> 入库箱数 </th>
                     <th> 仓库 </th>
                 </tr>
             </thead>
@@ -161,20 +167,14 @@
                     <td> ****** </td>
                     <td> 11 </td>
                     <td> 一仓 </td>
-                </tr> 
-                <tr>
-                    <td> s001 </td>
-                    <td> ****** </td>
-                    <td> 11 </td>
-                    <td> 一仓 </td>
-                </tr> 
+                </tr>  
             </tbody>
         </table>
       </div>
       <div class="mui-card-footer">
           <div class="mui-button-row">
-              <button type="button" class="mui-btn mui-btn-primary">提交保存</button>&nbsp;&nbsp; 
-              <button type="button" class="mui-btn ">取消</button> 
+              <button type="button" class="mui-btn mui-btn-primary">提交入仓</button>&nbsp;&nbsp; 
+              <button type="button" class="mui-btn mui-btn-danger">取消</button> 
           </div> 
         </div>
     </div>
@@ -206,10 +206,8 @@
     <div class="jxc-mask"></div>
  
 
-
-  <script src="./js/up-img.js"></script>
-  <script type="text/javascript"> 
-   function buttonImg(){  if($("#dd").html() !==""){ $("#up-img-box button").hide(); $("#guige-boxNumber").css({  "height": "420px"  }); }   }  
+ 
+  <script type="text/javascript">   
         //  展开选择框
         $("#tuihuo").on("click", function () {
             showBOX()

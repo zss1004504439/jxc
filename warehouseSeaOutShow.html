@@ -9,16 +9,10 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <link rel="stylesheet" href="css/mui.min.css"> 
     <link rel="stylesheet" href="css/app.css">
-    <style type="text/css">
-    #goodsList li a img{ max-width: 90px; height: 90px;  } 
-    #goodsList li a  div div{  font-size: 13px;color: #333  }
-    #goodsList li a  div div span{ flex: 3  }
-    #goodsList li a  div h4{  font-size: 15px;  }
-    .mui-table-view .mui-media-object{    height: 85px;
-    max-width: 85px;}
+    <style type="text/css"> 
+    .mui-table-view .mui-media-object{  }
     </style>
-</head>
-
+</head> 
 <body>
     <header id="header" class="mui-bar mui-bar-nav">
         <h1 class="mui-title">海外出仓详情</h1>
@@ -28,14 +22,14 @@
             <div class="mui-card">
                     <div class="mui-card-header">
                         <h4> 
-                            出库编号：  xx55555555 
+                            销售单号：xx55555555 
                         </h4>
                     </div>
                 <div class="mui-card-content">
                         <div class="mui-card-content-inner list-show"> 
                                 <div class="df"> 
-                                    <span>总箱数： <b>10</b> </span> 
-                                    <span>总金额： <b>55555</b> </span>  
+                                    <span>总箱数： <b>12</b> </span> 
+                                    <span>总金额(当地货币)： <b>1230</b> </span>  
                                 </div>
                                 <div class="df"> 
                                     <span>客户：<b>某某</b> </span> 
@@ -45,17 +39,15 @@
                                     <span  class="mui-ellipsis">地址：河南省郑州市金水区东风路18号金城国际广场6号楼  </span> 
                                 </div>
                                 <div class="df"> 
-                                    <span>时间：<b>20180418</b> </span> 
-                                    <span>销售：<b>yiweb</b> </span>  
+                                    <span>出仓时间：<b>20180418</b> </span> 
+                                    <span>销售员：<b>yiweb</b> </span>  
                                 </div> 
                                
                             </div>
                 </div>
-                <div class="mui-card-footer"> 
-                                <button  class="mui-btn-primary" > 确认出库 </button> 
+                <div class="mui-card-footer"><button  class="mui-btn-danger" > 确认出仓&出仓完成 </button> 
                 </div>
-            </div>
-      
+            </div> 
     </div> 
  
     <ul class="mui-table-view"  >
@@ -63,14 +55,14 @@
                 <a class=" " href="">
                     <img class="mui-media-object mui-pull-left" src="./images/cbd.jpg">
                     <div class="mui-media-body list-show">
-                        <h4 class="title">商品名称</h4>
-                        <p class="df"> <span>货号：<b>s001</b></span> </p>
-                        <p class="df">
-                            <span> 货品箱名：<b>大箱80</b></span> </p>
+                        <h4 class="title">货号：s001</h4> 
+                        <p class="df"> <span> 货品箱名：<b>大箱80</b></span> </p>
                         <p class="df"> 
-                          <span>箱数：<b>40</b></span>
-                          <span>出库仓位：<b>F仓</b> </span>
+                            <span>箱数：<b>40</b></span>
                         </p> 
+                        <p class="df">
+                                <span>出库仓位：<b>F仓</b> </span>
+                         </p>
                     </div>
                 </a>
             </li> 
@@ -99,24 +91,13 @@
             <div class="mui-tab-item" data-href="./basis.html">
                 <span class="mui-icon mui-icon-gear"></span>
                 <span class="mui-tab-label">基础管理</span>
-            </div>
-      
-    </nav>
-
-
-
+            </div> 
+    </nav> 
     <script src="js/mui.min.js"></script>
     <script src="js/song.js"></script>
     <script>
         mui.init({});
-        //当前页面执行
-       /*  mui(".mui-table-view").on("tap", "li", function () {
-            var href = this.getAttribute("data-href");
-            if (href !== "") {
-                gotoUrl(href);
-                return;
-            }
-        }, false) */
+        //当前页面执行 
         mui("#bar-down").on("tap", "div", function () {
             var href = this.getAttribute("data-href");
             if (href !== "") {

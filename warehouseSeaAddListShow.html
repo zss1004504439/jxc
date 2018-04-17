@@ -1,1 +1,187 @@
-<h1> 由国外入仓决定 </h1>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title> 海外入仓单详情 </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="stylesheet" href="css/mui.min.css"> 
+  <link rel="stylesheet" href="css/app.css">
+  <script src="js/jquery.min.js"></script> 
+  <script src="js/layer.js"></script>  
+  <script src="js/mui.min.js"></script>
+  <script src="js/song.js"></script>
+  <style type="text/css"> 
+    #warehouse-click .mui-input-row {
+      font-size: 13px; 
+    } 
+    #warehouse-click .mui-input-row input {
+      font-size: 12px; 
+    } 
+  </style> 
+</head> 
+<body>
+  <header id="header" class="mui-bar mui-bar-nav">
+    <h1 class="mui-title">海外入仓单详情</h1>
+    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>  
+  </header> 
+  <div class="mui-content" > 
+    <div class="mui-card">
+      <!-- <div class="mui-card-header"></div>  -->
+      <div class="mui-input-group mui-card-content">
+        <div class="mui-input-row">
+          <label>入仓单编号：</label>
+          <input type="text"  disabled value="DY8888888"  >
+        </div> 
+        <div class="mui-input-row">
+          <label>入仓单类型：</label>
+          <input type="text"  disabled value="海外入仓"  > 
+        </div>
+        <div class="mui-input-row">
+          <label>关联运单号：</label>
+            <input type="text"  disabled value="DY66666666"  >  
+        </div>
+
+        <ul class="mui-table-view" id="warehouse-click">
+            <li class="mui-table-view-cell mui-collapse">
+              <a class="mui-navigate-right" href="#">点击查看海运单详情</a>
+              <div class="mui-collapse-content">
+                <div class="mui-input-row">
+                  <label>制单人</label>
+                  <input type="text" disabled value="yiweb">
+                </div>
+                <div class="mui-input-row">
+                  <label>集装箱编号</label>
+                  <input type="text" class=" " disabled value="jzx098">
+                </div>
+                <div class="mui-input-row">
+                  <label>港口</label>
+                  <input type="text" class=" " disabled value="义乌港">
+                </div>
+                <div class="mui-input-row">
+                  <label>总箱数</label>
+                  <input type="text" class=" " disabled value="90">
+                </div> 
+                <div class="mui-input-row">
+                  <label>总金额</label>
+                  <input type="text" class=" " disabled value="16515.00">
+                </div> 
+                <div class="mui-input-row">
+                  <label>制单时间</label>
+                  <input type="text" class=" " disabled value="2018-04-12">
+                </div>
+                <div class="mui-input-row mui-input-row-textarea">
+                    <textarea id="" rows="2" placeholder="备注信息"></textarea>
+                </div>
+              </div>
+            </li>
+          </ul>
+      </div>
+    </div>
+ 
+    <div id=" ">
+      <ul class="mui-table-view " id="">
+        <li class="mui-table-view-cell mui-media">   
+                <img src="./images/cbd.jpg" class="mui-media-object mui-pull-left " >
+                <div class="mui-media-body list-show">
+                  <h4 class="title">货号：s001</h4>
+                  <p class="df"> 
+                    <span>货品箱：<b>大箱80</b></span>
+                    <span>总箱数：<b>80</b></span>
+                  </p>
+                  <p class="df">
+                    <span>
+                      入库仓位：
+                      <b class="f00">
+                        A仓
+                      </b> 
+                    </span> 
+                  </p> 
+                  <p class="df"> 
+                    <span>
+                      入库箱数：
+                      <b class="f00">
+                        80
+                      </b> 
+                    </span>  
+                  </p> 
+                </div> 
+        </li> 
+        <li class="mui-table-view-cell mui-media">   
+                <img src="./images/cbd.jpg" class="mui-media-object mui-pull-left " >
+                <div class="mui-media-body list-show">
+                  <h4 class="title">货号：s001</h4>
+                  <p class="df"> 
+                    <span>货品箱：<b>大箱80</b></span>
+                    <span>总箱数：<b>80</b></span>
+                  </p>
+                  <p class="df">
+                    <span>
+                      入库仓位：
+                      <b class="f00">
+                        A仓
+                      </b> 
+                    </span> 
+                  </p> 
+                  <p class="df"> 
+                    <span>
+                      入库箱数：
+                      <b class="f00">
+                        80
+                      </b> 
+                    </span>  
+                  </p> 
+                </div> 
+        </li> 
+      </ul>
+    </div>  
+  </div>
+
+ 
+
+    <div class="jxc-mask"></div>
+   
+ 
+
+  <nav class="mui-bar mui-bar-tab" id="bar-down">
+
+    <div class="mui-tab-item mui-active" data-href="./index.html">
+      <span class="mui-icon mui-icon-home"></span>
+      <span class="mui-tab-label">首页</span>
+    </div>
+    <div class="mui-tab-item" data-href="./sales.html">
+      <span class="mui-icon mui-icon-star"> </span>
+      <span class="mui-tab-label">销售管理</span>
+    </div>
+    <div class="mui-tab-item" data-href="./procurement.html">
+      <span class="mui-icon mui-icon-download"> </span>
+      <span class="mui-tab-label">采购管理</span>
+    </div>
+    <div class="mui-tab-item" data-href="./warehouse.html">
+      <span class="mui-icon mui-icon-flag"></span>
+      <span class="mui-tab-label">仓库管理</span>
+    </div>
+    <div class="mui-tab-item" data-href="./basis.html">
+      <span class="mui-icon mui-icon-gear"></span>
+      <span class="mui-tab-label">基础管理</span>
+    </div>
+  </nav>
+
+
+  <script>
+    mui.init({});
+
+    // 底部导航 链接
+    mui("#bar-down").on("tap", "div", function () {
+      var href = this.getAttribute("data-href");
+      if (href !== "") {
+        gotoUrl(href);
+        return;
+      }
+    }, false);
+  </script>
+</body>
+
+</html>
