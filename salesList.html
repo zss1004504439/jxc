@@ -11,19 +11,7 @@
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="./css//mui.picker.min.css">
     <style type="text/css">
-        #warehouse-click .mui-input-row {
-            font-size: 13px;
-            ;
-        }
-
-        #warehouse-click .mui-input-row input {
-            font-size: 12px;
-            ;
-        }.mui-btn {
-				font-size: 16px;
-				padding: 8px;
-				margin: 3px;
-			}
+      
     </style>
     <script src="js/jquery.min.js"></script>
     <script src="./js/layer.js"></script>
@@ -33,8 +21,7 @@
     <header id="header" class="mui-bar mui-bar-nav">
 
         <h1 class="mui-title"> 销售开单记录 </h1>
-        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-        <a id="promptBtn" class="mui-icon mui-icon-plus mui-pull-right" href="./salesAdd.html"></a>
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a> 
     </header>
 
     <div class="mui-content" id=" ">
@@ -46,8 +33,7 @@
         <div class="mui-content-padded">
             <a href="./salesAdd.html" id="popup-area-show" class="addItem mui-btn mui-btn-success mui-icon mui-icon-plus">新增销售单</a>
         </div>
-
-
+ 
         <div class="timeInterval clearfix">
 
             <button id='demo1' data-options='{"type":"date","beginYear":2018}' class="btn mui-btn mui-btn-block">开始时间</button>
@@ -58,7 +44,7 @@
         <div class="mui-content-padded"> 
             <h5> 共检索到 5 条记录 </h5>
             <h5>销售箱数合计：55 箱，销售金额合计：10000.00</h5>
-            <h5>已付款：1200.00，未付款：8800.00</h5>
+            <h5>已收款：1200.00，未收款：8800.00</h5>
         </div>
 
         <div class=" ">
@@ -76,17 +62,17 @@
                                     <b class="mui-badge mui-badge-primary">s001</b>
                                 </span>
                             </p>
-                            <p class="df list-show-other">
+                            <p class="df  ">
                                 <span>总金额（当地货币）：
-                                    <b>1230</b>
-                                </span>
-                                <span>总箱数：
-                                    <b>12</b>
+                                    <b>1230.00</b>
                                 </span>
                             </p>
                             <p class="df">
                                 <span>已出库箱数：
                                     <b>100</b>
+                                </span>
+                                <span>总箱数：
+                                    <b>12</b>
                                 </span>
                             </p>
                             <p class="df">
@@ -144,17 +130,8 @@
 
             var picker = new mui.DtPicker(options);
             picker.show(function (rs) {
-                /*
-                 * rs.value 拼合后的 value
-                 * rs.text 拼合后的 text
-                 * rs.y 年，可以通过 rs.y.vaue 和 rs.y.text 获取值和文本
-                 * rs.m 月，用法同年
-                 * rs.d 日，用法同年
-                 * rs.h 时，用法同年
-                 * rs.i 分（minutes 的第二个字母），用法同年
-                 */
-                demo1.innerText = rs.text;
-
+                
+                demo1.innerText = rs.text; 
                 picker.dispose();
             });
         }, false);

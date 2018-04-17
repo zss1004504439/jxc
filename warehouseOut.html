@@ -7,11 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="stylesheet" href="css/mui.min.css">
-    <link rel="stylesheet" href="css/icons-extra.css">
+    <link rel="stylesheet" href="css/mui.min.css"> 
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" type="text/css" href="css/mui.picker.min.css" />
     <style type="text/css">
+    .warehouse-del{ z-index: 11;border-radius: 2px;line-height: initial }
     </style>
     <script src="js/jquery.min.js"></script>
     <script src="./js/layer.js"></script>
@@ -50,20 +50,20 @@
 
                 <div class="mui-input-row">
                     <label> 总箱数：</label>
-                    <input type="text" class="mui-input-clear " disabled value="19">
+                    <input type="text" class="  " disabled value="19">
                 </div>
                 <div class="mui-input-row">
                     <label> 总体积（m³）：</label>
-                    <input type="text" class="mui-input-clear " disabled value="1038.00">
+                    <input type="text" class="" disabled value="1038.00">
                 </div>
                 <div class="mui-input-row">
                     <label> 时间：</label>
                     <!-- 自动提 可选择  精确到天 -->
-                    <input type="text" class="mui-input-clear " placeholder="时间">
-                </div>
+                    <input  id='warehouseDate' data-options='{"type":"date"}' type="text" class=" " value="2018-04-08">
+                </div> 
                 <div class="mui-input-row">
                     <label> 总金额：</label>
-                    <input type="text" class="mui-input-clear f00" disabled value="12000.00">
+                    <input type="text" class="  f00" disabled value="12000.00">
                 </div>
                 <div class="mui-input-row mui-input-row-textarea">
                     <textarea id="" rows="2" placeholder="备注信息"></textarea>
@@ -74,6 +74,8 @@
         <div class="" id=" ">
             <ul class="mui-table-view " id="">
                 <li class="mui-table-view-cell mui-media"> 
+                    <!-- 点击调用   warehouseDel() -->
+                    <span  class="mui-badge mui-badge-danger warehouse-del">移除</span>
                     <img class="mui-media-object mui-pull-left" src="./images/cbd.jpg" alt="">
                     <div class="mui-media-body list-show">
                         <h4 class="title">货号：s001</h4>
@@ -83,24 +85,22 @@
                             </span>
                         </p>
                         <p class="df">
-                            <span>总箱数：
+                            <span>库存箱数：
                                 <b>1000</b>
                             </span> 
-                            <span>
-                                仓库位：
-                                <b> A库 </b>
-                            </span>
                         </p>
                         <p class="df">
-                           
+                                    <span>
+                                        仓库位：
+                                        <b> A库 </b>
+                                    </span> 
                         <span>
                             出库箱数：
                             <label class="input_nor_line">
                                 <input class="input_nor" type="text" value="100">
                             </label>
                         </span>
-                        <span> 
-                        </span>
+                      
                         </p>
                     </div>
                 </li>
@@ -114,11 +114,7 @@
             <a class="mui-btn mui-btn-danger mui-icon mui-icon-settings"> 计算汇总 </a>
         </div>
 
-        <div class="" id="warehouse-out-tot">
-            <!-- 点击预览图片 -->
-            <!-- 点击预览图片 -->
-            <!-- 点击预览图片 -->
-            <!-- 点击预览图片 -->
+        <div class="" id="warehouse-out-tot"> 
             <table class="table-style">
                 <thead>
                     <tr>
@@ -243,6 +239,13 @@
             hideBOX()
         })
 
+        // 移除li
+        $(".warehouse-del").on("click",warehouseDel)
+       function warehouseDel(){
+           alert("ddd")
+           $(this).parent().remove()
+        }
+        // 移除li
         mui.init({});
 
         // 底部导航 链接
@@ -253,6 +256,24 @@
                 return;
             }
         }, false);
+ 
+        (function($) {
+				$.init();
+				var result = $('#warehouseDate')[0]; 
+                result.addEventListener('tap', function() {
+						var optionsJson = this.getAttribute('data-options') || '{}';
+						var options = JSON.parse(optionsJson);
+						var id = this.getAttribute('id');
+						 
+						var picker = new $.DtPicker(options);
+						picker.show(function(rs) { 
+							// result.innerText =  rs.text;
+							result.value =  rs.value; 
+							picker.dispose();
+						});
+					}, false);
+			 
+			})(mui);
     </script>
 </body>
 

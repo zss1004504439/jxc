@@ -1,1 +1,235 @@
-<h1> 由国内入库确认  </h1>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title> 国内入库详情 </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="stylesheet" href="css/mui.min.css"> 
+  <link rel="stylesheet" href="css/app.css">
+  <script src="js/jquery.min.js"></script>  
+  <script src="js/mui.min.js"></script>
+  <script src="js/song.js"></script>
+  <script src="js/webuploader.min.js"></script>
+  <script src="js/uploader.js"></script>
+  <style type="text/css"> 
+    #warehouse-click .mui-input-row {
+      font-size: 13px; 
+    } 
+    #warehouse-click .mui-input-row input {
+      font-size: 12px; 
+    }
+  </style> 
+</head>
+
+<body>
+  <header id="header" class="mui-bar mui-bar-nav">
+    <h1 class="mui-title">国内入库</h1>
+    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+  
+  </header>
+
+  <div class="mui-content" id="supplier-search">
+
+    <div class="mui-card">
+      <!-- <div class="mui-card-header">
+        新增国内入库单
+      </div> -->
+
+      <div class="mui-input-group mui-card-content">
+        <div class="mui-input-row">
+          <label>入库单编号：</label>
+          <input type="text" disabled value="GG88888888">
+        </div>
+        <div class="mui-input-row">
+          <label>入库单类型：</label>
+          <input type="text" disabled value="采购入库"> 
+        </div>
+        <div class="mui-input-row">
+          <label>关联采购单号：</label>
+          <input type="text" disabled value="DY66666666">  
+        </div> 
+        <ul class="mui-table-view" id="warehouse-click">
+          <li class="mui-table-view-cell mui-collapse">
+            <a class="mui-navigate-right" href="#">点击查看采购单详情</a>
+            <div class="mui-collapse-content">
+              <div class="mui-input-row">
+                <label>制单人</label>
+                <input type="text" value="yiwebcms">
+              </div>
+              <div class="mui-input-row">
+                <label>供应商编号</label>
+                <input type="text" class="" value="004">
+              </div>
+              <div class="mui-input-row">
+                <label>供应商名称</label>
+                <input type="text" class=" " value="某某企业">
+              </div>
+              <div class="mui-input-row">
+                <label>供应商联系人</label>
+                <input type="text" class=" " value="张某某">
+              </div>
+              <div class="mui-input-row">
+                <label>供应商电话</label>
+                <input type="text" class="" value="13273803588">
+              </div>
+              <div class="mui-input-row">
+                <label>制单时间</label>
+                <input type="text" class=" " value="2018-04-03">
+              </div>
+              <div class="mui-input-row mui-input-row-textarea">
+                  <textarea id="" rows="2" placeholder="备注信息"></textarea>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+ 
+    <div id="">
+      <ul class="mui-table-view " id="">
+        <li class="mui-table-view-cell mui-media">  
+            <img class="mui-media-object mui-pull-left" src="./images/cbd.jpg" alt="">
+            <div class="mui-media-body list-show">
+              <h4 class="title">货号：s001</h4>
+              <p class="df"><span>  货品箱：<b>大箱80</b> </span></p>
+              <p class="df"> 
+                <span>总箱数：<b>1000</b></span> 
+              </p>
+              <p class="df">
+                <span>
+                    选择仓库：
+                    <label  class="input_nor_line"> 
+                      <select class="  input_nor">
+                          <option value="A仓">A仓</option>
+                          <option value="B仓">B仓</option>
+                        </select>
+                    </label>
+                </span> 
+                    <span>
+                        入库箱数：
+                        <label  class="input_nor_line">
+                          <input class="input_nor" type="text" value="100">
+                        </label>
+                    </span>
+              </p>
+            </div>  
+        </li>
+        <li class="mui-table-view-cell mui-media">  
+            <img class="mui-media-object mui-pull-left" src="./images/cbd.jpg" alt="">
+            <div class="mui-media-body list-show">
+              <h4 class="title">货号：s001</h4>
+              <p class="df"><span>  货品箱：<b>大箱80</b> </span></p>
+              <p class="df"> 
+                <span>总箱数：<b>1000</b></span> 
+              </p>
+              <p class="df">
+                <span>
+                    选择仓库：
+                    <label  class="input_nor_line"> 
+                      <select class="  input_nor">
+                          <option value="A仓">A仓</option>
+                          <option value="B仓">B仓</option>
+                        </select>
+                    </label>
+                </span> 
+                    <span>
+                        入库箱数：
+                        <label  class="input_nor_line">
+                          <input class="input_nor" type="text" value="100">
+                        </label>
+                    </span>
+              </p>
+            </div>  
+        </li>
+        
+      </ul>
+
+    </div> 
+ 
+  
+  </div>
+
+
+    <!-- 弹出层 -->
+    <div id="guige-boxNumber" style="display:none">
+        <div class="title"> 退货理由 </div> 
+        <form class="mui-input-group">
+       
+            <div style="padding-top: 10px"> 
+                <ul class="logo">
+                    <div id="tupian"></div>
+                    <input type="hidden" id="txtImgUrl" name="txtImgUrl" class="input normal upload-path" />
+                    <div class="upload-box upload-img"></div>
+                </ul> 
+            </div>
+            <div class="mui-input-row mui-input-row-textarea">
+              <!-- <label>描述</label> -->
+              <textarea name="" class="mui-input-clear" id="" rows="4" placeholder="图片描述" ></textarea> 
+            </div> 
+          </form>
+        <button type="button" class="mui-btn mui-btn-primary mui-btn-block" id=""> 确认退货 </button>
+    </div>
+
+    <div class="jxc-mask"></div>
+ 
+
+  
+
+  <nav class="mui-bar mui-bar-tab" id="bar-down">
+
+    <div class="mui-tab-item mui-active" data-href="./index.html">
+      <span class="mui-icon mui-icon-home"></span>
+      <span class="mui-tab-label">首页</span>
+    </div>
+    <div class="mui-tab-item" data-href="./sales.html">
+      <span class="mui-icon mui-icon-star"> </span>
+      <span class="mui-tab-label">销售管理</span>
+    </div>
+    <div class="mui-tab-item" data-href="./procurement.html">
+      <span class="mui-icon mui-icon-download"> </span>
+      <span class="mui-tab-label">采购管理</span>
+    </div>
+    <div class="mui-tab-item" data-href="./warehouse.html">
+      <span class="mui-icon mui-icon-flag"></span>
+      <span class="mui-tab-label">仓库管理</span>
+    </div>
+    <div class="mui-tab-item" data-href="./basis.html">
+      <span class="mui-icon mui-icon-gear"></span>
+      <span class="mui-tab-label">基础管理</span>
+    </div>
+  </nav>
+ 
+  <script>
+      //  展开选择框
+      $("#tuihuo").on("click", function () {
+            showBOX()
+        }) 
+        //  隐藏选择框
+        $(".jxc-mask").on("click", function () {
+            hideBOX()
+        })
+        $(function () {
+            $(".upload-img").InitUploader({
+                filesize: "10240",
+                // sendurl: "/tools/upload_ajax.ashx",
+                swf: "/scripts/webuploader/uploader.swf",
+                filetypes: "gif,jpg,png,bmp"
+            });
+        })
+    mui.init({});
+
+    // 底部导航 链接
+    mui("#bar-down").on("tap", "div", function () {
+      var href = this.getAttribute("data-href");
+      if (href !== "") {
+        gotoUrl(href);
+        return;
+      }
+    }, false);
+  </script>
+</body>
+
+</html>

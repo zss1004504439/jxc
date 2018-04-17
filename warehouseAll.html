@@ -3,118 +3,85 @@
 
 <head>
     <meta charset="utf-8">
-    <title> 仓库盘点 </title>
+    <title> 新增销售 </title>
     <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <link rel="stylesheet" href="css/mui.min.css"> 
     <link rel="stylesheet" href="css/app.css">
-    <style type="text/css">
-  
-    </style>
+    <style type="text/css"> 
+       
+    </style> 
     <script src="js/jquery.min.js"></script> 
+    <script src="./js/layer.js"></script>
+</head>
 
-</head> 
 <body>
-    <!-- 和库存查询一样 -->
     <header id="header" class="mui-bar mui-bar-nav">
 
-        <h1 class="mui-title">仓库盘点</h1>
-        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-        <!-- <a id="promptBtn" class="mui-icon mui-icon-search mui-pull-right"></a> -->
-        <!-- <a class="mui-icon mui-icon-checkmarkempty mui-pull-right">   </a> -->
-    </header>
+        <h1 class="mui-title"> 库存盘点 </h1>
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a> 
+    </header> 
     <div class="mui-content" id=" ">
-        <form action="" class="mui-content-padded" >
-            <div class="mui-input-row mui-search" id=" ">
-                <input type="search" class="mui-input-clear" placeholder="如：男鞋">
+            <form action="" class="mui-content-padded"  >
+                    <div class="mui-input-row mui-search" id=" ">
+                        <input type="search" class="mui-input-clear" placeholder="如：货号">
+                    </div>
+            </form>
+           
+    </div>
+    <div class="mui-content-padded"> 
+        <div class="select-pro-list">
+                <span>
+                    <select name="" id="">
+                        <option value="0">点击选择仓库位置</option>
+                        <option value="">国内仓</option>
+                        <option value="">海外仓</option>
+                        <option value="">海运集装箱</option>
+                    </select>
+                </span>
+                <span>
+                    <select name="" id="">
+                        <option value="0">点击选择商品类别</option>
+                        <option value="">男鞋</option>
+                        <option value="">女鞋</option> 
+                    </select>
+                </span>
             </div>
-        </form>
     </div>
-    <div>
+ 
+<div class="mui-content-padded">
+    <h5> 你选择的是 <span class="f00">国内仓</span> <span class="f00">男鞋</span> 库存情况如下： </h5>
+</div>
+    <div> 
+            <table id="warehouseAll" class="table-style">
+                <thead>
+                    <tr> 
+                        <th> 仓库名称 </th>
+                        <th> 货号 </th> 
+                        <th> 库存箱数 </th>
+                        <th>库存金额(￥) </th>  
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr> 
+                        <td> A仓 </td>
+                        <td> S001 </td> 
+                        <td> 17 </td>
+                        <td> 0.00 </td>  
+                    </tr>   
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td> 合计 </td>
+                        <td> 100 </td>
+                        <td> 1000000 </td>
+                        <td> 20000.00 </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
 
-        <table id="warehouseAll" class="table-style">
-            <thead>
-                <tr>
-                    <th> 仓库名 </th>
-                    <th> 货号信息 </th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td> A仓 </td>
-                    <td>
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td>s001</td>
-                                    <td>12</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </td>
-                </tr>
-                <tr>
-                    <td> B仓 </td>
-                    <td>
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td>s001</td>
-                                    <td>12</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td> 一仓 </td>
-                    <td>
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td>s001</td>
-                                    <td>12</td>
-                                </tr>
-                                <tr>
-                                    <td>s001</td>
-                                    <td>12</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </td>
-
-                </tr>
-                <tr>
-                    <td> 二仓 </td>
-                    <td>
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td>s001</td>
-                                    <td>12</td>
-                                </tr>
-                                <tr>
-                                    <td>s001</td>
-                                    <td>12</td>
-                                </tr>
-                                <tr>
-                                    <td>s001</td>
-                                    <td>12</td>
-                                </tr>
-                                <tr>
-                                    <td>s001</td>
-                                    <td>12</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </td>
-
-                </tr>
-            </tbody>
-        </table>
-    </div>
     <nav class="mui-bar mui-bar-tab" id="bar-down">
 
         <div class="mui-tab-item mui-active" data-href="./index.html">
@@ -138,12 +105,15 @@
             <span class="mui-tab-label">基础管理</span>
         </div>
     </nav>
+ 
+
 
     <script src="js/mui.min.js"></script>
     <script src="js/song.js"></script>
     <script>
+      
         mui.init({});
-
+     
         // 底部导航 链接
         mui("#bar-down").on("tap", "div", function () {
             var href = this.getAttribute("data-href");

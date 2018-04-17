@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="utf-8">
-    <title> 采购历史订单 </title>
+    <title> 采购财务报表 </title>
     <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -12,21 +13,22 @@
     <script src="./js/jquery.min.js"></script>
     <script src="./js/layer.js"></script>
     <style type="text/css">
-          </style>
+      
+    </style>
 </head>
 
 <body>
     <header id="header" class="mui-bar mui-bar-nav">
 
-        <h1 class="mui-title">采购单详情</h1>
+        <h1 class="mui-title">采购财务报表详情</h1>
         <a class="mui-action-back mui-icon mui-icon-undo mui-pull-left"></a>
-        <a class="mui-icon  mui-icon-plus mui-pull-right" href="./procurementAdd.html"></a>
+       
     </header>
 
     <div class="mui-content">
 
         <div class="mui-card">
-            <div class="mui-card-header">采购单编号：DY4858794899</div>
+            <div class="mui-card-header">采购单号：DY4858794899</div>
             <div class="mui-card-content">
                 <div class="mui-card-content-inner list-show">
                     <div class="df">
@@ -34,23 +36,14 @@
                             <b>2018/04/04</b>
                         </span>
                         <span>入库日期：
-                            <b> 暂无</b>
+                            <b> 2018/04/14</b>
                         </span>
-                    </div>
-
-                    <div class="df">
-                        <span>实付总金额：
-                            <b>5120.00</b>
-                        </span>
-                        <span>预付款：
-                            <b class="f00">5120.00</b>
-                        </span>
-                    </div>
+                    </div> 
                     <div class="df">
                         <span> 采购总箱数：
                             <b>200</b>
                         </span>
-                        <span>录入人：
+                        <span>采购人：
                             <b>yiwebcms</b>
                         </span>
                     </div>
@@ -60,7 +53,50 @@
                     <div class="df">
                         <span> 备注：郑州壹网无忧信息技术有限公司郑州壹网无忧信息技术有限公司 </span>
                     </div>
+                    <div class="df">
+                        <span>应付总金额：
+                            <b>5120.00</b>
+                        </span>
+                        <span>已付款：
+                            <b>3120.00</b>
+                        </span>
+                    </div>
+                    <div class="df"> 
+                        <span>未付款：
+                            <b class="f00">2000.00</b>
+                        </span>
+                    </div> 
                 </div>
+            </div>
+            <div class="mui-card-footer" style="padding:10px 0 0 " >
+                <table class="table-style">
+                    <thead>
+                      <tr>
+                        <th colspan="4">付款记录</th>
+                      </tr>
+                      <tr>
+                        <th>款项（￥）</th>
+                        <th>付款方式</th>
+                        <th>操作人</th>
+                        <th>日期</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td> 1000 </td>
+                        <td> 银行转账 </td>
+                        <td> yiweb </td>
+                        <td> 2018-04-11 </td>
+                      </tr>
+                      <tr>
+                        <td> 1000 </td>
+                        <td> 银行转账 </td>
+                        <td> yiweb </td>
+                        <td> 2018-04-11 </td>
+                      </tr>
+                    </tbody>
+
+                  </table>
             </div>
             <div class="mui-card-footer">  
                     <div class="mui-table-view-cell mui-collapse" style="width: 100%;">
@@ -154,8 +190,7 @@
             
             </div>
         </div>
-        <div class="mui-content-padded" >
-
+        <div class="mui-content-padded" > 
             <div class=" mui-btn mui-btn-success addItem"  >采购单包含的货品详情</div>
         </div>
         <div class="">

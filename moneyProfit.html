@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title> 毛利汇总表 </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="stylesheet" href="css/mui.min.css"> 
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css//mui.picker.min.css">
+  <script src="js/jquery.min.js"></script>  
+  <script src="js/mui.min.js"></script>
+  <script src="js/song.js"></script> 
+  <script src="js/mui.picker.min.js"></script> 
+  <style type="text/css">  
+     .table-style td{ padding: 8px 0 }
+  </style> 
+</head> 
+<body>
+  <header id="header" class="mui-bar mui-bar-nav">
+    <h1 class="mui-title"> 毛利汇总表 </h1>
+    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a> 
+  </header>
+  <div class="mui-content" id=""> 
+      <div class="timeInterval clearfix">
+
+          <button id='demo1' data-options='{"type":"date","beginYear":2018}' class="btn mui-btn mui-btn-block">开始时间</button>
+          <!-- <button class="mui-btn">—</button> -->
+          <button id='demo2' data-options='{"type":"date","beginYear":2018}' class="btn mui-btn mui-btn-block">结束时间</button>
+      </div>
+
+      <div class="mui-content-padded"> 
+          <h5> 共检索到 5 条记录 </h5> 
+          <h5>应付总金额：1200.00，已付总金额：11580.00，未付总金额：8800.00</h5>
+      </div>  
+       <div>
+          <table class="table-style">
+              <thead>
+                <tr>
+                  <th> 销售票号 </th>
+                  <th> 销售金额（当地货币） </th>
+                  <th> 采购成本（￥） </th>
+                  <th> 汇率 </th>
+                  <th> 毛利（￥） </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td> <a href="./salesShow.html">SD001</a> </td>
+                  <td> 548486.00 </td>
+                  <td> 5000.00 </td> 
+                  <td> 2.9 </td>
+                  <td> 195252.00 </td>
+                </tr> 
+                <tr>
+                  <td> <a href="./salesShow.html">SD001</a> </td>
+                  <td> 548486.00 </td>
+                  <td> 5000.00 </td> 
+                  <td> 2.9 </td>
+                  <td> 195252.00 </td>
+                </tr> 
+                <tr>
+                  <td> <a href="./salesShow.html">SD001</a> </td>
+                  <td> 548486.00 </td>
+                  <td> 5000.00 </td> 
+                  <td> 2.9 </td>
+                  <td> 195252.00 </td>
+                </tr> 
+                <tr>
+                  <td> <a href="./salesShow.html">SD001</a> </td>
+                  <td> 548486.00 </td>
+                  <td> 5000.00 </td> 
+                  <td> 2.9 </td>
+                  <td> 195252.00 </td>
+                </tr> 
+              </tbody>
+            </table>
+       </div>
+  </div> 
+    <div class="jxc-mask"></div> 
+  <nav class="mui-bar mui-bar-tab" id="bar-down">
+
+    <div class="mui-tab-item mui-active" data-href="./index.html">
+      <span class="mui-icon mui-icon-home"></span>
+      <span class="mui-tab-label">首页</span>
+    </div>
+    <div class="mui-tab-item" data-href="./sales.html">
+      <span class="mui-icon mui-icon-star"> </span>
+      <span class="mui-tab-label">销售管理</span>
+    </div>
+    <div class="mui-tab-item" data-href="./procurement.html">
+      <span class="mui-icon mui-icon-download"> </span>
+      <span class="mui-tab-label">采购管理</span>
+    </div>
+    <div class="mui-tab-item" data-href="./warehouse.html">
+      <span class="mui-icon mui-icon-flag"></span>
+      <span class="mui-tab-label">仓库管理</span>
+    </div>
+    <div class="mui-tab-item" data-href="./basis.html">
+      <span class="mui-icon mui-icon-gear"></span>
+      <span class="mui-tab-label">基础管理</span>
+    </div>
+  </nav>
+ 
+  <script> 
+       
+        mui.init({});
+        var demo1 = document.getElementById('demo1');
+        var demo2 = document.getElementById('demo2'); 
+        demo1.addEventListener('tap', function () {
+            var optionsJson = this.getAttribute('data-options') || '{}';
+            var options = JSON.parse(optionsJson);
+            var id = this.getAttribute('id');
+
+            var picker = new mui.DtPicker(options);
+            picker.show(function (rs) {
+                
+                demo1.innerText = rs.text; 
+                picker.dispose();
+            });
+        }, false);
+        demo2.addEventListener('tap', function () {
+            var optionsJson = this.getAttribute('data-options') || '{}';
+            var options = JSON.parse(optionsJson);
+            var id = this.getAttribute('id');
+
+            var picker = new mui.DtPicker(options);
+            picker.show(function (rs) { 
+                demo2.innerText = rs.text; 
+                picker.dispose();
+            });
+        }, false);
+    // 底部导航 链接
+    mui("#bar-down").on("tap", "div", function () {
+      var href = this.getAttribute("data-href");
+      if (href !== "") {
+        gotoUrl(href);
+        return;
+      }
+    }, false);
+  </script>
+</body>
+
+</html>
