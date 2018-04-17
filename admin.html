@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="css/icons-extra.css">
   <link rel="stylesheet" href="css/app.css">
   <style type="text/css">
+  .mui-input-row .mui-switch{ margin-top: 0 }
   </style>
 </head>
 
@@ -42,8 +43,16 @@
                   </div>
                 
                 <div class="mui-input-row mui-checkbox mui-right">
-                    <label>用户是否启用：</label>
-                    <input name="checkbox" value="" checked type="checkbox">
+                    <ul class="mui-table-view">
+                      
+                      <li class="mui-table-view-cell">
+                        <span>用户是否启用：</span>
+                        <div class="mui-switch mui-active">
+                          <div class="mui-switch-handle"></div>
+                        </div>
+                      </li>
+                    </ul>
+                    <!-- <input name="checkbox" value="" checked type="checkbox"> -->
                   </div>
             </div>
           </div>  

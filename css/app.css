@@ -100,7 +100,8 @@ td{text-align:center}
     /* 蒙层 */
     /* 货品箱规格弹出层 */
     #guige-choose-box{display: none;  position:fixed; bottom:0; left:0; width: 100%; /* height: 400px;  */padding:0px 10px; border:none; transition: all .3s;z-index: 101;    background: #fff;}
-    #guige-choose-box ul{    padding: 10px 0;}
+    #guige-choose-box ul{    padding: 10px 0;    height: 316px;
+        overflow-y: auto;}
     /* 货品箱规格弹出层 */
     #popup-area{display: none;  position:fixed; bottom:0; left:0; width: 100%; /* height: 400px;  */padding:0px 10px; border:none; transition: all .3s;z-index: 101;}
     #popup-area>div{ margin-bottom: 6px;background-color: #fff; border-radius: 5px; }
